@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "c3fdb2e6c8e254e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "087a8de0f0652935",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "32eed9fd87caf1ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/SUMMARY.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7bfcf12bca719c40",
+    "type": "split",
+    "children": [
+      {
+        "id": "c74c86359119edbe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "96ec0ebf565cfe5d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9b976f09e703fb46",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4516f2cdc53ac296",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b9a9c36d6a13e718",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e77d197c356a8df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05f3945a9fc39a5a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/SUMMARY.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9206606e6ddb04e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/SUMMARY.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "200ed6397280fba7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0dddb232cd40e17b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/SUMMARY.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "32eed9fd87caf1ac",
+  "lastOpenFiles": [
+    "book/new-technologies-future",
+    "book/base",
+    "book/appendix",
+    "book/elasticlunr.min.js",
+    "book/mark.min.js",
+    "book/404.html",
+    "book/searcher.js",
+    "book/searchindex.js",
+    "book/searchindex.json",
+    "book/advanced-features-internals/data-pages-rows.html",
+    "src/tools-practice/log-processing-analysis.md",
+    "src/SUMMARY.md",
+    "src/tools-practice/social-network-system.md",
+    "src/tools-practice/e-commerce-system.md",
+    "book/advanced-features-internals/deadlock-detection.html",
+    "src/tools-practice/real-world-cases.md",
+    "src/tools-practice/percona-toolkit.md",
+    "src/tools-practice/mysql-shell.md",
+    "src/tools-practice/phpmyadmin.md",
+    "src/tools-practice/mysql-workbench.md",
+    "src/tools-practice/mysql-tools.md",
+    "src/performance-tuning/os-tuning.md",
+    "src/performance-tuning/hardware-tuning.md",
+    "src/performance-tuning/parameter-optimization.md",
+    "book/favicon.png",
+    "book/FontAwesome/fonts/fontawesome-webfont.svg",
+    "book/favicon.svg",
+    "src/performance-tuning/system-tuning.md",
+    "src/performance-tuning/query-rewriting-optimization.md",
+    "src/performance-tuning/slow-query-log.md",
+    "src/performance-tuning/explain.md",
+    "src/performance-tuning/query-optimization.md",
+    "src/performance-tuning/third-party-tools.md",
+    "src/performance-tuning/mysql-tools.md",
+    "src/performance-tuning/performance-monitoring.md",
+    "src/architecture-deployment/recovery-strategies.md",
+    "src/architecture-deployment/logical-backup.md",
+    "src/architecture-deployment/physical-backup.md",
+    "src/architecture-deployment/backup-recovery.md"
+  ]
+}

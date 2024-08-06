@@ -1,0 +1,7 @@
+- [SQL基础](basics/sql-basics.md)
+    - [数据库和表的创建、修改与删除](basics/creating-modifying-deleting-databases-tables.md)
+    - [数据类型](basics/data-types.md)
+    - [基本查询语句（SELECT）](basics/basic-query-statements-select.md)
+    - [插入数据（INSERT）](basics/inserting-data.md)
+    - [更新数据（UPDATE）](basics/updating-data.md)
+    - [删除数据（DELETE）](basics/deleting-data.md)
