@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/advanced-features-internals/index-why.md",
+                "file": "src/advanced-features-internals/storage-engines.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/advanced-features-internals/index-why.md",
+                "file": "src/advanced-features-internals/storage-engines.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/advanced-features-internals/index-why.md",
+                "file": "src/advanced-features-internals/storage-engines.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/advanced-features-internals/index-why.md"
+                "file": "src/advanced-features-internals/storage-engines.md"
               }
             }
           }
@@ -148,20 +148,19 @@
   },
   "active": "32eed9fd87caf1ac",
   "lastOpenFiles": [
+    "src/SUMMARY.md",
+    "src/basics/creating-modifying-deleting-databases-tables.md",
+    "src/advanced-features-internals/index-why.md",
+    "book/base",
+    "book/appendix",
+    "book/elasticlunr.min.js",
+    "book/ayu-highlight.css",
+    "book/404.html",
     "book/basics/nosql-sql-mysql,m",
     "book/basics/nosql-sql-mysql,",
     "book/basics/nosql-sql",
     "book/basics/nosq",
-    "book/base",
-    "book/appendix",
     "book/advanced-features-internals/index_",
-    "book/advanced-features-internals/index-and-locks",
-    "book/advanced-features-internals/index-and-k",
-    "book/advanced-features-internals/index-and-",
-    "book/new-technologies-future",
-    "src/advanced-features-internals/index-why.md",
-    "src/advanced-features-internals/index-why.md",
-    "src/SUMMARY.md",
     "src/advanced-features-internals/index-types.md",
     "src/advanced-features-internals/logs.md",
     "src/basics/data-types.md",
