@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md",
+                "file": "src/advanced-features-internals/index-why.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md",
+                "file": "src/advanced-features-internals/index-why.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md",
+                "file": "src/advanced-features-internals/index-why.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md"
+                "file": "src/advanced-features-internals/index-why.md"
               }
             }
           }
@@ -148,44 +148,44 @@
   },
   "active": "32eed9fd87caf1ac",
   "lastOpenFiles": [
-    "book/404.html",
+    "book/basics/nosql-sql-mysql,m",
+    "book/basics/nosql-sql-mysql,",
+    "book/basics/nosql-sql",
+    "book/basics/nosq",
     "book/base",
     "book/appendix",
-    "book/elasticlunr.min.js",
+    "book/advanced-features-internals/index_",
+    "book/advanced-features-internals/index-and-locks",
+    "book/advanced-features-internals/index-and-k",
+    "book/advanced-features-internals/index-and-",
     "book/new-technologies-future",
-    "book/mark.min.js",
-    "book/searcher.js",
-    "book/searchindex.js",
-    "book/searchindex.json",
+    "src/advanced-features-internals/index-why.md",
+    "src/advanced-features-internals/index-why.md",
     "src/SUMMARY.md",
+    "src/advanced-features-internals/index-types.md",
+    "src/advanced-features-internals/logs.md",
+    "src/basics/data-types.md",
+    "src/basics/nosql-sql-mysql.md",
+    "book/FontAwesome/fonts/fontawesome-webfont.svg",
+    "src/basics/what-is-mysql.md",
+    "src/advanced-features-internals/data-pages-rows.md",
+    "src/advanced-features-internals/Multi-Version-Concurrency-Control.md",
+    "src/advanced-features-internals/storage-engines.md",
+    "src/tools-practice/e-commerce-system.md",
+    "src/advanced-features-internals/index-and-locks.md",
+    "src/advanced-features-internals/lock-optimization.md",
+    "src/advanced-features-internals/lock-types.md",
+    "src/advanced-features-internals/index-optimization.md",
+    "src/database-design/index-design.md",
+    "src/advanced-features-internals/create-manage-indexes.md",
+    "src/advanced-sql-data-processing/stored-procedures-functions.md",
     "src/database-design/partitioning-sharding.md",
     "src/database-design/physical-design.md",
     "src/database-design/overview.md",
     "src/advanced-features-internals/README.md",
-    "book/css/chrome.css",
-    "book/css/general.css",
     "src/advanced-sql-data-processing/README.md",
     "src/database-design/README.md",
-    "src/basics/README.md",
-    "src/tools-practice/README.md",
-    "src/performance-tuning/README.md",
-    "src/architecture-deployment/README.md",
-    "src/basics/sql-basics.md",
-    "src/tools-practice/log-processing-analysis.md",
-    "src/tools-practice/social-network-system.md",
-    "src/tools-practice/e-commerce-system.md",
-    "src/tools-practice/real-world-cases.md",
-    "src/tools-practice/percona-toolkit.md",
-    "src/tools-practice/mysql-shell.md",
-    "src/tools-practice/phpmyadmin.md",
-    "src/tools-practice/mysql-workbench.md",
-    "src/tools-practice/mysql-tools.md",
-    "src/performance-tuning/os-tuning.md",
-    "src/performance-tuning/hardware-tuning.md",
-    "src/performance-tuning/parameter-optimization.md",
     "book/favicon.png",
-    "book/FontAwesome/fonts/fontawesome-webfont.svg",
-    "book/favicon.svg",
-    "src/performance-tuning/system-tuning.md"
+    "book/favicon.svg"
   ]
 }
