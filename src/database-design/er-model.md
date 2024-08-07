@@ -37,64 +37,43 @@
 ### ER图的示例
 以下是一个简单的电商系统的ER图示例：
 
-```plaintext
-    +----------------+               +--------------+
-    |     用户       |               |    产品      |
-    |   User         |               |   Product    |
-    +----------------+               +--------------+
-    | 用户ID (PK)    |               | 产品ID (PK)  |
-    | 用户名         |               | 名称         |
-    | 密码           |               | 描述         |
-    | 邮箱           |               | 价格         |
-    | 注册日期       |               | 库存数量     |
-    +----------------+               +--------------+
-            |                               |
-            |                               |
-            |  1                n           |
-            |                               |
-            |                               |
-            +------------+    +-------------+
-                         |    |
-                         v    v
-                   +--------------+
-                   |    订单      |
-                   |    Order     |
-                   +--------------+
-                   | 订单ID (PK)  |
-                   | 用户ID (FK)  |
-                   | 订单日期     |
-                   | 总金额       |
-                   +--------------+
-                         |
-                         |
-                         |  1                n
-                         |
-                         v
-                   +--------------+
-                   | 订单明细     |
-                   | OrderDetail  |
-                   +--------------+
-                   | 明细ID (PK)  |
-                   | 订单ID (FK)  |
-                   | 产品ID (FK)  |
-                   | 数量         |
-                   | 单价         |
-                   +--------------+
-                         |
-                         |
-                         |  n
-                         |
-                         v
-                   +--------------+
-                   |    产品      |
-                   |   Product    |
-                   +--------------+
-                   | 产品ID (PK)  |
-                   | 名称         |
-                   | 描述         |
-                   | 价格         |
-                   | 库存数量     |
-                   +--------------+
+```mermaid
+erDiagram
+    USER {
+        int userID PK
+        string username
+        string password
+        string email
+        datetime registrationDate
+    }
+
+    PRODUCT {
+        int productID PK
+        string name
+        string description
+        float price
+        int stockQuantity
+    }
+
+    ORDER {
+        int orderID PK
+        int userID FK
+        datetime orderDate
+        float totalAmount
+    }
+
+    ORDERDETAIL {
+        int detailID PK
+        int orderID FK
+        int productID FK
+        int quantity
+        float unitPrice
+    }
+
+    USER ||--o{ ORDER : places
+    ORDER ||--o{ ORDERDETAIL : contains
+    ORDERDETAIL ||--o{ PRODUCT : includes
+
 ```
 
 ### ER图设计的注意事项

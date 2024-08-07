@@ -3,6 +3,7 @@ authors = ["cuihairu"]
 language = "en"
 multilingual = false
 src = "src"
+title = "Hello MySQL"
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"

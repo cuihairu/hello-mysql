@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "087a8de0f0652935",
+        "id": "1543014095545b65",
         "type": "tabs",
         "children": [
           {
-            "id": "32eed9fd87caf1ac",
+            "id": "7d5f7d875368830e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/advanced-features-internals/storage-engines.md",
+                "file": "src/database-design/er-model.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/advanced-features-internals/storage-engines.md",
+                "file": "src/database-design/er-model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/advanced-features-internals/storage-engines.md",
+                "file": "src/database-design/er-model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/advanced-features-internals/storage-engines.md"
+                "file": "src/database-design/er-model.md"
               }
             }
           }
@@ -133,8 +133,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,21 +145,23 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "32eed9fd87caf1ac",
+  "active": "7d5f7d875368830e",
   "lastOpenFiles": [
-    "src/SUMMARY.md",
-    "src/basics/creating-modifying-deleting-databases-tables.md",
-    "src/advanced-features-internals/index-why.md",
+    "book/new-technologies-future",
     "book/base",
     "book/appendix",
     "book/elasticlunr.min.js",
-    "book/ayu-highlight.css",
+    "book/mark.min.js",
+    "book/searcher.js",
+    "book/searchindex.js",
+    "book/searchindex.json",
     "book/404.html",
-    "book/basics/nosql-sql-mysql,m",
-    "book/basics/nosql-sql-mysql,",
-    "book/basics/nosql-sql",
-    "book/basics/nosq",
-    "book/advanced-features-internals/index_",
+    "book/advanced-features-internals/data-pages-rows.html",
+    "book/advanced-features-internals/deadlock-detection.html",
+    "src/SUMMARY.md",
+    "src/advanced-features-internals/storage-engines.md",
+    "src/basics/creating-modifying-deleting-databases-tables.md",
+    "src/advanced-features-internals/index-why.md",
     "src/advanced-features-internals/index-types.md",
     "src/advanced-features-internals/logs.md",
     "src/basics/data-types.md",
@@ -169,7 +170,6 @@
     "src/basics/what-is-mysql.md",
     "src/advanced-features-internals/data-pages-rows.md",
     "src/advanced-features-internals/Multi-Version-Concurrency-Control.md",
-    "src/advanced-features-internals/storage-engines.md",
     "src/tools-practice/e-commerce-system.md",
     "src/advanced-features-internals/index-and-locks.md",
     "src/advanced-features-internals/lock-optimization.md",
