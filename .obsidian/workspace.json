@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/advanced-features-internals/README.md",
+                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/advanced-features-internals/README.md",
+                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/advanced-features-internals/README.md",
+                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/advanced-features-internals/README.md"
+                "file": "src/advanced-sql-data-processing/stored-procedures-functions.md"
               }
             }
           }
@@ -148,24 +148,28 @@
   },
   "active": "32eed9fd87caf1ac",
   "lastOpenFiles": [
-    "src/SUMMARY.md",
-    "src/advanced-sql-data-processing/README.md",
+    "book/404.html",
     "book/base",
     "book/appendix",
     "book/elasticlunr.min.js",
-    "book/404.html",
-    "src/database-design/README.md",
-    "src/basics/README.md",
     "book/new-technologies-future",
     "book/mark.min.js",
     "book/searcher.js",
     "book/searchindex.js",
     "book/searchindex.json",
+    "src/SUMMARY.md",
+    "src/database-design/partitioning-sharding.md",
+    "src/database-design/physical-design.md",
+    "src/database-design/overview.md",
+    "src/advanced-features-internals/README.md",
+    "book/css/chrome.css",
+    "book/css/general.css",
+    "src/advanced-sql-data-processing/README.md",
+    "src/database-design/README.md",
+    "src/basics/README.md",
     "src/tools-practice/README.md",
     "src/performance-tuning/README.md",
-    "book/ayu-highlight.css",
     "src/architecture-deployment/README.md",
-    "src/advanced-features-internals/README.md",
     "src/basics/sql-basics.md",
     "src/tools-practice/log-processing-analysis.md",
     "src/tools-practice/social-network-system.md",
@@ -182,9 +186,6 @@
     "book/favicon.png",
     "book/FontAwesome/fonts/fontawesome-webfont.svg",
     "book/favicon.svg",
-    "src/performance-tuning/system-tuning.md",
-    "src/performance-tuning/query-rewriting-optimization.md",
-    "src/performance-tuning/slow-query-log.md",
-    "src/performance-tuning/explain.md"
+    "src/performance-tuning/system-tuning.md"
   ]
 }
