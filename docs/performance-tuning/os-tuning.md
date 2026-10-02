@@ -20,7 +20,7 @@
 
 ##### 2.1 **磁盘 I/O 调优**
 
-- **I/O 调度器**：选择合适的 I/O 调度器（如 `noop`、`deadline` 或 `cfq`）可以优化磁盘 I/O 性能。对于 SSD，通常推荐使用 `noop` 调度器，而对于机械硬盘，`deadline` 或 `cfq` 可能更合适。
+- **I/O 调度器**：选择合适的块设备 I/O 调度器可以优化磁盘 I/O 性能。对于 SSD/NVMe 通常推荐 `none` 或 `mq-deadline`，机械硬盘可用 `mq-deadline` 或 `bfq`。注意 `noop`、`deadline`、`cfq` 是老内核（blk 调度框架）下的名称，`cfq` 已在 Linux 4.20 起被移除，现代内核（多队列 blk-mq）使用 `none`、`mq-deadline`、`kyber`、`bfq`。可用 `cat /sys/block/<设备>/queue/scheduler` 查看和切换。
 
 - **文件系统**：选择高性能的文件系统（如 XFS、ZFS 或 ext4）可以提高磁盘 I/O 性能。配置文件系统时，可以根据实际应用需求调整相关参数（如日志模式、块大小等）。
 

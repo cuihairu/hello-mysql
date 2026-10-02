@@ -72,6 +72,8 @@ WHERE column_name NOT BETWEEN value1 AND value2;
 #### 注意事项
 
 - **范围边界**：`BETWEEN` 和 `NOT BETWEEN` 是包含边界的，即 `BETWEEN value1 AND value2` 包括 `value1` 和 `value2`。如果需要排除边界值，则需要使用其他条件，如 `>` 和 `<`。
+
+- **日期时间类型的边界**：如果列的类型是 `DATETIME`/`TIMESTAMP`，`order_date BETWEEN '2023-01-01' AND '2023-12-31'` 只会匹配到 `2023-12-31 00:00:00` 及之前的时间，**会漏掉 12 月 31 日当天的数据**。此时应改写为 `order_date >= '2023-01-01' AND order_date < '2024-01-01'`。
   
 - **数据类型一致性**：确保 `BETWEEN` 和 `NOT BETWEEN` 中的值与列的数据类型一致。如果数据类型不匹配，可能会导致查询错误或性能问题。
 

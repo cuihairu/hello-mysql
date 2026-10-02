@@ -20,19 +20,9 @@
   key_buffer_size = 512M
 ```
 
-##### 1.3 **查询缓存**
+##### 1.3 **查询缓存（MySQL 8.0 已移除）**
 
-- **`query_cache_size`**：设置查询缓存的大小。注意：从 MySQL 8.0 开始，查询缓存已被弃用，建议将其设置为 0。对于早期版本，适当调整可以提高性能。
-
-```ini
-  query_cache_size = 0
-```
-
-- **`query_cache_type`**：设置查询缓存的启用类型。建议在大多数情况下禁用查询缓存，以避免可能的性能开销。
-
-```ini
-  query_cache_type = 0
-```
+MySQL 8.0 **移除**了查询缓存，不再提供 `query_cache_size`、`query_cache_type` 这两个变量（不是“建议设为 0”，而是根本不存在），在 8.0 的 `my.cnf` 中写入它们会导致服务器启动时报 `unknown variable` 错误。请把原本的查询缓存配置从配置文件中删除；重复查询的结果缓存改由应用层的 Redis、Memcached 等承担。
 
 ##### 1.4 **连接和线程**
 
@@ -46,6 +36,13 @@
 
 ```ini
   thread_cache_size = 50
+```
+
+- **`thread_handling`**：线程与连接的对应方式，取值为 `one-thread-per-connection`（默认，每个连接一个线程）、`no-threads`（禁止使用线程，仅用于调试）或 `loaded-dynamically`（由动态加载的线程池插件接管线程处理）。MySQL Enterprise 的线程池（Thread Pool）插件加载后会将其设置为 `loaded-dynamically`，在大量短连接场景下能显著减少线程开销和上下文切换。
+
+```ini
+  # 社区版默认值
+  thread_handling = one-thread-per-connection
 ```
 
 #### 2. **日志相关参数**
@@ -72,7 +69,7 @@
 
 ##### 3.1 **InnoDB 日志**
 
-- **`innodb_log_file_size`**：设置 InnoDB 日志文件的大小。增大日志文件可以减少磁盘 I/O 操作，但需要与 `innodb_log_buffer_size` 配合调整。
+- **`innodb_log_file_size`**：设置 InnoDB 每个重做日志文件的大小。增大日志文件可以减少磁盘 I/O 操作，但需要与 `innodb_log_buffer_size` 配合调整。注意：MySQL 8.0.30 起该变量被弃用，统一由 `innodb_redo_log_capacity`（默认 104857600，即 100 MB）控制重做日志总容量，新部署应使用后者。
 
 ```ini
   innodb_log_file_size = 256M
@@ -102,7 +99,7 @@
 
 ##### 4.1 **临时表**
 
-- **`tmp_table_size`** 和 **`max_heap_table_size`**：设置临时表的大小，增大这些值可以减少内存中的临时表使用，降低磁盘 I/O。
+- **`tmp_table_size`** 和 **`max_heap_table_size`**：设置内存中内部临时表的大小上限。二者取较小值生效，超过该上限的内存临时表会被转换为磁盘临时表；适当增大它们可以减少临时表落盘，降低磁盘 I/O。
 
 ```ini
   tmp_table_size = 64M

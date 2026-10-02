@@ -17,8 +17,8 @@ MySQL提供了多种内置工具和命令，用于监控数据库的运行状态
 - **Com_insert**：执行的INSERT语句的数量。
 - **Com_update**：执行的UPDATE语句的数量。
 - **Com_delete**：执行的DELETE语句的数量。
-- **Innodb_buffer_pool_read_requests**：InnoDB缓冲池的读请求数量。
-- **Innodb_buffer_pool_reads**：从磁盘读取到InnoDB缓冲池的数据页的数量。
+- **Innodb_buffer_pool_read_requests**：InnoDB缓冲池的逻辑读次数（命中缓冲池的读请求）。
+- **Innodb_buffer_pool_reads**：无法从缓冲池满足、直接从磁盘读取数据页的次数。两者可以估算缓冲池命中率：`1 - Innodb_buffer_pool_reads / Innodb_buffer_pool_read_requests`。
 
 ##### **示例用法**
 
@@ -46,7 +46,7 @@ SHOW STATUS LIKE 'Connections';
 - **db**：线程当前操作的数据库。
 - **Command**：线程执行的命令类型，如 `Query`、`Sleep`、`Connect`。
 - **Time**：线程当前状态下已经持续的时间（以秒为单位）。
-- **State**：线程的当前状态，例如 `Locked`、`Sending data`、`Sorting result`。
+- **State**：线程的当前状态，例如 `Waiting for table metadata lock`（等待元数据锁）、`Sorting result`（排序中）、`Sending data`；8.0.17 起，SQL 执行阶段的状态也可能显示为 `executing`。通过状态可以判断线程是否在等待锁、磁盘 I/O 或排序。
 - **Info**：正在执行的查询语句（如果有）。
 
 ##### **示例用法**
@@ -65,11 +65,19 @@ SHOW FULL PROCESSLIST;
 
 ##### **筛选特定线程**
 
-```sql
-SHOW PROCESSLIST WHERE Command = 'Query';
-```
+`SHOW PROCESSLIST` 不支持 `WHERE` 子句，需要筛选时应查询 `information_schema.processlist` 或 `performance_schema.threads`：
 
-此命令仅显示当前正在执行查询的线程信息。
+```sql
+-- 只查看正在执行查询的线程
+SELECT * FROM information_schema.processlist WHERE command = 'Query';
+
+-- 更完整的信息（含线程内部 ID、事务/锁等关联数据）
+SELECT thread_id, processlist_user, processlist_host,
+       processlist_db, processlist_command, processlist_time,
+       processlist_state, processlist_info
+FROM performance_schema.threads
+WHERE processlist_command = 'Query';
+```
 
 #### **总结**
 

@@ -20,10 +20,10 @@ Percona Toolkit 是一个开源的数据库工具集，提供了一系列用于M
   pt-online-schema-change --alter "ADD COLUMN new_column INT" D=mydatabase,t=mytable --execute
   ```
 
-- **`pt-table-checksum`**：用于比较主从数据库中的表数据，以验证主从数据一致性。这有助于检测复制延迟或数据不一致的问题。
+- **`pt-table-checksum`**：用于比较主从数据库中的表数据，以验证主从数据一致性。它没有 `--execute` 选项（指定参数后即会执行，可用 `--explain` 只打印将要运行的校验语句），结果默认写入源库的 `percona.checksums` 表。
   
   ```bash
-  pt-table-checksum --execute --databases mydatabase
+  pt-table-checksum --databases mydatabase h=localhost,u=root,p=xxxx
   ```
 
 - **`pt-table-sync`**：用于同步主从数据库或不同数据库之间的数据，解决数据一致性问题。
@@ -32,10 +32,10 @@ Percona Toolkit 是一个开源的数据库工具集，提供了一系列用于M
   pt-table-sync --execute h=master_db,D=mydatabase,t=mytable h=slave_db,D=mydatabase,t=mytable
   ```
 
-- **`pt-duplicate-key-checker`**：检查表中是否存在重复的唯一键或主键值，这有助于识别和修复数据重复的问题。
+- **`pt-duplicate-key-checker`**：检查表中是否存在重复的索引（冗余索引），这有助于识别并清理无用的重复索引。该工具只输出检查结果和建议的 `DROP KEY` 语句，本身没有 `--execute` 选项，不会直接修改表结构。
 
   ```bash
-  pt-duplicate-key-checker --execute --databases mydatabase --tables mytable
+  pt-duplicate-key-checker --databases mydatabase --tables mytable h=localhost,u=root,p=xxxx
   ```
 
 ##### **安装**

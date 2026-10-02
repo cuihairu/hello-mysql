@@ -71,16 +71,17 @@ COMMIT;
 **示例**：
 ```sql
 BEGIN;
-SELECT * FROM accounts WHERE balance BETWEEN 1000 AND 2000;
--- 间隙锁定
+-- 加锁读（当前读）会对扫描到的记录及间隙加临键锁/间隙锁
+SELECT * FROM accounts WHERE balance BETWEEN 1000 AND 2000 FOR UPDATE;
 COMMIT;
 ```
+注意：普通的 `SELECT`（快照读）基于 MVCC 读取一致性视图，并不会加间隙锁；只有加锁读（`SELECT ... FOR UPDATE` / `FOR SHARE`）以及 `UPDATE`、`DELETE` 这类当前读操作才会使用间隙锁。
 
 #### 5. 共享锁与排他锁（Shared Lock and Exclusive Lock）
 
 **定义**：
 - **共享锁（Shared Lock）**：允许其他事务读取数据，但不允许写入。多个事务可以同时持有共享锁。
-- **排他锁（Exclusive Lock）**：阻止其他事务读取或写入数据。只有一个事务可以持有排他锁。
+- **排他锁（Exclusive Lock）**：其他事务不能再对该数据加锁或修改，只有一个事务可以持有排他锁。注意在 InnoDB 中，普通的一致性非锁定读（快照读）不会被 X 锁阻塞，仍可读取快照数据。
 
 **特点**：
 - **共享锁**：适用于只读操作，确保读取的数据在事务期间不会被修改。

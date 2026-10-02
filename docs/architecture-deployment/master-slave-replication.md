@@ -18,10 +18,10 @@
    - 主服务器在执行写操作时，会将这些操作记录到二进制日志（Binary Log）中。
 
 2. **日志传输**：
-   - 从服务器定期向主服务器请求更新的二进制日志，并将其下载到本地。
+   - 从服务器（副本）上的复制 I/O 线程与主服务器建立一条长连接，主服务器的 Binlog Dump 线程在二进制日志事件产生后持续推送给从服务器，从服务器将其写入本地的中继日志（Relay Log）。
 
 3. **日志应用**：
-   - 从服务器将下载的二进制日志应用到本地数据库，使其与主服务器的数据保持同步。
+   - 从服务器上的 SQL（Applier）线程读取中继日志并重放其中的事务，使其与主服务器的数据保持同步。
 
 4. **数据同步**：
    - 从服务器的数据库状态与主服务器保持一致，确保读操作获取的数据是最新的。
@@ -52,21 +52,79 @@
 
 配置主从复制通常涉及以下步骤：
 
-1. **配置主服务器**：
-   - 启用二进制日志功能。
-   - 设置服务器ID（唯一标识）。
-   - 创建一个复制专用的用户并授权。
+1. **配置主服务器**（`my.cnf`）：
+
+   ```ini
+   [mysqld]
+   server_id = 1
+   log_bin = mysql-bin
+   # 推荐启用 GTID，便于主从切换与故障转移
+   gtid_mode = ON
+   enforce_gtid_consistency = ON
+   ```
+
+   并创建复制专用账号并授权：
+
+   ```sql
+   CREATE USER 'repl'@'192.168.1.%' IDENTIFIED BY 'Repl@123456';
+   GRANT REPLICATION SLAVE ON *.* TO 'repl'@'192.168.1.%';
+   ```
 
 2. **配置从服务器**：
-   - 设置从服务器的服务器ID。
-   - 指定主服务器的连接信息（主机、端口、用户、密码）。
-   - 启动复制进程并同步数据。
+
+   ```ini
+   [mysqld]
+   server_id = 2
+   relay_log = relay-bin
+   read_only = ON
+   ```
+
+   在 8.0.23 及以后版本使用 `CHANGE REPLICATION SOURCE TO`（旧版本为 `CHANGE MASTER TO`，8.0 中仍可用）：
+
+   ```sql
+   CHANGE REPLICATION SOURCE TO
+     SOURCE_HOST = '192.168.1.10',
+     SOURCE_PORT = 3306,
+     SOURCE_USER = 'repl',
+     SOURCE_PASSWORD = 'Repl@123456',
+     SOURCE_AUTO_POSITION = 1;
+   START REPLICA;   -- 旧版本为 START SLAVE
+   ```
 
 3. **检查和监控**：
-   - 定期检查主从服务器的同步状态和复制进程的健康状况。
+   - 定期检查主从服务器的同步状态和复制进程的健康状况：
+
+     ```sql
+     SHOW REPLICA STATUS\G
+     -- 重点关注 Replica_IO_Running、Replica_SQL_Running、Seconds_Behind_Source
+     -- （旧版本列名为 Slave_IO_Running、Slave_SQL_Running、Seconds_Behind_Master）
+     ```
+
    - 监控延迟和性能问题，确保系统正常运行。
 
-#### 6. **常见问题及解决方案**
+#### 6. **复制模式：异步复制与半同步复制**
+
+MySQL 默认使用异步复制：源库提交事务后不会等待从库确认，主库宕机时可能丢失尚未传送到从库的事务。
+
+半同步复制（Semi-Synchronous Replication）要求源库在提交时至少等待一个从库把事务写入其中继日志并确认，可显著降低故障切换时丢数据的风险。MySQL 8.0.26 及以后版本的插件与变量命名如下（旧版本为 `rpl_semi_sync_master_*` / `rpl_semi_sync_slave_*`）：
+
+```sql
+-- 源库
+INSTALL PLUGIN rpl_semi_sync_source SONAME 'semisync_source.so';
+SET GLOBAL rpl_semi_sync_source_enabled = 1;
+
+-- 从库
+INSTALL PLUGIN rpl_semi_sync_replica SONAME 'semisync_replica.so';
+SET GLOBAL rpl_semi_sync_replica_enabled = 1;
+```
+
+常用参数：
+
+- `rpl_semi_sync_source_wait_for_replica_count`（旧名 `rpl_semi_sync_master_wait_for_slave_count`）：需要等待确认的从库数量，默认为 1。
+- `rpl_semi_sync_source_timeout`（旧名 `rpl_semi_sync_master_timeout`）：等待确认的超时时间，默认 10000 毫秒；超时后半同步会自动退化为异步复制，避免阻塞主库。
+- `rpl_semi_sync_source_wait_point`（旧名 `rpl_semi_sync_master_wait_point`）：`AFTER_SYNC`（默认，源库先写 binlog、等从库确认后再提交，即“无损半同步”）或 `AFTER_COMMIT`。
+
+#### 7. **常见问题及解决方案**
 
 - **延迟问题**：
   - 调整从服务器的复制设置，优化网络和磁盘性能，减少延迟。

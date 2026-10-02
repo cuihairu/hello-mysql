@@ -6,6 +6,8 @@ MySQL Cluster 是一种高可用、可扩展的数据库解决方案，它通过
 
 MySQL Cluster 是基于 NDB（Network DataBase）存储引擎的，提供了分布式数据库的功能。它适用于需要高可用性、实时数据访问和大规模数据处理的应用场景，如电信、金融服务和在线交易处理（OLTP）系统。
 
+> 注意：常规的 MySQL Community Server 发行版并不包含 NDB 存储引擎，需要使用专门的 NDB Cluster（MySQL Cluster）发行版；它与普通的 MySQL 8.0 服务器是两种不同的产品形态。
+
 #### 2. **架构组成**
 
 MySQL Cluster 的架构主要包括以下组件：

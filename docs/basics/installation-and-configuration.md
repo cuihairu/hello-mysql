@@ -21,9 +21,8 @@
 
 3. **配置MySQL**：
    - 编辑 `/etc/mysql/my.cnf` 文件进行基本配置。
-   - 设置 root 密码并创建数据库用户：
+   - 设置 root 密码并创建数据库用户。先使用 `sudo mysql` 连接到服务器，再执行以下语句：
      ```sql
-     sudo mysql
      ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'your_password';
      CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
      GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
@@ -41,9 +40,9 @@
    - 配置 root 用户密码，选择默认字符集。
 
 3. **启动MySQL服务**：
-   - 打开命令提示符，输入以下命令启动 MySQL 服务：
+   - 打开命令提示符，输入以下命令启动 MySQL 服务（使用安装向导安装时，Windows 服务名默认为 `MySQL80`；如果安装时自定义了服务名，请替换为实际的服务名）：
      ```cmd
-     net start mysql
+     net start MySQL80
      ```
 
 #### 在macOS上安装MySQL
@@ -56,10 +55,8 @@
    ```
 
 2. **配置MySQL**：
-   - 设置 root 密码并创建数据库用户：
+   - 设置 root 密码并创建数据库用户。先运行 `mysql_secure_installation`，再使用 `mysql -u root -p` 连接到服务器，然后执行以下语句：
      ```sql
-     mysql_secure_installation
-     mysql -u root -p
      ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'your_password';
      CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
      GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;

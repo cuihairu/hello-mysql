@@ -26,14 +26,15 @@ DELIMITER //
 
 CREATE PROCEDURE process_employees()
 BEGIN
-    -- 声明游标
-    DECLARE emp_cursor CURSOR FOR SELECT id, salary FROM employees;
-
-    -- 声明变量来存储游标中的数据
+    -- 声明变量来存储游标中的数据（变量必须声明在游标之前）
+    DECLARE done BOOLEAN DEFAULT FALSE;
     DECLARE emp_id INT;
     DECLARE emp_salary DECIMAL(10,2);
 
-    -- 声明游标完成标志
+    -- 声明游标
+    DECLARE emp_cursor CURSOR FOR SELECT id, salary FROM employees;
+
+    -- 声明游标完成标志（HANDLER 必须声明在游标之后）
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
     -- 打开游标
@@ -60,7 +61,7 @@ END //
 DELIMITER ;
 ```
 
-在上述示例中，我们创建了一个名为`process_employees`的存储过程，使用游标`emp_cursor`遍历`employees`表中的所有员工记录，并对每个员工的工资进行处理。我们在存储过程中声明了一个游标，打开它，逐行提取数据并处理，最后关闭游标。
+在上述示例中，我们创建了一个名为`process_employees`的存储过程，使用游标`emp_cursor`遍历`employees`表中的所有员工记录，并对每个员工的工资进行处理。注意声明顺序有严格要求：先声明变量，再声明游标，最后声明 `HANDLER`；`done` 变量用于配合 `NOT FOUND` 处理器判断游标是否已经读取完所有数据。存储过程中先打开游标，再逐行提取数据并处理，最后关闭游标。
 
 #### 3. 游标的使用场景
 

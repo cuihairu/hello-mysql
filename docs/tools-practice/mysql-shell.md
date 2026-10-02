@@ -22,8 +22,7 @@ MySQL Shell 是一个强大的命令行工具，提供了 MySQL 数据库的交�
    - **数据分析**：通过脚本和编程语言进行数据分析和处理，支持复杂的数据操作。
 
 5. **自动化脚本**
-   - **脚本执行**：可以编写和执行自动化脚本，进行定期的数据库维护和管理任务。
-   - **任务调度**：支持创建和调度数据库任务，自动执行预定的操作。
+   - **脚本执行**：可以编写和执行自动化脚本，进行定期的数据库维护和管理任务，例如 `mysqlsh --file /path/to/job.js`；定时执行可结合操作系统的 `cron`/`systemd timer` 实现（MySQL Shell 本身没有内置任务调度器，服务器端的定时任务则由 MySQL 的事件调度器 Event Scheduler 承担）。
 
 6. **JSON 和 NoSQL 支持**
    - **JSON 数据处理**：支持处理 JSON 格式的数据，适合与现代应用程序的数据交互。
@@ -62,12 +61,35 @@ MySQL Shell 是一个强大的命令行工具，提供了 MySQL 数据库的交�
    - JavaScript 模式：`\js`
    - Python 模式：`\py`
 
-4. **执行命令和脚本**：
+4. **执行命令和脚本**（示例中的 `db` 是通过 `\use 数据库名` 绑定的默认 Schema）：
    - 在 SQL 模式下执行 SQL 语句，例如：`SELECT * FROM my_table;`
-   - 在 JavaScript 模式下编写和执行 JavaScript 脚本，例如：`db.myCollection.find().toArray();`
-   - 在 Python 模式下编写和执行 Python 脚本，例如：`for row in db.my_table.find(): print(row)`
+   - 在 JavaScript 模式下查询集合中的文档，例如：`db.myCollection.find().limit(3)`；在脚本中需要拿到结果时使用 `db.myCollection.find().limit(3).fetchAll()`（`DocResult` 的方法，注意 `toArray()` 是 MongoDB Shell 的写法，X DevAPI 中并不存在）。
+   - 在 Python 模式下查询关系表，例如：`db.my_table.select().limit(3)`；查询集合则用 `db.myCollection.find().limit(3)`（关系表用 `select()`，集合才用 `find()`）。
+   - 结果对象统一通过 `fetchAll()`（Python 为 `fetch_all()`）或 `fetchOne()` 消费。
 
 5. **管理数据库**：
    - 使用 SQL 语句或脚本进行数据库管理、数据处理和自动化任务。
+
+#### **备份、升级检查等实用工具函数**
+
+MySQL Shell 内置了一组 `util.*` 工具函数，是它相比普通客户端最大的实用价值：
+
+```javascript
+// 检查实例能否平滑升级到指定版本，并给出需要修改的项
+util.checkForServerUpgrade()
+
+// 并行逻辑备份整个实例（输出为压缩分片文件，支持多线程恢复）
+util.dumpInstance("/data/backup/inst_dump", {threads: 4, compress: true})
+
+// 只备份部分 Schema / 单表
+util.dumpSchemas(["mydb"], "/data/backup/mydb_dump", {threads: 4})
+util.exportTable("mydb.orders", "/data/backup/orders.csv", {format: "csv"})
+
+// 并行恢复 dumpInstance/dumpSchemas 的备份
+util.loadDump("/data/backup/inst_dump", {threads: 4})
+```
+
+- `util.dumpInstance()` / `util.loadDump()` 在 8.0 中引入，配合多线程与压缩，通常比 `mysqldump` 快得多，是 MySQL 官方推荐的逻辑备份方式。
+- `util.checkForServerUpgrade()` 会在升级前检查废弃配置项、保留字冲突、不兼容的 SQL 用法等，升级前务必先跑一遍。
 
 MySQL Shell 提供了一个灵活和强大的环境，适合各种数据库操作需求，无论是开发、管理还是数据分析。

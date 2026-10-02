@@ -40,7 +40,7 @@ FROM products;
 
 #### 3. `LENGTH()` 或 `CHAR_LENGTH()`
 
-**功能**: 返回字符串的长度（以字符为单位）。
+**功能**: 返回字符串的长度。注意二者的区别：`LENGTH()` 返回字符串的**字节数**（受字符集影响，如 UTF-8 中一个汉字占 3 个字节）；`CHAR_LENGTH()` 返回字符串的**字符数**。
 
 **语法**:
 ```sql
@@ -53,10 +53,11 @@ CHAR_LENGTH(string)
 
 **示例**:
 ```sql
-SELECT LENGTH(product_name) AS name_length
+SELECT LENGTH(product_name) AS name_bytes,
+       CHAR_LENGTH(product_name) AS name_chars
 FROM products;
 ```
-*此查询返回 `product_name` 的字符长度。*
+*此查询分别返回 `product_name` 的字节长度和字符长度。对于纯 ASCII 字符串，两者结果相同；包含中文等多字节字符时，`LENGTH()` 的结果会大于 `CHAR_LENGTH()`。*
 
 #### 4. `UPPER()`
 

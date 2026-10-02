@@ -107,7 +107,7 @@ FROM employees;
    - **函数**：必须返回一个值。函数只能返回一个单一的数据类型值。
 
 3. **调用方式**：
-   - **存储过程**：通过 `CALL` 或 `EXEC` 语句来调用。例如：
+   - **存储过程**：通过 `CALL` 语句来调用（MySQL 不支持 `EXEC`，那是 SQL Server 的语法）。例如：
     
 	```sql
     CALL procedure_name(parameters);
@@ -156,11 +156,13 @@ CALL AddEmployee('John Doe', 'Engineering');
 DELIMITER //
 CREATE FUNCTION CalculateBonus(salary DECIMAL(10,2), rate DECIMAL(5,2))
 RETURNS DECIMAL(10,2)
+DETERMINISTIC
 BEGIN
     RETURN salary * rate / 100;
 END //
 DELIMITER ;
 ```
+> 提示：在开启二进制日志的服务器上创建函数时，MySQL 要求函数声明为 `DETERMINISTIC`、`NO SQL` 或 `READS SQL DATA` 之一（否则会报 1418 错误），除非把 `log_bin_trust_function_creators` 设为 `ON`。
 调用函数：
 ```sql
 SELECT CalculateBonus(50000, 10);

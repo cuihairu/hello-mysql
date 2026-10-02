@@ -75,12 +75,14 @@
 - **注意事项**：不支持范围查询。
 - **底层实现**：基于哈希表（Hash Table）实现。
 - **选择原因**：哈希表具有 O(1) 的查找和插入时间复杂度，非常适合等值查询，但不支持范围查询。
-- **示例**（MySQL中通常用于Memory存储引擎）：
+- **示例**（MySQL 中仅 MEMORY 等支持 HASH 索引的引擎真正使用哈希索引）：
 
   ```sql
   CREATE INDEX idx_hash_column
   ON table_name (column_name) USING HASH;
   ```
+
+  注意：InnoDB 不支持手动创建哈希索引（其自适应哈希索引 AHI 由引擎自动创建与维护），对 InnoDB 表即使写上 `USING HASH`，实际建立的仍是 B+ 树索引。
 
 #### 7. **B-Tree索引（B-Tree Index）**
 
@@ -101,9 +103,10 @@
 - **适用场景**：通常用于数据仓库中的分析型查询。
 - **底层实现**：基于位图（Bitmap）实现。
 - **选择原因**：位图索引适合处理低基数列，通过位图操作可以快速进行逻辑运算，适用于数据仓库中的分析型查询。
-- **示例**（如Oracle数据库支持）：
+- **示例**（位图索引在 Oracle 等数据库中支持，**MySQL 不支持位图索引**）：
 
   ```sql
+  -- Oracle 语法示例，MySQL 中无法执行
   CREATE BITMAP INDEX idx_bitmap_column
   ON table_name (column_name);
   ```
@@ -114,11 +117,11 @@
 - **适用场景**：用于对某些模式的文本数据进行索引，如逆向地理位置信息。
 - **底层实现**：基于 B-Tree 或哈希表实现，但对键值进行反转处理。
 - **选择原因**：反转后的键值可以优化某些特定的查询模式，如逆向地理位置信息，有助于提高查询性能。
-- **示例**（通常在特定数据库系统中）：
+- **示例**：MySQL 不提供 `CREATE REVERSE INDEX` 这样的语法（该写法在 MySQL 中无法执行）。如需类似效果，可以先生成反转后的列再对该列建索引：
 
   ```sql
-  CREATE REVERSE INDEX idx_reverse_column
-  ON table_name (column_name);
+  ALTER TABLE table_name ADD COLUMN reversed_column VARCHAR(64) GENERATED ALWAYS AS (REVERSE(column_name)) STORED;
+  CREATE INDEX idx_reverse_column ON table_name (reversed_column);
   ```
 
 #### 10. **聚簇索引（Clustered Index）**
@@ -127,11 +130,17 @@
 - **适用场景**：适合于需要高效范围查询的表。
 - **底层实现**：基于 B+ Tree 实现，且数据表的物理存储顺序与索引顺序一致。
 - **选择原因**：聚簇索引使数据的物理顺序与索引顺序一致，减少了磁盘 I/O，提高了查询效率，特别适用于范围查询。
-- **示例**（MySQL InnoDB存储引擎的默认索引类型）：
+- **示例**：InnoDB 的聚簇索引由表的主键决定，**MySQL 不支持 `CREATE CLUSTERED INDEX` 这样的语法**（该写法无法在 MySQL 中执行）。InnoDB 中的聚簇索引是隐式创建的：
 
   ```sql
-  CREATE CLUSTERED INDEX idx_clustered_column
-  ON table_name (column_name);
+  -- 主键即聚簇索引，叶子节点存储完整数据行
+  CREATE TABLE table_name (
+      id INT PRIMARY KEY,
+      column_name VARCHAR(64)
+  );
+
+  -- 若表没有主键，InnoDB 会优先选择第一个非空唯一索引作为聚簇索引；
+  -- 若两者都没有，则会自动生成隐藏列 DB_ROW_ID 建立聚簇索引
   ```
 
 ### 总结

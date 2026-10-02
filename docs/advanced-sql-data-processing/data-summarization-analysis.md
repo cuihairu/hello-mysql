@@ -55,7 +55,7 @@ HAVING AVG(salary) > 50000;
 
 #### 3. 组合查询（UNION, INTERSECT, EXCEPT）
 
-组合查询用于将多个查询的结果合并在一起。常用的组合查询操作包括：
+组合查询用于将多个查询的结果合并在一起（`INTERSECT` 和 `EXCEPT` 自 MySQL 8.0.31 起被原生支持）。常用的组合查询操作包括：
 
 - **UNION**：合并两个或更多查询的结果集，去除重复的记录。
 - **INTERSECT**：返回两个查询结果集的交集，即两个结果集中都存在的记录。
@@ -85,7 +85,7 @@ SQL函数用于对数据进行操作和转换，包括字符串处理、数学�
 
 - **字符串函数**：`CONCAT`、`SUBSTRING`、`LENGTH`、`REPLACE`
 - **数学函数**：`ROUND`、`FLOOR`、`CEIL`、`RAND`
-- **日期和时间函数**：`NOW`、`DATEADD`、`DATEDIFF`、`YEAR`
+- **日期和时间函数**：`NOW`、`DATE_ADD`、`DATEDIFF`、`YEAR`（MySQL 没有 `DATEADD` 函数，日期加减使用 `DATE_ADD(date, INTERVAL n unit)`）
 - **条件判断函数**：`IF`、`CASE`
 
 **示例**：

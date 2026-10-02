@@ -56,7 +56,7 @@
 
 - **[日期和时间函数](date-time-functions.md)**
 
-  介绍SQL中的日期和时间函数，如NOW、DATEADD、DATEDIFF等，用于处理时间相关的数据。
+  介绍SQL中的日期和时间函数，如NOW、DATE_ADD、DATEDIFF等，用于处理时间相关的数据。
 
 - **[条件判断函数（IF, CASE）](conditional-functions.md)**
 

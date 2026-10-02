@@ -74,7 +74,7 @@ CREATE TABLE Customers (
 ```sql
 CREATE TABLE Orders (
     OrderID INT NOT NULL AUTO_INCREMENT,
-    OrderDate DATE NOT NULL DEFAULT CURRENT_DATE,
+    OrderDate DATE NOT NULL DEFAULT (CURRENT_DATE),
     CustomerID INT NOT NULL,
     TotalAmount DECIMAL(10, 2) CHECK (TotalAmount >= 0),
     PRIMARY KEY (OrderID),
@@ -117,13 +117,15 @@ CREATE INDEX idx_order_date ON Orders (OrderDate);
 - **数据格式验证**：确保字段值符合特定格式，例如电子邮件地址或电话号码。
 - **范围限制**：限制字段值在指定范围内，例如年龄或价格。
 
+注意：`CHECK` 约束的表达式只能使用确定性的内置函数，`CURDATE()`、`NOW()` 这类非确定性函数不能出现在 `CHECK` 中，因此“出生日期不能晚于今天”这类动态规则需要在应用层或触发器中实现。
+
 **示例**：
 ```sql
 CREATE TABLE Employees (
     EmployeeID INT NOT NULL AUTO_INCREMENT,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
-    BirthDate DATE CHECK (BirthDate <= CURDATE()),
+    BirthDate DATE CHECK (BirthDate >= '1900-01-01'),
     Salary DECIMAL(10, 2) CHECK (Salary >= 0),
     PRIMARY KEY (EmployeeID)
 );

@@ -34,6 +34,7 @@ EXPLAIN SELECT * FROM employees WHERE department_id = 1;
 - **`key_len`**：使用的索引长度。
 - **`ref`**：列与索引的匹配方式。例如 `const` 表示常量。
 - **`rows`**：估算的扫描行数。
+- **`filtered`**：经过 `WHERE` 条件过滤后剩余行的百分比估算（8.0 输出还包含 `partitions` 列，表示命中的分区）。
 - **`Extra`**：额外信息。例如是否使用了文件排序（`Using filesort`）或临时表（`Using temporary`）。
 
 #### 3. **示例分析**
@@ -48,18 +49,18 @@ EXPLAIN SELECT first_name, last_name FROM employees WHERE department_id = 1;
 
 | id | select_type | table     | type  | possible_keys   | key              | key_len | ref              | rows | Extra       |
 |----|-------------|-----------|-------|-----------------|------------------|---------|------------------|------|-------------|
-| 1  | SIMPLE      | employees | index | department_idx  | department_idx   | 4       | NULL             | 100  | Using where |
+| 1  | SIMPLE      | employees | ref   | department_idx  | department_idx   | 5       | const            | 100  | NULL        |
 
 - **`id`**：1，表示这是一个简单查询。
 - **`select_type`**：SIMPLE，表示这是一个简单查询，没有子查询。
 - **`table`**：employees，表示查询访问了 `employees` 表。
-- **`type`**：index，表示使用了索引扫描。
+- **`type`**：ref，表示通过索引进行等值匹配，性能较好。
 - **`possible_keys`**：department_idx，表示 `department_idx` 是可能使用的索引。
 - **`key`**：department_idx，表示实际使用了 `department_idx` 索引。
-- **`key_len`**：4，表示索引长度为4字节。
-- **`ref`**：NULL，表示没有列与索引匹配。
+- **`key_len`**：5，表示索引长度为5字节（`INT` 占 4 字节，列允许 `NULL` 时额外 1 字节）。
+- **`ref`**：const，表示与索引比较的是一个常量值（即 `WHERE department_id = 1`）。
 - **`rows`**：100，表示估算需要扫描100行。
-- **`Extra`**：Using where，表示使用了 `WHERE` 子句来过滤数据。
+- **`Extra`**：NULL，表示没有需要额外提示的执行动作。
 
 #### 4. **优化建议**
 
@@ -83,6 +84,29 @@ WHERE d.location = 'New York';
 
 通过 `EXPLAIN` 分析输出，可以更好地理解查询的执行流程，识别性能瓶颈，并据此优化查询。
 
-#### 6. **总结**
+#### 6. **EXPLAIN 的输出格式与 EXPLAIN ANALYZE**
+
+- **`FORMAT=TRADITIONAL`**：默认的表格式输出，即上文介绍的形式。
+- **`FORMAT=JSON`**：JSON 格式输出，包含成本估算（`cost_info`）等更详细的信息。
+- **`FORMAT=TREE`**（8.0.16 起）：以树形结构展示执行计划，能直观看出各算子的嵌套关系，优化器多选一的场景（如哈希连接、窗口函数、物化）会显示具体算法。
+
+`EXPLAIN ANALYZE`（MySQL 8.0.18 引入）会**真实执行**语句，并在 `FORMAT=TREE` 的执行计划上叠加实际的耗时和行数，用来验证“估算值”与“实际值”的偏差：
+
+```sql
+EXPLAIN ANALYZE
+SELECT * FROM employees WHERE department_id = 1;
+```
+
+输出采用缩进树形结构，每一行都包含三类信息：
+
+- **估算值**：`cost=`（优化器估算成本）与 `rows=`（估算行数）；
+- **实际值**：`actual time=...`（单位毫秒，两个值分别为取到第一行和取到全部行的实际耗时）与 `rows=... loops=...`（每次循环实际返回的行数与循环执行次数）；
+- **算子与访问方式**：如 `Index lookup on employees using department_idx`、`Filter: ...`、`Table scan on ...`。
+
+分析要点：某算子的 `actual time` 远大于估算值，通常说明统计信息过期（可用 `ANALYZE TABLE` 更新）或缺少合适的索引；`loops` 很大而单次耗时很小的算子，需要关注它是否在循环中被反复执行。注意 `EXPLAIN ANALYZE` 会执行语句本身，对 `UPDATE`/`DELETE` 等写语句慎用。
+
+此外，`EXPLAIN FOR CONNECTION <线程ID>`（需有相应权限）可以查看另一个会话中正在执行的语句的执行计划，常用于排查正在运行的长查询。
+
+#### 7. **总结**
 
 `EXPLAIN` 是一个强大的工具，用于分析 SQL 查询的执行计划。通过理解 `EXPLAIN` 的输出，可以识别性能问题，优化查询，并提高数据库的整体性能。

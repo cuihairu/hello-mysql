@@ -170,10 +170,15 @@
   ```
 
 - **全连接（FULL JOIN）**
+  MySQL 不支持 `FULL JOIN`（`FULL OUTER JOIN`）语法，如需实现全外连接的效果，可以用 `LEFT JOIN` 与 `RIGHT JOIN` 配合 `UNION` 来模拟：
   ```sql
   SELECT table1.column1, table2.column2
   FROM table1
-  FULL JOIN table2 ON table1.common_column = table2.common_column;
+  LEFT JOIN table2 ON table1.common_column = table2.common_column
+  UNION
+  SELECT table1.column1, table2.column2
+  FROM table1
+  RIGHT JOIN table2 ON table1.common_column = table2.common_column;
   ```
 
 了解和掌握这些基本的 `SELECT` 查询语句可以帮助你有效地从 MySQL 数据库中检索和处理数据。

@@ -58,7 +58,7 @@
 - **避免不小心删除所有数据**
   确保在执行 `DELETE` 操作时，`WHERE` 子句条件正确，防止意外删除整个表的数据。例如：
   ```sql
-  DELETE FROM employees; -- 确认条件是否正确
+  DELETE FROM employees; -- 危险：没有 WHERE 子句，会删除表中所有行
   ```
 
 - **使用事务处理**

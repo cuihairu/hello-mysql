@@ -93,6 +93,7 @@ CREATE TABLE OrderDetails (
 - **UNIQUE**：确保字段值在表中唯一。
 - **DEFAULT**：为字段设置默认值。
 - **CHECK**：用于定义字段值必须符合特定条件（MySQL 8.0.16 及以上版本支持）。
+- **表达式默认值**：默认值可以是表达式，但必须写在一对括号中（如 `DEFAULT (CURRENT_DATE)`，MySQL 8.0.13 及以上版本支持）。
 
 **示例**：
 ```sql
@@ -100,7 +101,7 @@ CREATE TABLE Customers (
     CustomerID INT NOT NULL AUTO_INCREMENT,
     CustomerName VARCHAR(100) NOT NULL,
     Email VARCHAR(100) UNIQUE,
-    JoinDate DATE DEFAULT CURRENT_DATE,
+    JoinDate DATE DEFAULT (CURRENT_DATE),
     PRIMARY KEY (CustomerID)
 );
 ```

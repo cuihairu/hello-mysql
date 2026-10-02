@@ -11,7 +11,7 @@
 - **INNER JOIN**：只返回两个表中匹配的记录。
 - **LEFT JOIN**（或LEFT OUTER JOIN）：返回左表中所有记录，即使右表中没有匹配的记录。
 - **RIGHT JOIN**（或RIGHT OUTER JOIN）：返回右表中所有记录，即使左表中没有匹配的记录。
-- **FULL JOIN**（或FULL OUTER JOIN）：返回两个表中所有记录，包括左表和右表中没有匹配的记录。
+- **FULL JOIN**（或FULL OUTER JOIN）：返回两个表中所有记录，包括左表和右表中没有匹配的记录。**注意：MySQL 不支持 `FULL JOIN` 语法**，可以用 `LEFT JOIN` 加 `UNION` 加 `RIGHT JOIN` 的方式模拟。
 - **CROSS JOIN**：返回两个表的笛卡尔积，即每个左表的记录与每个右表的记录配对。
 
 **示例**：
@@ -97,6 +97,7 @@ DELIMITER //
 
 CREATE FUNCTION calculate_bonus(salary DECIMAL(10,2))
 RETURNS DECIMAL(10,2)
+DETERMINISTIC
 BEGIN
     RETURN salary * 0.1;
 END //
@@ -110,6 +111,8 @@ DELIMITER ;
 
 **示例**：
 ```sql
+DELIMITER //
+
 -- 创建触发器
 CREATE TRIGGER before_employee_insert
 BEFORE INSERT ON employees
@@ -119,7 +122,9 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Salary cannot be negative';
     END IF;
-END;
+END //
+
+DELIMITER ;
 ```
 
 #### 5. 游标（Cursors）
@@ -132,9 +137,11 @@ DELIMITER //
 
 CREATE PROCEDURE process_employees()
 BEGIN
-    DECLARE emp_cursor CURSOR FOR SELECT id, salary FROM employees;
+    -- 变量必须在游标之前声明，游标必须在处理器（HANDLER）之前声明
+    DECLARE done BOOLEAN DEFAULT FALSE;
     DECLARE emp_id INT;
     DECLARE emp_salary DECIMAL(10,2);
+    DECLARE emp_cursor CURSOR FOR SELECT id, salary FROM employees;
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
 
     OPEN emp_cursor;

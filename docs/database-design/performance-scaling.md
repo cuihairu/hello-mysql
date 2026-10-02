@@ -39,13 +39,13 @@
   ```sql
   CREATE TABLE Orders (
       OrderID INT,
-      OrderDate DATE,
+      OrderDate DATE
       -- 其他字段
-      PARTITION BY RANGE (YEAR(OrderDate)) (
-          PARTITION p0 VALUES LESS THAN (1991),
-          PARTITION p1 VALUES LESS THAN (1992),
-          -- 更多分区
-      );
+  )
+  PARTITION BY RANGE (YEAR(OrderDate)) (
+      PARTITION p0 VALUES LESS THAN (1991),
+      PARTITION p1 VALUES LESS THAN (1992),
+      PARTITION pmax VALUES LESS THAN MAXVALUE
   );
   ```
 

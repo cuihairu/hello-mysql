@@ -14,29 +14,30 @@
   ```sql
   CREATE TABLE Orders (
       OrderID INT,
-      OrderDate DATE,
+      OrderDate DATE
       -- 其他字段
-      PARTITION BY RANGE (YEAR(OrderDate)) (
-          PARTITION p0 VALUES LESS THAN (1991),
-          PARTITION p1 VALUES LESS THAN (1992),
-          PARTITION p2 VALUES LESS THAN (1993)
-      );
+  )
+  PARTITION BY RANGE (YEAR(OrderDate)) (
+      PARTITION p0 VALUES LESS THAN (1991),
+      PARTITION p1 VALUES LESS THAN (1992),
+      PARTITION p2 VALUES LESS THAN (1993),
+      PARTITION pmax VALUES LESS THAN MAXVALUE
   );
   ```
 
-- **列表分区（List Partitioning）**：根据某个列的值列表将数据划分到不同的分区。例如，将用户表按国家进行分区。
+- **列表分区（List Partitioning）**：根据某个列的值列表将数据划分到不同的分区。例如，将用户表按国家进行分区。注意：`LIST` 分区的分区表达式必须返回整数，如果要直接按字符串等类型的列分区，需要使用 `LIST COLUMNS` 分区。
 
   **示例**：
   ```sql
   CREATE TABLE Users (
       UserID INT,
-      Country VARCHAR(50),
+      Country VARCHAR(50)
       -- 其他字段
-      PARTITION BY LIST (Country) (
-          PARTITION p0 VALUES IN ('USA', 'Canada'),
-          PARTITION p1 VALUES IN ('UK', 'Germany'),
-          PARTITION p2 VALUES IN ('France', 'Italy')
-      );
+  )
+  PARTITION BY LIST COLUMNS (Country) (
+      PARTITION p0 VALUES IN ('USA', 'Canada'),
+      PARTITION p1 VALUES IN ('UK', 'Germany'),
+      PARTITION p2 VALUES IN ('France', 'Italy')
   );
   ```
 
@@ -46,10 +47,10 @@
   ```sql
   CREATE TABLE Employees (
       EmployeeID INT,
-      DepartmentID INT,
+      DepartmentID INT
       -- 其他字段
-      PARTITION BY HASH (DepartmentID) PARTITIONS 4;
-  );
+  )
+  PARTITION BY HASH (DepartmentID) PARTITIONS 4;
   ```
 
 - **键分区（Key Partitioning）**：类似于哈希分区，但使用数据库内建的哈希函数来决定数据的分区。
@@ -58,10 +59,10 @@
   ```sql
   CREATE TABLE Sales (
       SaleID INT,
-      ProductID INT,
+      ProductID INT
       -- 其他字段
-      PARTITION BY KEY (ProductID) PARTITIONS 4;
-  );
+  )
+  PARTITION BY KEY (ProductID) PARTITIONS 4;
   ```
 
 ##### 1.2 分区的优点

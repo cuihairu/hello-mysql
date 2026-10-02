@@ -73,10 +73,14 @@ Percona Toolkit 是一组开源工具，专为 MySQL 数据库管理和优化设
      ```
 
 2. **使用 Percona Toolkit**：
-   - **运行工具**：使用命令行运行 Percona Toolkit 中的工具，例如：
+   - **运行工具**：使用命令行运行 Percona Toolkit 中的工具，例如（把一年前的数据迁移到归档表并从源表删除）：
      ```bash
-     pt-archiver --source h=localhost,D=mydb,t=mytable --where 'created_at < NOW() - INTERVAL 1 YEAR' --archive /path/to/archive
+     pt-archiver --source h=localhost,D=mydb,t=mytable \
+       --dest h=localhost,D=mydb_archive,t=mytable \
+       --where 'created_at < NOW() - INTERVAL 1 YEAR' \
+       --limit 1000 --commit-each --statistics
      ```
+     `pt-archiver` 没有 `--archive` 选项，归档行为由 `--dest`（写入目标表）、`--file`（写入文件）或 `--purge`（仅删除）三选一（或组合）决定，建议先用 `--dry-run` 检查将要执行的语句。
    - **查看帮助**：使用 `--help` 参数查看工具的使用说明，例如：
      ```bash
      pt-archiver --help

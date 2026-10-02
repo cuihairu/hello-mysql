@@ -34,15 +34,17 @@
 **步骤**：
 1. **使用 `pt-table-checksum` 检查数据一致性**：
    ```bash
-   pt-table-checksum --user=root --password=yourpassword --host=master-host D=mydb
+   pt-table-checksum --user=root --password=yourpassword \
+     --host=master-host --databases mydb
    ```
-   这个命令会计算主库表的校验和，并将结果存储在 `checksum` 表中。
+   这个命令会按块计算主库各表的校验和，并把结果写入源库上的 `percona.checksums` 表（默认库名为 `percona`、表名为 `checksums`，不存在时会自动创建），再通过复制把校验语句传到从库重放，从而比较出主从差异。注意：该工具依赖基于语句的复制，会在会话级自动把 `binlog_format` 切换为 `STATEMENT`（需要 `SUPER` 或 `SESSION_VARIABLES_ADMIN` 权限，云上托管实例常受限）。之后可以用 `pt-table-sync --replicate=percona.checksums ...` 精确修复差异块。
 
 2. **使用 `pt-table-sync` 修复数据一致性**：
    ```bash
-   pt-table-sync --user=root --password=yourpassword --host=master-host --execute D=mydb
+   pt-table-sync --user=root --password=yourpassword \
+     --execute h=master-host,D=mydb h=slave-host,D=mydb
    ```
-   这个命令会根据校验和的结果将从库的数据与主库同步，确保主从数据库的数据一致性。
+   `pt-table-sync` 至少需要指定源和目标两个 DSN（或使用 `--replicate` 复用 `pt-table-checksum` 的结果、`--sync-to-source` 以从库为入口），只写 `--execute D=mydb` 是不完整的。加上 `--execute` 才会真正执行修复语句，缺省只打印 SQL，建议先去掉 `--execute` 用 `--print` 预览。
 
 **效果**：确保主从数据库的数据一致，解决了数据同步问题。
 
@@ -75,9 +77,10 @@
 **步骤**：
 1. **终止长时间运行的查询**：
    ```bash
-   pt-kill --user=root --password=yourpassword --host=localhost --interval=5 --long-query-time=60
+   pt-kill --user=root --password=yourpassword --host=localhost \
+     --interval=5 --busy-time=60 --kill
    ```
-   这个命令会每隔 5 秒检查一次查询，如果查询运行超过 60 秒，就会自动终止。
+   `pt-kill` 使用 `--busy-time`（按 `SHOW PROCESSLIST` 的 Time 值判断）而不是 `--long-query-time`（那是 MySQL 慢查询日志的服务器变量），并且必须显式给出动作：`--kill` 才会真正终止连接，`--print` 只打印要执行的 `KILL` 语句。这个命令会每隔 5 秒检查一次，运行时间超过 60 秒的查询就会被终止。
 
 **效果**：成功自动终止了长时间运行的查询，恢复了系统的正常性能。
 
@@ -91,9 +94,11 @@
 **步骤**：
 1. **配置和运行 `pt-stalk`**：
    ```bash
-   pt-stalk --user=root --password=yourpassword --host=localhost --collect "processlist,innodb_status"
+   pt-stalk --user=root --password=yourpassword --host=localhost \
+     --variable Threads_running --threshold 25 --cycles 5 \
+     --iterations 2 --dest /var/lib/pt-stalk
    ```
-   这个命令会在性能问题发生时自动收集进程列表和 InnoDB 状态信息。
+   `pt-stalk` 的 `--collect` 是一个开关选项（默认开启，不可传值），不能写成 `--collect "processlist,innodb_status"`。它默认以 `SHOW GLOBAL STATUS` 中的 `Threads_running` 作为触发条件：连续 `--cycles` 次超过 `--threshold`（默认 25）就触发采集，把 `SHOW FULL PROCESSLIST`、`SHOW ENGINE INNODB STATUS`、锁等待、事务信息以及系统层（`vmstat`、`iostat` 等）的状态快照保存到 `--dest` 目录。`--iterations` 限制采集次数，避免反复触发。
 
 2. **分析诊断信息**：
    收集到的信息可以用于分析性能问题的根本原因，并采取相应的优化措施。

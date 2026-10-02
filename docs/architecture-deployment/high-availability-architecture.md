@@ -77,6 +77,49 @@ Galera Cluster 是一个多主节点的高可用性解决方案，提供了基�
   - 配置和管理复杂度较高。
   - 对网络延迟较为敏感，可能影响集群的性能。
 
+#### 3. **Group Replication 与 InnoDB Cluster（MySQL 8.0 官方方案）**
+
+MySQL 8.0 把高可用能力内置到了服务器中，即组复制（Group Replication，MGR），并在其之上提供了 InnoDB Cluster 这一整套解决方案。
+
+##### 3.1 **Group Replication 概述**
+
+- **架构组成**：以插件形式运行（`group_replication.so`），多个 MySQL Server 组成一个复制组，组内通过基于 Paxos 协议的多数派共识来决定事务是否可以提交。
+- **工作模式**：
+  - **单主模式**（默认）：组内自动选出一台主节点接受写入，其余节点为只读副本，主节点故障时自动选主。
+  - **多主模式**：所有节点都可以写入，依靠乐观并发控制和冲突检测来处理写冲突（提交时检测到冲突的事务会被回滚）。
+- **数据同步**：基于 GTID 的复制，配合 Binlog 和 Certification（事务认证）机制保证组内数据一致。
+
+##### 3.2 **部署的基本要求**
+
+- 所有节点使用 InnoDB 存储引擎，且每张表必须有主键。
+- 开启二进制日志并启用 GTID：`gtid_mode = ON`、`enforce_gtid_consistency = ON`。
+- 必须使用基于行的二进制日志：`binlog_format = ROW`，并保持 `log_replica_updates = ON`（8.0 默认开启）。
+- 通过 `INSTALL PLUGIN group_replication SONAME 'group_replication.so'` 安装插件，再用 `START GROUP_REPLICATION` 启动。
+
+##### 3.3 **InnoDB Cluster**
+
+InnoDB Cluster = **Group Replication + MySQL Shell（AdminAPI）+ MySQL Router**：
+
+- 使用 MySQL Shell 的 AdminAPI 创建和管理集群，例如：
+  ```javascript
+  // mysqlsh（JavaScript 模式）
+  dba.createCluster('myCluster');          // 创建集群
+  var cluster = dba.getCluster('myCluster');
+  cluster.addInstance('icadmin@node2:3306'); // 添加实例
+  cluster.status();                          // 查看集群状态
+  ```
+- MySQL Router 作为轻量级中间件，对应用透明地完成读写分离和故障转移。
+- 该方案与 MHA 相比不需要额外的脚本和外部组件，是 MySQL 8.0 环境下官方推荐的高可用方案。
+
+##### 3.4 **方案对比**
+
+| 方案 | 复制方式 | 是否自动故障转移 | 是否支持多主 | 说明 |
+| ---- | -------- | ---------------- | ------------ | ---- |
+| 异步复制 + MHA | 异步 | 是（外部工具） | 否 | MHA 已较长时间未更新，社区分支维护 |
+| 半同步复制 + Orchestrator/MHA | 半同步 | 是（外部工具） | 否 | 数据丢失风险低于异步复制 |
+| Galera Cluster | 同步 | 是 | 是 | 需 Percona XtraDB Cluster / MariaDB Galera 等发行版 |
+| Group Replication / InnoDB Cluster | 准同步（多数派） | 是 | 可选 | MySQL 8.0 官方内置方案 |
+
 ### 总结
 
 MHA 和 Galera Cluster 是两种常见的 MySQL 高可用架构方案，各有其特点和适用场景。MHA 适合需要主节点自动切换的场景，而 Galera Cluster 适合需要多主节点和高一致性的场景。选择合适的高可用架构取决于具体的应用需求、负载特性以及系统的复杂性。

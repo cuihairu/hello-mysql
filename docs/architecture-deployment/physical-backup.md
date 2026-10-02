@@ -13,7 +13,7 @@
 
 - **步骤**：
   1. **停止数据库服务**：确保数据库服务已经完全停止。
-  2. **复制数据文件**：将数据文件（如 `.ibd`、`.frm` 文件）和日志文件（如 `ib_logfile0`）复制到备份位置。
+  2. **复制数据文件**：将数据目录（`datadir` 下的 `.ibd` 表空间文件、`ibdata1` 系统表空间、undo 与 redo 日志文件）和配置文件一起复制到备份位置。注意：MySQL 8.0 已经移除了 `.frm` 表结构文件，表结构保存在 InnoDB 数据字典中，因此必须备份完整的数据目录，不能只复制表空间文件。
   3. **验证备份**：检查备份文件的完整性，以确保备份成功。
 
 - **适用场景**：
@@ -30,11 +30,22 @@
   - **一致性处理**：需要确保备份的数据在逻辑上的一致性，通常通过在备份过程中利用数据库的备份工具实现。
 
 - **步骤**：
-  1. **准备备份**：确保备份工具（如 `mysqlhotcopy`、`innobackupex`）能够正常运行。
-  2. **执行备份**：
-     - **使用 `innobackupex`**（适用于 InnoDB）：该工具能够生成一致的备份，并支持备份同时进行。
-     - **使用 `mysqlhotcopy`**（适用于 MyISAM）：专门用于 MyISAM 表的热备份。
-  3. **验证备份**：检查备份文件的完整性，并确保备份可以正确恢复。
+  1. **准备备份**：确保备份工具可用。MySQL 8.0 中常用的热备份工具是 Percona XtraBackup（社区版）和 MySQL Enterprise Backup（企业版）。注意：`mysqlhotcopy` 已在 MySQL 5.7.5 中被移除，`innobackupex` 也已从 Percona XtraBackup 8.0 起被移除（统一使用 `xtrabackup` 命令），不要再使用这两个工具。
+  2. **执行备份**（以 XtraBackup 为例，适用于 InnoDB）：
+     ```bash
+     # 全量备份，备份期间业务可以正常读写
+     xtrabackup --backup --target-dir=/data/backup/base \
+       --user=backup_user --password=xxxxxx
+
+     # 恢复前先“准备”备份，把 redo 日志合并到数据文件，使其达到一致状态
+     xtrabackup --prepare --target-dir=/data/backup/base
+
+     # 恢复：把备份复制回数据目录（需先停库并清空原数据目录）
+     xtrabackup --copy-back --target-dir=/data/backup/base
+     ```
+     企业版可使用 `mysqlbackup`（MySQL Enterprise Backup）完成同样的备份与恢复，并支持增量备份和压缩备份。
+  3. **处理 MyISAM 表**：MyISAM 引擎不支持崩溃安全的热备份，只能在加读锁（`FLUSH TABLES WITH READ LOCK`）后复制 `.MYD`/`.MYI` 文件，属于“温备份”。
+  4. **验证备份**：检查备份文件的完整性，并定期在测试环境做一次完整恢复演练，确保备份可以正确恢复。
 
 - **适用场景**：
   - 高可用性系统需要避免停机的情况。

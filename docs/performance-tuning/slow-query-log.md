@@ -15,7 +15,24 @@ long_query_time = 2
 
 - **`slow_query_log`**：设置为 `1` 启用慢查询日志，设置为 `0` 禁用。
 - **`slow_query_log_file`**：指定慢查询日志文件的路径。
-- **`long_query_time`**：设置查询被视为慢查询的阈值（单位：秒）。例如，`long_query_time = 2` 表示查询执行时间超过2秒的将被记录。
+- **`long_query_time`**：设置查询被视为慢查询的阈值，支持小数（最小可到微秒精度，如 `0.1`）。例如，`long_query_time = 2` 表示查询执行时间超过2秒的将被记录。
+
+另外两个常用参数：
+
+```ini
+[mysqld]
+# 记录未使用索引的查询（即使执行时间没有超过 long_query_time）
+log_queries_not_using_indexes = 1
+# 对这类记录做限速，避免日志暴涨（每分钟最多记录的条数）
+log_throttle_queries_not_using_indexes = 60
+```
+
+上述参数也可以在运行时通过 `SET GLOBAL` 动态修改，无需重启：
+
+```sql
+SET GLOBAL slow_query_log = ON;
+SET GLOBAL long_query_time = 2;
+```
 
 #### 2. **查看和分析慢查询日志**
 
@@ -67,7 +84,7 @@ mysqldumpslow -s t /path/to/slow-query.log
 # Time: 2024-08-06T10:15:00.123456Z
 # User@Host: root[root] @ localhost []  Id: 12345
 # Query_time: 5.678123  Lock_time: 0.000456 Rows_sent: 100  Rows_examined: 1000
-SET timestamp=1691314500;
+SET timestamp=1722939300;
 SELECT * FROM employees WHERE department_id = 1;
 ```
 

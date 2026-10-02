@@ -72,7 +72,7 @@ erDiagram
 
     USER ||--o{ ORDER : places
     ORDER ||--o{ ORDERDETAIL : contains
-    ORDERDETAIL ||--o{ PRODUCT : includes
+    ORDERDETAIL }o--|| PRODUCT : includes
 
 ```
 

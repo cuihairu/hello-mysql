@@ -69,7 +69,7 @@ SQL中常见的数据类型包括：
 - **逻辑操作符**：如 `AND`, `OR`, `NOT`。
 - **聚合函数**：如 `SUM()`, `AVG()`, `COUNT()`, `MIN()`, `MAX()`。
 - **字符串函数**：如 `CONCAT()`, `SUBSTR()`, `LENGTH()`。
-- **日期函数**：如 `NOW()`, `DATEADD()`, `DATEDIFF()`。
+- **日期函数**：如 `NOW()`, `DATE_ADD()`, `DATEDIFF()`。
 
 #### **6. SQL标准与方言**
 

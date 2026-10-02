@@ -34,7 +34,7 @@
    - 返回右表中的所有记录，以及左表中匹配的记录。如果左表没有匹配记录，则结果中显示空值。例如，返回所有订单及其客户，即使某些订单没有客户。
    
 4. **全连接（FULL JOIN）**：
-   - 返回左表和右表中的所有记录。当左表和右表都没有匹配记录时，结果中显示空值。例如，返回所有客户和所有订单，包括没有匹配的记录。
+   - 返回左表和右表中的所有记录。当左表和右表都没有匹配记录时，结果中显示空值。例如，返回所有客户和所有订单，包括没有匹配的记录。需要注意的是，MySQL 不支持 `FULL JOIN`（`FULL OUTER JOIN`）语法，需要用 `LEFT JOIN` 与 `RIGHT JOIN` 配合 `UNION` 来模拟（见下方示例 3）。
    
 5. **交叉连接（CROSS JOIN）**：
    - 返回左表和右表的笛卡尔积，即左表中的每一行与右表中的每一行组合成一个结果集。例如，返回所有产品与所有订单的组合。
@@ -58,10 +58,15 @@ LEFT JOIN orders ON customers.customer_id = orders.customer_id;
 这个查询返回所有客户及其对应的订单ID，即使某些客户没有订单。
 
 ##### 示例 3：全连接
+MySQL 不支持 `FULL JOIN` 语法，可以用 `LEFT JOIN` 与 `RIGHT JOIN` 配合 `UNION` 模拟全外连接：
 ```sql
 SELECT a.id, b.value
 FROM table1 a
-FULL JOIN table2 b ON a.id = b.id;
+LEFT JOIN table2 b ON a.id = b.id
+UNION
+SELECT a.id, b.value
+FROM table1 a
+RIGHT JOIN table2 b ON a.id = b.id;
 ```
 这个查询返回两个表中的所有记录，匹配的记录一起显示，非匹配的记录显示为空值。
 

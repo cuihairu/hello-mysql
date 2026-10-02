@@ -37,7 +37,31 @@
 - **Grafana + Prometheus**：
   - 结合Grafana和Prometheus来实现MySQL的实时性能监控。Prometheus用于数据采集和存储，Grafana用于数据可视化和仪表盘展示。
 
-#### 4. **性能指标**
+#### 4. **performance_schema 与 sys schema**
+
+MySQL 8.0 中 `performance_schema` 默认开启（`performance_schema = ON`），配合 `sys` schema 可以直接用 SQL 定位性能问题，是自带的“性能监控数据库”：
+
+```sql
+-- 最耗时的语句（按累计耗时排序，.Timer 单位为皮秒）
+SELECT DIGEST_TEXT, COUNT_STAR,
+       ROUND(SUM_TIMER_WAIT / 1e12, 3) AS total_sec,
+       ROUND(AVG_TIMER_WAIT / 1e9, 3)  AS avg_ms
+FROM performance_schema.events_statements_summary_by_digest
+ORDER BY SUM_TIMER_WAIT DESC
+LIMIT 10;
+
+-- 通过 sys schema 视图找出全表扫描的语句
+SELECT * FROM sys.statements_with_full_table_scans LIMIT 10;
+
+-- 查看当前正在等待锁的事务（8.0 数据字典表）
+SELECT * FROM performance_schema.data_lock_waits\G
+```
+
+- `events_statements_summary_by_digest`：按语句指纹聚合的执行统计，是慢查询定位的核心数据源。
+- `sys` schema 是对 `performance_schema` 的易读封装，常用视图还有 `sys.innodb_buffer_stats_by_table`、`sys.io_global_by_file_by_bytes`、`sys.schema_table_statistics` 等。
+- 旧版本中的 `information_schema.innodb_locks`、`innodb_lock_waits` 在 8.0 已被 `performance_schema.data_locks`、`data_lock_waits` 取代。
+
+#### 5. **性能指标**
 
 - **查询性能**：
   - **查询响应时间**：每个查询的执行时间，过长的响应时间可能表示查询效率低。
@@ -48,8 +72,8 @@
   - **最大连接数**：数据库允许的最大连接数，需根据实际负载设置合适的值。
 
 - **缓存使用**：
-  - **查询缓存**：缓存查询结果的使用情况，帮助减少重复查询的执行时间。
-  - **InnoDB缓冲池**：用于缓存数据和索引的内存区域，缓存的命中率影响数据库性能。
+  - **InnoDB缓冲池**：用于缓存数据和索引的内存区域，缓存的命中率影响数据库性能。可由 `Innodb_buffer_pool_read_requests`（逻辑读）与 `Innodb_buffer_pool_reads`（直接读盘）估算命中率。
+  - **查询缓存**：MySQL 8.0 已经移除查询缓存（Query Cache），不再需要监控 `Qcache_*` 状态变量；重复查询的结果缓存应放在应用层（如 Redis）中实现。
 
 - **I/O性能**：
   - **磁盘读写速度**：监控磁盘的读写速度，确保磁盘I/O不会成为性能瓶颈。
@@ -59,7 +83,7 @@
   - **CPU使用率**：监控数据库服务器的CPU使用情况，防止CPU过载。
   - **内存使用**：监控内存的使用情况，避免内存泄漏和不足问题。
 
-#### 5. **性能监控的最佳实践**
+#### 6. **性能监控的最佳实践**
 
 - **设置警报**：根据性能指标设置警报和阈值，及时通知管理员潜在的性能问题。
 - **定期检查**：定期查看性能报告和监控数据，进行性能分析和优化。
