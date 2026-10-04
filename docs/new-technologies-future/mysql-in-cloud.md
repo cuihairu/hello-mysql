@@ -6,7 +6,7 @@
 
 - **自建（Self-managed）**：在云主机（ECS、CVM、EC2 等）上自行安装 MySQL，完全掌控版本与参数，但备份、高可用、监控都要自己负责；
 - **托管数据库服务（Managed）**：云厂商提供的 MySQL 兼容服务，如 AWS RDS for MySQL、Azure Database for MySQL、Google Cloud SQL for MySQL、阿里云 RDS for MySQL、腾讯云 TencentDB for MySQL 等，自动化处理备份、补丁、监控与主从切换；
-- **云原生增强型**：厂商在 MySQL 之上的自研改造，例如 AWS Aurora（存算分离、日志即数据库）、阿里云 PolarDB、腾讯云 TDSQL-C，以及 Oracle 的 MySQL HeatWave（在 MySQL 之上叠加列式内存分析与机器学习能力）；
+- **云原生增强型**：厂商在 MySQL 之上的自行开发改造，例如 AWS Aurora（存算分离、日志即数据库）、阿里云 PolarDB、腾讯云 TDSQL-C，以及 Oracle 的 MySQL HeatWave（在 MySQL 之上叠加列式内存分析与机器学习能力）；
 - **分布式/分片中间层**：Vitess（常部署在 Kubernetes 上）、各类分库分表中间件，用于在云上实现水平扩展。
 
 ## 2. 托管服务通常提供的能力
