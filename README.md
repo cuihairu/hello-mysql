@@ -1,9 +1,11 @@
 <div align="center">
 
-<!-- 品牌资产空位：logo.svg 到位后启用 -->
-<!-- <img src="docs/public/logo.svg" width="96" alt="hello-mysql logo" /> -->
+<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /></p>
 
 # Hello MySQL
+
+<p align="center"><img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /></p>
+<p align="center"><img src="docs/public/badges/license.svg" alt="CC BY 4.0" /></p>
 
 MySQL 知识手册 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
 
@@ -12,9 +14,6 @@ MySQL 知识手册 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
 ---
 
 覆盖 MySQL 基础与 SQL、数据库设计、高级数据处理、底层原理、架构部署、性能调优与工具实战的中文知识站点。
-
-<p align="center"><img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /></p>
-<p align="center"><img src="docs/public/badges/license.svg" alt="CC BY 4.0" /></p>
 
 ## 本地开发
 
