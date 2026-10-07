@@ -13,6 +13,8 @@ MySQL 知识手册 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
 
 覆盖 MySQL 基础与 SQL、数据库设计、高级数据处理、底层原理、架构部署、性能调优与工具实战的中文知识站点。
 
+<p align="center"><img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /></p>
+
 ## 本地开发
 
 ```bash
