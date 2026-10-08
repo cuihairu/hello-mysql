@@ -1,5 +1,7 @@
 <div align="center">
 
+[English](README.md) | [中文](README.zh.md)
+
 <p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> </p>
 
 # Hello MySQL
@@ -11,23 +13,23 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-MySQL 知识手册 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
+MySQL Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-mysql/)
 
 </div>
 
 ---
 
-覆盖 MySQL 基础与 SQL、数据库设计、高级数据处理、底层原理、架构部署、性能调优与工具实战的中文知识站点。
+A Chinese-language knowledge site covering MySQL fundamentals and SQL, database design, advanced data processing, internals, architecture and deployment, performance tuning, and tooling in practice.
 
-## 本地开发
+## Local Development
 
 ```bash
-npm install          # 安装依赖
-npm run docs:dev     # 本地开发
-npm run docs:build   # 构建到 docs/.vitepress/dist
-npm run docs:preview # 本地预览构建产物
+npm install          # Install dependencies
+npm run docs:dev     # Local development
+npm run docs:build   # Build to docs/.vitepress/dist
+npm run docs:preview # Preview the build locally
 ```
 
 ## License
 
-本作品采用 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) 许可协议发布。
+This work is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license.
