@@ -21,6 +21,8 @@ MySQL 知识手册 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
 
 覆盖 MySQL 基础与 SQL、数据库设计、高级数据处理、底层原理、架构部署、性能调优与工具实战的中文知识站点。
 
+知识点主文档：[docs/knowledge.md](https://cuihairu.github.io/hello-mysql/knowledge) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+
 ## 本地开发
 
 ```bash

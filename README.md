@@ -21,6 +21,8 @@ MySQL Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-mysql
 
 A Chinese-language knowledge site covering MySQL fundamentals and SQL, database design, advanced data processing, internals, architecture and deployment, performance tuning, and tooling in practice.
 
+Knowledge notes: [docs/knowledge.md](https://cuihairu.github.io/hello-mysql/knowledge) — core concepts, the reference books, official manual pages, use cases, and common pitfalls, each linked to the full pages.
+
 ## Local Development
 
 ```bash

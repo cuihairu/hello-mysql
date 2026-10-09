@@ -8,7 +8,7 @@
 - MySQL 8.4 / 9.x 参考手册：<https://dev.mysql.com/doc/>
 - MySQL Shell 文档：<https://dev.mysql.com/doc/mysql-shell/8.4/en/>
 - X DevAPI 用户指南：<https://dev.mysql.com/doc/x-devapi-userguide/en/>
-- Connector 文档（各语言驱动）：<https://dev.mysql.com/doc/connector/odbc/en/> 等各语言分册
+- Connector 文档（各语言驱动）：<https://dev.mysql.com/doc/connector-odbc/en/> 等各语言分册
 - 错误码与消息：<https://dev.mysql.com/doc/mysql-errors/8.0/en/>
 - 发布说明（各版本变更与移除项）：<https://dev.mysql.com/doc/relnotes/mysql/8.0/en/>
 - Percona XtraBackup 文档：<https://docs.percona.com/percona-xtrabackup/8.0/>
