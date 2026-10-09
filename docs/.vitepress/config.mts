@@ -12,8 +12,7 @@ export default withMermaid(defineConfig({
   lastUpdated: true,
 
   head: [
-    // 品牌资产空位：favicon.svg 到位后启用
-    // ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-mysql/favicon.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-mysql/favicon.svg' }]
   ],
 
   // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
@@ -22,8 +21,7 @@ export default withMermaid(defineConfig({
   ignoreDeadLinks: true,
 
   themeConfig: {
-    // 品牌资产空位：logo.svg 到位后启用
-    // logo: '/logo.svg',
+    logo: '/logo.svg',
     siteTitle: 'Hello MySQL',
 
     nav: [
@@ -34,7 +32,8 @@ export default withMermaid(defineConfig({
       { text: '底层原理', link: '/advanced-features-internals/README' },
       { text: '架构部署', link: '/architecture-deployment/README' },
       { text: '性能调优', link: '/performance-tuning/README' },
-      { text: '工具实战', link: '/tools-practice/README' }
+      { text: '工具实战', link: '/tools-practice/README' },
+      { text: '知识点整理', link: '/knowledge' }
     ],
 
     // 由 mdbook SUMMARY.md 结构映射而来（vitepress-migration/parse_summary.py），
