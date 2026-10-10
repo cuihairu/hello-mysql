@@ -18,8 +18,6 @@ export default withMermaid(defineConfig({
   // mdbook 遗留的目录文件保留在仓库作映射底稿，不作为页面构建
   srcExclude: ['**/SUMMARY.md'],
 
-  ignoreDeadLinks: true,
-
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: 'Hello MySQL',
