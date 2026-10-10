@@ -106,6 +106,6 @@ FROM
 ```
 *此查询将优先显示 `phone_number`，如果为 NULL，则显示 `email_address`，如果两个都是 NULL，则显示 `'No contact info'`。*
 
-# 总结
+## 总结
 
 条件判断函数在 SQL 查询中用于实现复杂的逻辑判断。`IF()` 和 `CASE` 提供了灵活的条件表达式，用于根据不同的条件返回不同的值。`IFNULL()` 和 `COALESCE()` 则用于处理和替代空值，以确保查询结果的完整性和准确性。

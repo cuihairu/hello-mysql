@@ -104,7 +104,7 @@ LOCK TABLES accounts WRITE;
 UNLOCK TABLES;
 ```
 
-# 总结
+## 总结
 
 - **表锁**：锁定整个表，适用于整体操作但可能导致性能瓶颈。
 - **行锁**：锁定特定行，提高并发性能，主要由InnoDB提供。

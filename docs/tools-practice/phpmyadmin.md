@@ -46,7 +46,7 @@ phpMyAdmin 是一个基于 Web 的 MySQL/MariaDB 数据库管理工具，使用 
 - **开发和测试**：开发人员和测试人员可以使用 phpMyAdmin 快速操作数据库，进行数据编辑和查询测试。
 - **教育和培训**：在教学和培训环境中，phpMyAdmin 提供了易于演示和学习数据库管理的工具。
 
-# 使用 phpMyAdmin
+## 使用 phpMyAdmin
 
 要使用 phpMyAdmin，需要确保以下条件：
 

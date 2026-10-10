@@ -121,7 +121,7 @@
    UNLOCK TABLES;
    ```
 
-# 总结
+## 总结
 
 - **隔离级别**：定义了事务对其他事务的可见程度，包括 `READ UNCOMMITTED`、`READ COMMITTED`、`REPEATABLE READ` 和 `SERIALIZABLE`。
 - **锁机制**：包括表锁、行锁、意向锁、间隙锁、共享锁与排他锁，用于控制并发事务对数据的访问。

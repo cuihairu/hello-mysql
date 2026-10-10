@@ -77,7 +77,7 @@ FROM employees_eu;
 
 在这个例子中，`EXCEPT` 返回那些存在于 `employees_us` 表中但不在 `employees_eu` 表中的员工记录。
 
-# 总结
+## 总结
 
 - **`UNION`**: 合并两个或多个查询结果集，去除重复记录。使用 `UNION ALL` 可以保留所有记录，包括重复记录。
 - **`INTERSECT`**: 查找多个查询结果集的交集，返回所有查询中都存在的记录。MySQL 8.0.31 起原生支持，更早版本可用 `INNER JOIN` 或 `EXISTS` 实现。

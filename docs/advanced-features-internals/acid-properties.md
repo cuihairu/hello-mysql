@@ -81,6 +81,6 @@ INSERT INTO orders (order_id, customer_id, total_amount) VALUES ('O123', 'C456',
 COMMIT;  -- 即使系统崩溃，订单也会被记录在数据库中
 ```
 
-# 总结
+## 总结
 
 ACID特性确保了数据库事务的可靠性和一致性。在设计和实现数据库事务时，理解和应用这些特性可以帮助确保数据的完整性、准确性和稳定性。

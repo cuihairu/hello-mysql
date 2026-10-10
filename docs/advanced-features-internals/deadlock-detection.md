@@ -67,7 +67,7 @@
 - **MySQL 8.0 的数据字典表**：
   - 可查询 `performance_schema.data_locks`、`performance_schema.data_lock_waits` 查看当前的锁与锁等待情况，或直接使用 `sys.innodb_lock_waits` 视图定位阻塞来源；如需记录全部死锁，可开启 `innodb_print_all_deadlocks` 将死锁信息写入错误日志。
 
-# 总结
+## 总结
 
 - **死锁**：是一种互相等待资源的僵局状态，导致事务无法继续执行。
 - **死锁检测**：包括基于等待图、系统资源图、超时检测和银行家算法等策略。

@@ -46,7 +46,7 @@ HAVING COUNT(*) > 10;
 
 在这个例子中，`HAVING COUNT(*) > 10` 过滤出那些员工数量大于10的部门。
 
-# GROUP BY 和 HAVING 的结合使用
+## GROUP BY 和 HAVING 的结合使用
 
 `GROUP BY` 和 `HAVING` 通常一起使用，以便首先对数据进行分组，然后对分组结果进行筛选。这种组合查询能够帮助用户从数据中提取更精确的统计信息和汇总结果。
 
@@ -61,7 +61,7 @@ HAVING AVG(salary) > 5000;
 
 在这个例子中，`GROUP BY department_id` 按部门分组员工记录，`HAVING AVG(salary) > 5000` 过滤出平均薪资超过5000的部门。
 
-# 总结
+## 总结
 
 - `GROUP BY` 子句用于将结果集按一个或多个列进行分组。
 - `HAVING` 子句用于对分组后的结果进行过滤，通常与聚合函数一起使用。
