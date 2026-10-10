@@ -520,61 +520,55 @@
     "collapsed": true,
     "items": [
       {
-        "text": "appendix",
+        "text": "附录",
+        "link": "/appendix/README",
         "collapsed": true,
         "items": [
           {
-            "text": "appendix",
-            "link": "/appendix/README"
-          },
-          {
-            "text": "common-commands",
+            "text": "常用命令参考",
             "link": "/appendix/common-commands"
           },
           {
-            "text": "error-codes-solutions",
+            "text": "错误代码与解决方案",
             "link": "/appendix/error-codes-solutions"
           },
           {
-            "text": "references-resources",
+            "text": "参考书目与在线资源",
             "link": "/appendix/references-resources"
           }
         ]
       },
       {
-        "text": "new-technologies-future",
+        "text": "新技术与未来发展",
+        "link": "/new-technologies-future/README",
         "collapsed": true,
         "items": [
           {
-            "text": "new-technologies-future",
-            "link": "/new-technologies-future/README"
-          },
-          {
-            "text": "comparison-with-other-databases",
+            "text": "对比其他数据库的新功能",
             "link": "/new-technologies-future/comparison-with-other-databases"
           },
           {
-            "text": "future-development",
+            "text": "未来发展",
             "link": "/new-technologies-future/future-development"
           },
           {
-            "text": "integration-with-nosql",
+            "text": "与NoSQL数据库的整合",
             "link": "/new-technologies-future/integration-with-nosql"
           },
           {
-            "text": "mysql-8-0-features",
+            "text": "MySQL 8.0及以上版本的新特性",
             "link": "/new-technologies-future/mysql-8-0-features"
           },
           {
-            "text": "mysql-in-cloud",
+            "text": "MySQL在云环境中的应用",
             "link": "/new-technologies-future/mysql-in-cloud"
           },
           {
-            "text": "new-features-versions",
+            "text": "新特性与版本更新",
             "link": "/new-technologies-future/new-features-versions"
           },
           {
-            "text": "trends-and-outlook",
+            "text": "未来的趋势与展望",
             "link": "/new-technologies-future/trends-and-outlook"
           }
         ]
