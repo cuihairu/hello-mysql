@@ -2,7 +2,7 @@
 
 `SELECT` 语句是 SQL 中用于从数据库中检索数据的基本命令。以下是 `SELECT` 语句的主要用法和一些常见操作的介绍。
 
-## 1. **基本 SELECT 查询**
+## 1. 基本 SELECT 查询
 
 - **选择所有列**
   ```sql
@@ -16,7 +16,7 @@
   ```
   只选择指定的列 `column1` 和 `column2`。
 
-## 2. **条件查询**
+## 2. 条件查询
 
 - **使用 WHERE 子句**
   ```sql
@@ -69,7 +69,7 @@
   SELECT * FROM orders WHERE delivery_date IS NOT NULL;
   ```
 
-## 3. **排序**
+## 3. 排序
 
 - **使用 ORDER BY 子句**
   ```sql
@@ -83,7 +83,7 @@
   SELECT * FROM employees ORDER BY age DESC;
   ```
 
-## 4. **限制结果**
+## 4. 限制结果
 
 - **使用 LIMIT 子句**
   ```sql
@@ -103,7 +103,7 @@
   SELECT * FROM employees LIMIT 10 OFFSET 5;
   ```
 
-## 5. **聚合函数**
+## 5. 聚合函数
 
 - **COUNT()**
   ```sql
@@ -130,7 +130,7 @@
   SELECT MIN(salary) FROM employees;
   ```
 
-## 6. **分组**
+## 6. 分组
 
 - **使用 GROUP BY 子句**
   ```sql
@@ -146,7 +146,7 @@
   SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 10;
   ```
 
-## 7. **连接查询**
+## 7. 连接查询
 
 - **内连接（INNER JOIN）**
   ```sql

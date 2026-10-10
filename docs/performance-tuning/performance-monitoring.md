@@ -2,14 +2,14 @@
 
 性能监控是数据库管理中不可或缺的一部分，旨在确保数据库系统的健康、稳定和高效运行。通过监控，可以实时获取数据库的性能指标，识别潜在的问题，及时进行调整和优化。以下是关于MySQL性能监控的详细内容：
 
-## 1. **MySQL性能监控的目标**
+## 1. MySQL性能监控的目标
 
 - **识别性能瓶颈**：通过监控数据库的运行状态，及时发现性能瓶颈并采取措施进行优化。
 - **确保系统稳定**：监控系统资源的使用情况，确保数据库系统的稳定性。
 - **优化查询**：识别慢查询和低效的数据库操作，优化查询性能。
 - **提前预警**：设置警报和阈值，及时预警潜在的性能问题。
 
-## 2. **MySQL自带工具**
+## 2. MySQL自带工具
 
 - **SHOW STATUS**：
   - 通过 `SHOW STATUS` 命令可以查看数据库的运行状态信息，如连接数、查询数、缓存使用情况等。
@@ -23,7 +23,7 @@
   - 通过 `SHOW VARIABLES` 命令可以查看MySQL服务器的配置参数，如内存分配、缓冲区设置等。
   - 常用的变量包括 `innodb_buffer_pool_size`（InnoDB缓冲池大小）、`max_connections`（最大连接数）等。
 
-## 3. **第三方工具**
+## 3. 第三方工具
 
 - **Percona Toolkit**：
   - 一套开源工具集合，用于MySQL的性能分析和优化。常用工具包括 `pt-query-digest`（查询分析）、`pt-stalk`（性能数据收集）等。
@@ -37,7 +37,7 @@
 - **Grafana + Prometheus**：
   - 结合Grafana和Prometheus来实现MySQL的实时性能监控。Prometheus用于数据采集和存储，Grafana用于数据可视化和仪表盘展示。
 
-## 4. **performance_schema 与 sys schema**
+## 4. performance_schema 与 sys schema
 
 MySQL 8.0 中 `performance_schema` 默认开启（`performance_schema = ON`），配合 `sys` schema 可以直接用 SQL 定位性能问题，是自带的“性能监控数据库”：
 
@@ -61,7 +61,7 @@ SELECT * FROM performance_schema.data_lock_waits\G
 - `sys` schema 是对 `performance_schema` 的易读封装，常用视图还有 `sys.innodb_buffer_stats_by_table`、`sys.io_global_by_file_by_bytes`、`sys.schema_table_statistics` 等。
 - 旧版本中的 `information_schema.innodb_locks`、`innodb_lock_waits` 在 8.0 已被 `performance_schema.data_locks`、`data_lock_waits` 取代。
 
-## 5. **性能指标**
+## 5. 性能指标
 
 - **查询性能**：
   - **查询响应时间**：每个查询的执行时间，过长的响应时间可能表示查询效率低。
@@ -83,7 +83,7 @@ SELECT * FROM performance_schema.data_lock_waits\G
   - **CPU使用率**：监控数据库服务器的CPU使用情况，防止CPU过载。
   - **内存使用**：监控内存的使用情况，避免内存泄漏和不足问题。
 
-## 6. **性能监控的最佳实践**
+## 6. 性能监控的最佳实践
 
 - **设置警报**：根据性能指标设置警报和阈值，及时通知管理员潜在的性能问题。
 - **定期检查**：定期查看性能报告和监控数据，进行性能分析和优化。
