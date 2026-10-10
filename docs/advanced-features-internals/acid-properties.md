@@ -1,8 +1,8 @@
-### ACID特性
+# ACID特性
 
 ACID是数据库事务管理的四个基本特性，用于确保数据库的可靠性和一致性。ACID代表原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability）。以下是对每个特性的详细说明：
 
-#### 1. **原子性（Atomicity）**
+## 1. **原子性（Atomicity）**
 
 **定义**：原子性保证一个事务中的所有操作要么全部完成，要么全部不执行。事务是数据库操作的一个整体，要么完全成功，要么完全失败，不会有中间状态。
 
@@ -21,7 +21,7 @@ UPDATE accounts SET balance = balance + 100 WHERE account_id = 'B';
 COMMIT;
 ```
 
-#### 2. **一致性（Consistency）**
+## 2. **一致性（Consistency）**
 
 **定义**：一致性保证事务执行前后，数据库的完整性约束不被破坏。事务的执行应该将数据库从一个一致性状态转换到另一个一致性状态。
 
@@ -39,7 +39,7 @@ UPDATE inventory SET quantity = quantity - 1 WHERE product_id = 'P789';
 COMMIT;
 ```
 
-#### 3. **隔离性（Isolation）**
+## 3. **隔离性（Isolation）**
 
 **定义**：隔离性保证事务的操作不会受到其他事务的干扰，每个事务的操作对其他事务是不可见的。即使在并发环境下，事务也应当被隔离开来。
 
@@ -64,7 +64,7 @@ SELECT balance FROM accounts WHERE account_id = 'A';  -- 事务B看到的余额�
 COMMIT;
 ```
 
-#### 4. **持久性（Durability）**
+## 4. **持久性（Durability）**
 
 **定义**：持久性保证一旦事务提交，其对数据库的所有修改是永久性的，不会因为系统故障或其他错误而丢失。事务的结果将被保存到数据库的非易失性存储中。
 
@@ -81,6 +81,6 @@ INSERT INTO orders (order_id, customer_id, total_amount) VALUES ('O123', 'C456',
 COMMIT;  -- 即使系统崩溃，订单也会被记录在数据库中
 ```
 
-### 总结
+# 总结
 
 ACID特性确保了数据库事务的可靠性和一致性。在设计和实现数据库事务时，理解和应用这些特性可以帮助确保数据的完整性、准确性和稳定性。

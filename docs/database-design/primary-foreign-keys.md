@@ -1,8 +1,8 @@
-### 主键与外键
+# 主键与外键
 
 主键（Primary Key）和外键（Foreign Key）是关系数据库设计中两个非常重要的概念，用于确保数据的完整性和建立表之间的关系。
 
-#### 主键（Primary Key）
+## 主键（Primary Key）
 
 **主键**是表中一个或多个字段的组合，这些字段的值唯一地标识表中的每一行。主键具有以下特点：
 
@@ -22,7 +22,7 @@ CREATE TABLE Customers (
 ```
 在这个示例中，`CustomerID` 是 `Customers` 表的主键。
 
-#### 外键（Foreign Key）
+## 外键（Foreign Key）
 
 **外键**是一个或多个字段，它们在一个表中引用另一个表的主键。外键用于建立表之间的关系，并确保引用的完整性。外键具有以下特点：
 
@@ -43,7 +43,7 @@ CREATE TABLE Orders (
 ```
 在这个示例中，`CustomerID` 是 `Orders` 表的外键，它引用了 `Customers` 表的 `CustomerID` 主键。
 
-#### 主键与外键的关系
+## 主键与外键的关系
 
 1. **一对多关系**：
    - 在一对多关系中，主表（父表）的主键被引用为从表（子表）的外键。例如，一个客户可以有多个订单，但每个订单只能属于一个客户。`Customers` 表的主键 `CustomerID` 被 `Orders` 表作为外键引用。
@@ -76,7 +76,7 @@ CREATE TABLE Enrollments (
 ```
 在这个示例中，`Enrollments` 表的 `StudentID` 和 `CourseID` 分别是 `Students` 表和 `Courses` 表的外键，用于建立多对多关系。
 
-#### 总结
+## 总结
 
 - **主键**：唯一标识表中的每一行数据，必须唯一且不能为空。
 - **外键**：引用其他表的主键，确保数据的完整性并建立表之间的关系。

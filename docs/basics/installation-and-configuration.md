@@ -1,8 +1,8 @@
-### 安装与配置MySQL
+# 安装与配置MySQL
 
 安装与配置MySQL是使用MySQL数据库的第一步。本节将介绍在不同操作系统上安装MySQL的步骤以及基本的配置方法，包括如何使用Docker安装MySQL并指定初始化的SQL文件。
 
-#### 在Linux上安装MySQL
+## 在Linux上安装MySQL
 
 1. **使用APT（Debian/Ubuntu）**：
    ```sh
@@ -29,7 +29,7 @@
      FLUSH PRIVILEGES;
      ```
 
-#### 在Windows上安装MySQL
+## 在Windows上安装MySQL
 
 1. **下载与安装**：
    - 从 MySQL 官方网站下载 MySQL 安装包。
@@ -45,7 +45,7 @@
      net start MySQL80
      ```
 
-#### 在macOS上安装MySQL
+## 在macOS上安装MySQL
 
 1. **使用Homebrew安装**：
    ```sh
@@ -63,7 +63,7 @@
      FLUSH PRIVILEGES;
      ```
 
-#### 使用Docker安装MySQL
+## 使用Docker安装MySQL
 
 1. **拉取MySQL镜像**：
    ```sh

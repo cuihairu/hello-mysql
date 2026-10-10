@@ -1,12 +1,12 @@
-### MySQL自带工具
+# MySQL自带工具
 
 MySQL提供了多种内置工具和命令，用于监控数据库的运行状态和性能。以下是两种常用的工具及其详细说明：
 
-#### 1. **SHOW STATUS**
+## 1. **SHOW STATUS**
 
 `SHOW STATUS` 命令用于查看MySQL服务器的状态信息。它提供了有关数据库的运行状态、性能指标和活动的信息。执行此命令会返回当前MySQL实例的各种状态变量及其值。
 
-##### **常用状态变量**
+### **常用状态变量**
 
 - **Connections**：表示从MySQL启动到当前时间，总共的连接数。
 - **Threads_connected**：表示当前连接到MySQL服务器的客户端线程数。
@@ -20,7 +20,7 @@ MySQL提供了多种内置工具和命令，用于监控数据库的运行状态
 - **Innodb_buffer_pool_read_requests**：InnoDB缓冲池的逻辑读次数（命中缓冲池的读请求）。
 - **Innodb_buffer_pool_reads**：无法从缓冲池满足、直接从磁盘读取数据页的次数。两者可以估算缓冲池命中率：`1 - Innodb_buffer_pool_reads / Innodb_buffer_pool_read_requests`。
 
-##### **示例用法**
+### **示例用法**
 
 ```sql
 SHOW STATUS;
@@ -34,11 +34,11 @@ SHOW STATUS LIKE 'Connections';
 
 此命令仅显示有关连接的状态信息。
 
-#### 2. **SHOW PROCESSLIST**
+## 2. **SHOW PROCESSLIST**
 
 `SHOW PROCESSLIST` 命令用于查看当前MySQL服务器中正在运行的线程信息。它提供了每个线程的状态、执行的查询以及其他相关信息。这个命令对于诊断性能问题、检测长时间运行的查询以及识别可能导致锁争用的操作非常有用。
 
-##### **常用字段**
+### **常用字段**
 
 - **Id**：线程ID。
 - **User**：线程所属的用户。
@@ -49,7 +49,7 @@ SHOW STATUS LIKE 'Connections';
 - **State**：线程的当前状态，例如 `Waiting for table metadata lock`（等待元数据锁）、`Sorting result`（排序中）、`Sending data`；8.0.17 起，SQL 执行阶段的状态也可能显示为 `executing`。通过状态可以判断线程是否在等待锁、磁盘 I/O 或排序。
 - **Info**：正在执行的查询语句（如果有）。
 
-##### **示例用法**
+### **示例用法**
 
 ```sql
 SHOW PROCESSLIST;
@@ -63,7 +63,7 @@ SHOW FULL PROCESSLIST;
 
 此命令与 `SHOW PROCESSLIST` 相同，但 `Info` 列会显示完整的查询语句，而不是截断的内容。
 
-##### **筛选特定线程**
+### **筛选特定线程**
 
 `SHOW PROCESSLIST` 不支持 `WHERE` 子句，需要筛选时应查询 `information_schema.processlist` 或 `performance_schema.threads`：
 
@@ -79,7 +79,7 @@ FROM performance_schema.threads
 WHERE processlist_command = 'Query';
 ```
 
-#### **总结**
+## **总结**
 
 - **`SHOW STATUS`** 提供了关于MySQL服务器的整体运行状况和性能的快照，适合用于获取服务器的健康状态和统计信息。
 - **`SHOW PROCESSLIST`** 提供了当前活动线程的信息，适合用于监控活跃的查询和诊断潜在的性能瓶颈。

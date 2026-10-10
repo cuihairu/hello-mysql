@@ -1,4 +1,4 @@
-### 基础知识
+# 基础知识
 
 - [简介](introduction.md)
     - [什么是MySQL](what-is-mysql.md)

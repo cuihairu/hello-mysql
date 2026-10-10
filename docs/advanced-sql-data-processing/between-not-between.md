@@ -1,8 +1,8 @@
-### BETWEEN 和 NOT BETWEEN
+# BETWEEN 和 NOT BETWEEN
 
 `BETWEEN` 和 `NOT BETWEEN` 是 SQL 中用于指定范围的操作符。这些操作符使你能够筛选某列中的数据是否在指定的范围内或不在该范围内。
 
-#### 语法
+## 语法
 
 ```sql
 SELECT column1, column2, ...
@@ -21,11 +21,11 @@ WHERE column_name NOT BETWEEN value1 AND value2;
 - `column_name`：要应用条件的列。
 - `value1` 和 `value2`：定义范围的两个值，其中 `value1` 是范围的下界，`value2` 是范围的上界。
 
-#### `BETWEEN` 运算符
+## `BETWEEN` 运算符
 
 `BETWEEN` 运算符用于选取某列中的数据是否在指定的范围内，包括范围的边界值。
 
-##### 示例
+### 示例
 
 1. **选择范围内的日期**
 
@@ -45,11 +45,11 @@ WHERE column_name NOT BETWEEN value1 AND value2;
    ```
    *此查询将返回价格在 50 到 150 之间的所有产品，包括价格为 50 和 150 的产品。*
 
-#### `NOT BETWEEN` 运算符
+## `NOT BETWEEN` 运算符
 
 `NOT BETWEEN` 运算符用于选取某列中的数据是否不在指定的范围内，即在范围之外的数据。
 
-##### 示例
+### 示例
 
 1. **排除某个日期范围**
 
@@ -69,7 +69,7 @@ WHERE column_name NOT BETWEEN value1 AND value2;
    ```
    *此查询将返回价格不在 100 到 200 之间的所有产品，排除价格为 100 到 200 的产品。*
 
-#### 注意事项
+## 注意事项
 
 - **范围边界**：`BETWEEN` 和 `NOT BETWEEN` 是包含边界的，即 `BETWEEN value1 AND value2` 包括 `value1` 和 `value2`。如果需要排除边界值，则需要使用其他条件，如 `>` 和 `<`。
 
@@ -79,6 +79,6 @@ WHERE column_name NOT BETWEEN value1 AND value2;
 
 - **性能考虑**：`BETWEEN` 和 `NOT BETWEEN` 运算符在范围查询时通常较为高效，但在处理大量数据时，确保列上有适当的索引以优化查询性能。
 
-#### 总结
+## 总结
 
 `BETWEEN` 和 `NOT BETWEEN` 运算符用于在 SQL 查询中指定数据范围，这使得筛选数据变得更加简洁和直观。正确使用这些操作符，可以有效地检索或排除在特定范围内的数据。

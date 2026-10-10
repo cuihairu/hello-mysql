@@ -1,8 +1,8 @@
-### 数据汇总与分析
+# 数据汇总与分析
 
 数据汇总与分析是数据库查询的重要功能之一，能够帮助用户从大量数据中提取有价值的信息。通过各种SQL技术，用户可以对数据进行聚合、分类、过滤和组合，以满足业务需求和分析目的。
 
-#### 1. 聚合函数（SUM, AVG, COUNT, MIN, MAX）
+## 1. 聚合函数（SUM, AVG, COUNT, MIN, MAX）
 
 聚合函数用于对一组值进行汇总计算，常用于报告和数据分析。以下是常见的聚合函数及其用途：
 
@@ -35,7 +35,7 @@ SELECT MIN(salary) AS lowest_salary
 FROM employees;
 ```
 
-#### 2. GROUP BY 和 HAVING
+## 2. GROUP BY 和 HAVING
 
 `GROUP BY`子句用于将结果集按一个或多个列进行分组，聚合函数可以在这些分组上进行计算。`HAVING`子句用于过滤分组结果，它类似于`WHERE`子句，但适用于分组后的数据。
 
@@ -53,7 +53,7 @@ GROUP BY department_id
 HAVING AVG(salary) > 50000;
 ```
 
-#### 3. 组合查询（UNION, INTERSECT, EXCEPT）
+## 3. 组合查询（UNION, INTERSECT, EXCEPT）
 
 组合查询用于将多个查询的结果合并在一起（`INTERSECT` 和 `EXCEPT` 自 MySQL 8.0.31 起被原生支持）。常用的组合查询操作包括：
 
@@ -79,7 +79,7 @@ EXCEPT
 SELECT name FROM employees WHERE department_id = 2;
 ```
 
-#### 4. SQL函数
+## 4. SQL函数
 
 SQL函数用于对数据进行操作和转换，包括字符串处理、数学计算、日期时间操作和条件判断等。以下是一些常用的SQL函数：
 
@@ -112,6 +112,6 @@ SELECT name,
 FROM employees;
 ```
 
-### 总结
+# 总结
 
 数据汇总与分析涉及到通过聚合函数、分组、组合查询等技术来提取和分析数据中的关键信息。掌握这些技术可以帮助用户高效地处理数据，生成报告，并支持决策过程。通过合理使用这些SQL功能，用户可以深入理解数据并做出更具信息化的决策。

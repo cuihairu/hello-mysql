@@ -1,12 +1,12 @@
-### 第三方工具
+# 第三方工具
 
 除了MySQL自带的工具，许多第三方工具也可以帮助用户监控、管理和优化MySQL数据库。以下是两个常用的第三方工具：
 
-#### 1. **Percona Toolkit**
+## 1. **Percona Toolkit**
 
 Percona Toolkit 是一个开源的数据库工具集，提供了一系列用于MySQL和MariaDB数据库的实用工具。它主要用于数据库的维护、监控、性能优化和故障排除。以下是一些常用的Percona Toolkit工具：
 
-##### **常用工具**
+### **常用工具**
 
 - **`pt-query-digest`**：分析MySQL的慢查询日志、通用查询日志或连接器日志，生成查询性能的报告。这有助于识别性能瓶颈和优化查询。
   
@@ -38,7 +38,7 @@ Percona Toolkit 是一个开源的数据库工具集，提供了一系列用于M
   pt-duplicate-key-checker --databases mydatabase --tables mytable h=localhost,u=root,p=xxxx
   ```
 
-##### **安装**
+### **安装**
 
 Percona Toolkit 可以通过包管理器（如 `apt`、`yum`）安装，也可以从 [Percona官方网站](https://www.percona.com/downloads/percona-toolkit/) 下载。
 
@@ -50,11 +50,11 @@ sudo apt-get install percona-toolkit
 sudo yum install percona-toolkit
 ```
 
-#### 2. **MySQL Enterprise Monitor**
+## 2. **MySQL Enterprise Monitor**
 
 MySQL Enterprise Monitor 是MySQL公司提供的一个商业工具，用于监控和管理MySQL数据库。它提供了实时的监控、警报、诊断和报告功能。以下是MySQL Enterprise Monitor的一些主要功能：
 
-##### **主要功能**
+### **主要功能**
 
 - **实时监控**：提供实时的数据库性能数据和系统健康状况监控，包括查询性能、服务器负载、网络活动等。
   
@@ -68,7 +68,7 @@ MySQL Enterprise Monitor 是MySQL公司提供的一个商业工具，用于监�
 
 - **备份和恢复**：集成备份管理功能，提供备份状态监控和恢复操作支持。
 
-##### **安装和使用**
+### **安装和使用**
 
 MySQL Enterprise Monitor 是MySQL Enterprise Edition的一部分，需要购买许可。可以从 [MySQL官方网站](https://www.mysql.com/products/enterprise/) 了解更多信息并申请试用或购买。
 
@@ -76,7 +76,7 @@ MySQL Enterprise Monitor 是MySQL Enterprise Edition的一部分，需要购买�
 # 安装 MySQL Enterprise Monitor 需要根据官方文档进行详细操作
 ```
 
-#### **总结**
+## **总结**
 
 - **Percona Toolkit** 提供了一套强大的开源工具，帮助数据库管理员进行性能优化、数据一致性检查和在线维护。
 - **MySQL Enterprise Monitor** 提供了全面的监控和管理功能，适用于需要深入分析和高可用性的商业环境。

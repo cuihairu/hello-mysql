@@ -1,8 +1,8 @@
-### 锁机制
+# 锁机制
 
 锁机制是数据库系统中控制对数据并发访问的重要手段。它通过管理对数据的访问来确保数据的一致性和完整性，防止数据冲突和不一致性。MySQL中常见的锁机制包括表锁、行锁、意向锁、间隙锁、共享锁和排他锁等。以下是这些锁机制的详细介绍：
 
-#### 1. 表锁（Table Lock）
+## 1. 表锁（Table Lock）
 
 **定义**：表锁是锁定整个表，以防止其他事务对该表的写操作。表锁可以是共享的或排他的。
 
@@ -21,7 +21,7 @@ LOCK TABLES accounts WRITE;
 UNLOCK TABLES;
 ```
 
-#### 2. 行锁（Row Lock）
+## 2. 行锁（Row Lock）
 
 **定义**：行锁是锁定表中的特定行，而不是整个表。其他事务可以访问表中的其他行，但不能访问被锁定的行。
 
@@ -41,7 +41,7 @@ UPDATE accounts SET balance = balance - 100 WHERE account_id = 'A';
 COMMIT;
 ```
 
-#### 3. 意向锁（Intention Lock）
+## 3. 意向锁（Intention Lock）
 
 **定义**：意向锁用于表明事务对行或表的锁定意图。它主要用于协调表级锁和行级锁之间的关系。
 
@@ -57,7 +57,7 @@ COMMIT;
 -- 意向锁的应用主要在行锁操作中自动管理，用户无需直接操作意向锁。
 ```
 
-#### 4. 间隙锁（Gap Lock）
+## 4. 间隙锁（Gap Lock）
 
 **定义**：间隙锁锁定索引中两个值之间的间隙，以防止其他事务在此间隙中插入新的记录。
 
@@ -77,7 +77,7 @@ COMMIT;
 ```
 注意：普通的 `SELECT`（快照读）基于 MVCC 读取一致性视图，并不会加间隙锁；只有加锁读（`SELECT ... FOR UPDATE` / `FOR SHARE`）以及 `UPDATE`、`DELETE` 这类当前读操作才会使用间隙锁。
 
-#### 5. 共享锁与排他锁（Shared Lock and Exclusive Lock）
+## 5. 共享锁与排他锁（Shared Lock and Exclusive Lock）
 
 **定义**：
 - **共享锁（Shared Lock）**：允许其他事务读取数据，但不允许写入。多个事务可以同时持有共享锁。
@@ -104,7 +104,7 @@ LOCK TABLES accounts WRITE;
 UNLOCK TABLES;
 ```
 
-### 总结
+# 总结
 
 - **表锁**：锁定整个表，适用于整体操作但可能导致性能瓶颈。
 - **行锁**：锁定特定行，提高并发性能，主要由InnoDB提供。

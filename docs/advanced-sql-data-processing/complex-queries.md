@@ -1,8 +1,8 @@
-### 复杂查询（JOIN、子查询）
+# 复杂查询（JOIN、子查询）
 
 复杂查询在 SQL 中是指涉及多个表或多个步骤的数据检索操作。常见的复杂查询包括 `JOIN` 和子查询（`Subquery`）。这些查询可以帮助我们从多个表中获取相关数据，或者在一个查询中嵌套另一个查询来进行多层次的数据处理。
 
-#### 1. **JOIN 操作**
+## 1. **JOIN 操作**
 
 `JOIN` 操作用于在 SQL 查询中结合多个表。常见的 `JOIN` 类型包括：`INNER JOIN`、`LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN`。
 
@@ -79,7 +79,7 @@
   RIGHT JOIN departments ON employees.department_id = departments.id;
   ```
 
-#### 2. **子查询**
+## 2. **子查询**
 
 子查询是嵌套在另一个查询中的查询。子查询可以在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 语句中使用，也可以在 `WHERE`、`FROM` 和 `HAVING` 子句中使用。
 

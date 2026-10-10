@@ -1,8 +1,8 @@
-### 什么是MySQL
+# 什么是MySQL
 
 MySQL 是一个开源的关系型数据库管理系统（RDBMS），广泛应用于各种应用场景中，如Web应用、企业软件等。MySQL 最初由瑞典公司 MySQL AB 开发，后来被 Sun Microsystems 收购，最终于2010年成为 Oracle 公司的产品。作为一个关系型数据库系统，MySQL 以其高性能、可靠性和易用性而著称。
 
-#### MySQL 的特点
+## MySQL 的特点
 
 1. **开源**：MySQL 是一个开源软件，用户可以自由地下载、使用和修改源代码，这使得它在开发者社区中非常受欢迎。
 2. **跨平台**：MySQL 支持多种操作系统，如Windows、Linux、MacOS等，具有很强的跨平台性。
@@ -11,7 +11,7 @@ MySQL 是一个开源的关系型数据库管理系统（RDBMS），广泛应用
 5. **扩展性**：MySQL 支持多种存储引擎，如 InnoDB、MyISAM 等，用户可以根据实际需求选择合适的存储引擎。
 6. **社区支持**：作为一个开源项目，MySQL 拥有一个庞大而活跃的社区，用户可以获得丰富的资源和支持。
 
-#### MySQL 的应用场景
+## MySQL 的应用场景
 
 1. **Web 应用**：MySQL 被广泛应用于各种 Web 应用中，如 WordPress、Joomla、Drupal 等内容管理系统，LAMP（Linux、Apache、MySQL、PHP/Perl/Python）架构中的数据库部分通常也是 MySQL。
 2. **数据仓库**：MySQL 适用于构建数据仓库，支持复杂的查询和分析任务。

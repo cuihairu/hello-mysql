@@ -1,8 +1,8 @@
-### 组合查询（UNION, INTERSECT, EXCEPT）
+# 组合查询（UNION, INTERSECT, EXCEPT）
 
 在 SQL 中，`UNION`、`INTERSECT` 和 `EXCEPT` 是用于合并和比较多个查询结果集的操作。这些操作使得用户能够处理和分析来自不同查询的数据集合。需要注意版本差异：**自 MySQL 8.0.31 起，`INTERSECT` 与 `EXCEPT` 已被原生支持**；更早的版本需要用 `INNER JOIN` / `EXISTS` 和 `LEFT JOIN` / `NOT EXISTS` 等方式模拟。另外，MySQL 并不支持 Oracle 的 `MINUS` 运算符（`MINUS` 等价于 `EXCEPT`，但 MySQL 中应写 `EXCEPT`）。以下是它们的详细介绍：
 
-#### 1. UNION
+## 1. UNION
 
 `UNION` 操作符用于将两个或多个 `SELECT` 查询的结果集合并成一个结果集。默认情况下，`UNION` 去除重复的记录。如果需要保留所有记录，包括重复记录，可以使用 `UNION ALL`。
 
@@ -27,7 +27,7 @@ FROM employees_eu;
 
 在这个例子中，`UNION` 将来自 `employees_us` 和 `employees_eu` 表的员工记录合并在一起，去除重复的记录。
 
-#### 2. INTERSECT
+## 2. INTERSECT
 
 `INTERSECT` 操作符用于找出两个或多个查询结果集的交集，即在所有查询中都存在的记录。`INTERSECT` 自 **MySQL 8.0.31** 起被原生支持；如果使用的是更早的版本，可以使用 `INNER JOIN` 或 `EXISTS` 实现类似功能。
 
@@ -52,7 +52,7 @@ FROM employees_eu;
 
 在这个例子中，`INTERSECT` 返回同时在 `employees_us` 和 `employees_eu` 表中存在的员工记录。
 
-#### 3. EXCEPT
+## 3. EXCEPT
 
 `EXCEPT` 操作符用于找出一个查询结果集中的记录，但这些记录不出现在另一个查询结果集中。`EXCEPT` 同样自 **MySQL 8.0.31** 起被原生支持（MySQL 不支持 Oracle 的 `MINUS` 写法）；在更早的版本中，可以使用 `LEFT JOIN` 和 `WHERE` 子句或 `NOT EXISTS` 来实现类似功能。
 
@@ -77,7 +77,7 @@ FROM employees_eu;
 
 在这个例子中，`EXCEPT` 返回那些存在于 `employees_us` 表中但不在 `employees_eu` 表中的员工记录。
 
-### 总结
+# 总结
 
 - **`UNION`**: 合并两个或多个查询结果集，去除重复记录。使用 `UNION ALL` 可以保留所有记录，包括重复记录。
 - **`INTERSECT`**: 查找多个查询结果集的交集，返回所有查询中都存在的记录。MySQL 8.0.31 起原生支持，更早版本可用 `INNER JOIN` 或 `EXISTS` 实现。

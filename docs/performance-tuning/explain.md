@@ -1,8 +1,8 @@
-### 执行计划分析（EXPLAIN）
+# 执行计划分析（EXPLAIN）
 
 `EXPLAIN` 是 MySQL 提供的一个用于分析 SQL 查询执行计划的工具。通过分析执行计划，数据库管理员和开发人员可以了解 MySQL 如何执行查询，帮助识别性能瓶颈并优化查询。以下是对 `EXPLAIN` 的详细介绍。
 
-#### 1. **基本用法**
+## 1. **基本用法**
 
 在查询语句前加上 `EXPLAIN` 关键字，即可查看该查询的执行计划。
 
@@ -10,7 +10,7 @@
 EXPLAIN SELECT * FROM employees WHERE department_id = 1;
 ```
 
-#### 2. **执行计划输出字段**
+## 2. **执行计划输出字段**
 
 `EXPLAIN` 的输出结果包括多个字段，每个字段提供了查询执行过程中的不同信息：
 
@@ -37,7 +37,7 @@ EXPLAIN SELECT * FROM employees WHERE department_id = 1;
 - **`filtered`**：经过 `WHERE` 条件过滤后剩余行的百分比估算（8.0 输出还包含 `partitions` 列，表示命中的分区）。
 - **`Extra`**：额外信息。例如是否使用了文件排序（`Using filesort`）或临时表（`Using temporary`）。
 
-#### 3. **示例分析**
+## 3. **示例分析**
 
 假设我们有以下查询：
 
@@ -62,7 +62,7 @@ EXPLAIN SELECT first_name, last_name FROM employees WHERE department_id = 1;
 - **`rows`**：100，表示估算需要扫描100行。
 - **`Extra`**：NULL，表示没有需要额外提示的执行动作。
 
-#### 4. **优化建议**
+## 4. **优化建议**
 
 通过分析 `EXPLAIN` 输出，我们可以获得优化查询的线索：
 
@@ -71,7 +71,7 @@ EXPLAIN SELECT first_name, last_name FROM employees WHERE department_id = 1;
 - **减少扫描行数**：关注 `rows` 字段，尽可能减少扫描的行数。
 - **关注 `Extra` 信息**：例如，如果 `Extra` 中显示 `Using filesort`，可能需要优化排序操作。
 
-#### 5. **复杂查询的 EXPLAIN**
+## 5. **复杂查询的 EXPLAIN**
 
 对于更复杂的查询，`EXPLAIN` 可以提供更详细的执行计划，尤其是多表连接、子查询等。每个部分的 `id` 和 `select_type` 会帮助理解查询的执行顺序和结构。
 
@@ -84,7 +84,7 @@ WHERE d.location = 'New York';
 
 通过 `EXPLAIN` 分析输出，可以更好地理解查询的执行流程，识别性能瓶颈，并据此优化查询。
 
-#### 6. **EXPLAIN 的输出格式与 EXPLAIN ANALYZE**
+## 6. **EXPLAIN 的输出格式与 EXPLAIN ANALYZE**
 
 - **`FORMAT=TRADITIONAL`**：默认的表格式输出，即上文介绍的形式。
 - **`FORMAT=JSON`**：JSON 格式输出，包含成本估算（`cost_info`）等更详细的信息。
@@ -107,6 +107,6 @@ SELECT * FROM employees WHERE department_id = 1;
 
 此外，`EXPLAIN FOR CONNECTION <线程ID>`（需有相应权限）可以查看另一个会话中正在执行的语句的执行计划，常用于排查正在运行的长查询。
 
-#### 7. **总结**
+## 7. **总结**
 
 `EXPLAIN` 是一个强大的工具，用于分析 SQL 查询的执行计划。通过理解 `EXPLAIN` 的输出，可以识别性能问题，优化查询，并提高数据库的整体性能。
