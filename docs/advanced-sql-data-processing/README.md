@@ -28,7 +28,7 @@
 
 ## [数据汇总与分析](data-summarization-analysis.md)
 
-本节重点介绍数据汇总和分析的技巧，包括使用聚合函数、GROUP BY 和 HAVING 子句以及组合查询的技术。
+本节重点介绍数据汇总和分析的技巧，包括使用聚合函数、GROUP BY 和 HAVING 子句、窗口函数以及组合查询的技术。
 
 - **[聚合函数（SUM, AVG, COUNT, MIN, MAX）](aggregate-functions.md)**
 
@@ -38,13 +38,17 @@
 
   讲解如何使用GROUP BY进行数据分组，如何利用HAVING子句对分组后的数据进行过滤。
 
+- **[窗口函数（Window Functions）](window-functions.md)**
+
+  讲解 OVER 子句、PARTITION BY、排名函数（ROW_NUMBER、RANK、DENSE_RANK）、窗口帧与 LAG/LEAD 等分析函数的用法。
+
 - **[组合查询（UNION, INTERSECT, EXCEPT）](set-operations.md)**
 
   介绍组合查询操作，包括UNION、INTERSECT和EXCEPT的使用方法及其区别。
 
 ## [SQL函数](sql-functions.md)
 
-本节涵盖SQL中各种函数的使用，包括字符串函数、数学函数、日期和时间函数以及条件判断函数。
+本节涵盖SQL中各种函数的使用，包括字符串函数、数学函数、日期和时间函数、条件判断函数以及JSON函数。
 
 - **[字符串函数](string-functions.md)**
 
@@ -61,6 +65,10 @@
 - **[条件判断函数（IF, CASE）](conditional-functions.md)**
 
   讲解IF和CASE条件判断函数的使用方法及其在数据处理中的应用。
+
+- **[JSON 函数](json-functions.md)**
+
+  讲解JSON数据类型的读写：JSON_EXTRACT 与 ->、->> 提取、JSON_SET 等修改函数、JSON_TABLE 展开，以及生成列与多值索引的优化手段。
 
 ## [数据过滤与条件](data-filtering-conditions.md)
 

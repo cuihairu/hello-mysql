@@ -193,6 +193,10 @@
             "link": "/advanced-sql-data-processing/group-by-having"
           },
           {
+            "text": "窗口函数（Window Functions）",
+            "link": "/advanced-sql-data-processing/window-functions"
+          },
+          {
             "text": "组合查询（UNION, INTERSECT, EXCEPT）",
             "link": "/advanced-sql-data-processing/set-operations"
           }
@@ -218,6 +222,10 @@
           {
             "text": "条件判断函数（IF, CASE）",
             "link": "/advanced-sql-data-processing/conditional-functions"
+          },
+          {
+            "text": "JSON 函数",
+            "link": "/advanced-sql-data-processing/json-functions"
           }
         ]
       },
