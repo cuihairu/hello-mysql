@@ -3,6 +3,8 @@
 - [简介](introduction.md)
     - [什么是MySQL](what-is-mysql.md)
         - 介绍MySQL的基本概念、用途和特点。
+    - [NoSQL、SQL 和 MySQL 的关系](nosql-sql-mysql.md)
+        - 梳理 NoSQL 与 SQL 的概念边界，以及 MySQL 在其中的定位。
     - [MySQL的历史与发展](history-and-development.md)
         - 回顾MySQL的发展历程，了解其版本演进和重要里程碑。
     - [安装与配置MySQL](installation-and-configuration.md)

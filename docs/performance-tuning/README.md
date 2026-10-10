@@ -2,7 +2,7 @@
 
 性能调优是确保 MySQL 数据库高效运行的重要部分。本节内容将介绍如何通过性能监控、查询优化和系统调优来提升数据库的性能。
 
-## **性能监控**
+## [性能监控](performance-monitoring.md)
 
 性能监控帮助你实时跟踪数据库的运行状况，从而及时发现和解决性能瓶颈。
 
@@ -12,7 +12,7 @@
 - **[第三方工具（Percona Toolkit, MySQL Enterprise Monitor）](third-party-tools.md)**  
   介绍一些常用的第三方性能监控工具，如 Percona Toolkit 和 MySQL Enterprise Monitor，学习如何利用这些工具进行更深入的性能分析和监控。
 
-## **查询优化**
+## [查询优化](query-optimization.md)
 
 查询优化是提升数据库查询效率的关键。有效的查询优化可以显著减少查询时间和资源消耗。
 
@@ -25,7 +25,7 @@
 - **[查询重写与优化](query-rewriting-optimization.md)**  
   探讨查询重写技术，包括如何改写复杂的查询以提高执行效率和性能。
 
-## **系统调优**
+## [系统调优](system-tuning.md)
 
 系统调优涉及数据库配置、硬件和操作系统的调整，以确保数据库在各种负载下保持最佳性能。
 
