@@ -31,6 +31,7 @@ export default withMermaid(defineConfig({
       { text: '架构部署', link: '/architecture-deployment/README' },
       { text: '性能调优', link: '/performance-tuning/README' },
       { text: '工具实战', link: '/tools-practice/README' },
+      { text: '附录', link: '/appendix/README' },
       { text: '知识点整理', link: '/knowledge' }
     ],
 
