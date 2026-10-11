@@ -5,6 +5,9 @@ hero:
   name: Hello MySQL
   text: MySQL 知识手册
   tagline: 从 SQL 基础、数据库设计与高级数据处理，到索引与存储引擎原理、架构部署、性能调优与工具实战，系统掌握 MySQL。
+  image:
+    src: /illustrations/hero.png
+    alt: hello-mysql hero illustration
   actions:
     - theme: brand
       text: 开始阅读
