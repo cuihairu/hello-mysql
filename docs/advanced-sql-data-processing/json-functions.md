@@ -145,3 +145,15 @@ ALTER TABLE orders
 ```
 
 - 不要对 JSON 字段包一层函数做过滤（如 `WHERE JSON_EXTRACT(doc, '$.item') = 'x'` 在无生成列时无法用索引）；把比较下沉到生成列上。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · JSON 函数](https://dev.mysql.com/doc/refman/8.0/en/json-functions.html)
+- [MySQL 8.0 Reference Manual · JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

@@ -53,3 +53,16 @@
 ## 总结
 
 数据页和数据行是 MySQL 中数据存储和管理的核心组件。理解它们的工作原理有助于优化数据库性能、有效管理数据存储，并设计高效的数据库结构。数据页负责存储和管理表的数据行，而数据行则是表中实际存储的记录。通过合理配置和优化，可以提高数据库的效率和响应速度。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 行格式](https://dev.mysql.com/doc/refman/8.0/en/innodb-row-format.html)
+- [MySQL 8.0 Reference Manual · InnoDB 页压缩](https://dev.mysql.com/doc/refman/8.0/en/innodb-page-compression.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

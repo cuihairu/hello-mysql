@@ -127,3 +127,18 @@
 - **锁机制**：包括表锁、行锁、意向锁、间隙锁、共享锁与排他锁，用于控制并发事务对数据的访问。
 
 理解隔离级别和锁机制是优化数据库性能、维护数据一致性和处理并发事务的重要基础。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-model.html)
+- [MySQL 8.0 Reference Manual · SET TRANSACTION](https://dev.mysql.com/doc/refman/8.0/en/set-transaction.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

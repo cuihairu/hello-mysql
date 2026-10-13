@@ -141,3 +141,15 @@
 ## 总结
 
 **垂直拆分**和**水平拆分**都是优化数据库性能和扩展性的重要技术。**垂直拆分**通过将表的列拆分到不同的表中，减少每次查询的数据量，提高查询性能；**水平拆分**通过将表的行拆分到不同的表中，实现水平扩展和负载均衡。根据具体的应用场景和需求，选择合适的拆分策略可以显著提高数据库系统的性能和扩展能力。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [MySQL 8.0 Reference Manual · 分区](https://dev.mysql.com/doc/refman/8.0/en/partitioning.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

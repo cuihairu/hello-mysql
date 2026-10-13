@@ -57,3 +57,13 @@
 5. **扩展**：分库分表、NewSQL、云原生与 HTAP（第 7 部分）。
 
 建议边学边在本地搭建实验环境（可用 Docker 拉起 MySQL 8.0），用 `EXPLAIN ANALYZE`、`SHOW ENGINE INNODB STATUS`、`performance_schema` 验证书中的结论，形成自己的笔记。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [knowledge](/knowledge.md)

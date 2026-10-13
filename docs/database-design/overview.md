@@ -18,3 +18,14 @@
 3. **数据安全性**：保护数据不被未经授权的用户访问或修改。
 4. **高效性**：优化数据存储和检索的效率，提高系统的性能。
 5. **灵活性**：设计的数据库结构应能够适应业务需求的变化，便于扩展和修改。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

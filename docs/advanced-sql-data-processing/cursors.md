@@ -94,3 +94,14 @@ CLOSE emp_cursor;
 ## 总结
 
 游标是MySQL提供的一个强大工具，允许开发者在存储过程和函数中逐行处理数据。通过声明、打开、提取数据和关闭游标，可以实现复杂的数据处理任务。虽然游标提供了行级操作的能力，但在使用时需要注意性能影响和资源消耗。合理使用游标，可以在需要行级处理和多步操作的场景下提高数据处理的灵活性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 游标](https://dev.mysql.com/doc/refman/8.0/en/cursors.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

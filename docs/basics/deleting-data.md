@@ -119,3 +119,14 @@
   然后重复执行直到所有符合条件的记录被删除。
 
 了解 `DELETE` 语句的这些用法可以帮助你有效地从表中删除数据，并确保操作的安全性和准确性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · DELETE](https://dev.mysql.com/doc/refman/8.0/en/delete.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

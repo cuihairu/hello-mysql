@@ -66,3 +66,22 @@
 - [S10] 《MySQL 必知必会》,Ben Forta — 站内书目页收录
 - [S11] 《数据密集型应用系统设计》(DDIA) — 站内书目页收录
 - [S12] O'Reilly《Learning SQL》 — 站内书目页收录
+
+## 参考资料
+
+- 本页关键论断未找到权威出处（待核）。
+
+- [术语速查：术语表](./glossary.md)（中英对照、一句话定义、权威出处与相关页）。
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](/advanced-features-internals/README.md)
+- [README](/advanced-sql-data-processing/README.md)
+- [README](/appendix/README.md)
+- [README](/architecture-deployment/README.md)
+- [README](/basics/README.md)
+- [README](/database-design/README.md)
+- [README](/new-technologies-future/README.md)
+- [README](/performance-tuning/README.md)
+- [README](/tools-practice/README.md)

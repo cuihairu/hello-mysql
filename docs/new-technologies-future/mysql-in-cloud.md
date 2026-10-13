@@ -56,3 +56,14 @@
 ## 总结
 
 云上使用 MySQL 的核心变化是“运维责任的划分”：托管服务把备份、高可用、监控等交给云平台，而架构设计、参数调优、慢查询治理、迁移与成本控制仍然是使用者的责任。理解托管服务的限制（无 SUPER 权限、不支持直接恢复物理备份、插件受限）并在方案设计时提前规避，是云上平稳运行 MySQL 的关键。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · InnoDB 集群](https://dev.mysql.com/doc/refman/8.0/en/mysql-innodb-cluster-introduction.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

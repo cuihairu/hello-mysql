@@ -129,3 +129,13 @@ MySQL 8.0 已经移除查询缓存，服务端可利用的缓存主要是 InnoDB
 ## 4. 总结
 
 查询重写与优化是提升数据库性能的关键步骤。通过对 SQL 查询语句的修改和优化，可以显著提高查询效率。使用索引、分析执行计划、优化 JOIN 操作、减少排序和分组操作等方法可以有效提高数据库的性能。定期对查询进行重写和优化，是确保数据库系统高效运行的重要措施。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · SELECT 优化](https://dev.mysql.com/doc/refman/8.0/en/select-optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

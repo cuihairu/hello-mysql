@@ -80,3 +80,13 @@ WHERE column_name NOT IN (value1, value2, ...);
 ## 总结
 
 `IN` 和 `NOT IN` 运算符是用于在 SQL 查询中匹配多个值的有用工具。它们使得查询条件更简洁，并能够处理复杂的查询逻辑。正确使用这些操作符，可以提高查询的可读性和维护性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 子查询](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

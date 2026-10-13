@@ -63,3 +63,17 @@
 ## 总结
 
 查询优化器是数据库管理系统中至关重要的组件，负责生成和选择最优的查询执行计划，以提高查询性能。通过了解优化器的工作机制和常见优化策略，用户可以更好地设计和优化 SQL 查询，从而提升数据库系统的整体性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · 优化器追踪](https://dev.mysql.com/doc/refman/8.0/en/optimizer-tracing.html)
+- [MySQL 8.0 Reference Manual · 优化器提示](https://dev.mysql.com/doc/refman/8.0/en/optimizer-hints.html)
+- [MySQL 8.0 Reference Manual · 优化器统计信息](https://dev.mysql.com/doc/refman/8.0/en/optimizer-statistics.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

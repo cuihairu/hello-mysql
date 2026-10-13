@@ -82,3 +82,12 @@ MySQL Enterprise Monitor 是MySQL Enterprise Edition的一部分，需要购买�
 - **MySQL Enterprise Monitor** 提供了全面的监控和管理功能，适用于需要深入分析和高可用性的商业环境。
 
 根据具体需求选择合适的工具，可以帮助提高数据库的性能和管理效率。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

@@ -79,3 +79,12 @@
 ## 7. 总结
 
 硬件调优是提升数据库性能的关键因素之一。通过选择适当的处理器、内存、存储设备、网络配置以及确保系统的稳定性和冷却，可以显著提高数据库系统的性能和可靠性。定期监控硬件性能，并根据实际需求进行调整，以保持数据库的最佳运行状态。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

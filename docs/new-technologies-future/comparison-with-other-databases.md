@@ -57,3 +57,17 @@ MariaDB 是 MySQL 原作者 Monty 离开 Oracle 后分叉维护的社区分支�
 - 已有大量存量业务、追求稳定演进：在 MySQL 8.0 / 8.4 LTS 上持续升级，再按需引入分片、缓存与搜索组件。
 
 选型没有绝对答案，关键是把“事务一致性、扩展方式、运维成本、团队技能、生态支持”这五项与业务需求对齐。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

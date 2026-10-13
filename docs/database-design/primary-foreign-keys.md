@@ -82,3 +82,13 @@ CREATE TABLE Enrollments (
 - **外键**：引用其他表的主键，确保数据的完整性并建立表之间的关系。
 
 主键和外键的正确使用对于数据库的设计和数据一致性至关重要。它们帮助维护数据的结构化和完整性，并在不同的表之间建立有效的关系。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

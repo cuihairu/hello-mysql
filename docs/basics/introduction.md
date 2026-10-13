@@ -10,3 +10,13 @@ MySQL 的发展历史可以追溯到1995年，它的出现填补了一个轻量�
 
 安装 MySQL 通常比较简单，支持多种操作系统，如 Windows、Linux 和 MacOS。用户可以通过下载 MySQL 安装包或使用包管理器进行安装。配置方面，MySQL 提供了详细的配置文件（my.cnf 或 my.ini），用户可以根据实际需求对其进行调整，以优化数据库性能和安全性。
 
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

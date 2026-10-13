@@ -55,3 +55,13 @@ Oracle 对每个 GA 版本提供 Premier Support 与 Extended Support，具体�
 ## 总结
 
 梳理版本与特性的对应关系，有助于在读文档、写 SQL、做升级评估时避免“把 5.7 当 8.0 用”的常见错误。记住几条主线：8.0 是分水岭（数据字典、窗口函数、utf8mb4、移除查询缓存），8.4 是 LTS，9.x 是创新版；GTID 自 5.6 引入但默认关闭，默认认证插件在 8.0 变更、8.4 收紧。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · 新增/弃用/移除](https://dev.mysql.com/doc/refman/8.0/en/added-deprecated-removed.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

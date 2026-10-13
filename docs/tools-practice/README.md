@@ -34,3 +34,16 @@
 ---
 
 - [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+
+## 相关页面
+
+- [e-commerce-system](e-commerce-system.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [e-commerce-system](e-commerce-system.md)

@@ -86,3 +86,16 @@
 - **调优工具**：许多数据库管理系统提供了工具和命令来帮助分析和优化索引，如 MySQL 的 `EXPLAIN` 命令可以帮助了解查询计划和索引的使用情况。
 
 通过合理的索引设计和管理，可以显著提高数据库的性能，优化查询效率。正确理解和应用索引是数据库设计和性能调优的关键。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 索引](https://dev.mysql.com/doc/refman/8.0/en/innodb-indexes.html)
+- [MySQL 8.0 Reference Manual · 优化索引](https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

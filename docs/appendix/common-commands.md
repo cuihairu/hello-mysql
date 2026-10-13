@@ -183,3 +183,21 @@ ROLLBACK;
 -- 锁等待超时（默认 50 秒）
 SHOW VARIABLES LIKE 'innodb_lock_wait_timeout';
 ```
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · SELECT](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · SHOW](https://dev.mysql.com/doc/refman/8.0/en/show.html)
+- [MySQL 8.0 Reference Manual · EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html)
+- [MySQL 8.0 Reference Manual · DESCRIBE](https://dev.mysql.com/doc/refman/8.0/en/describe.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

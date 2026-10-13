@@ -66,3 +66,16 @@ HAVING AVG(salary) > 5000;
 - `GROUP BY` 子句用于将结果集按一个或多个列进行分组。
 - `HAVING` 子句用于对分组后的结果进行过滤，通常与聚合函数一起使用。
 - `GROUP BY` 和 `HAVING` 的组合使得用户能够对数据进行详细的分组和筛选操作，生成有用的汇总报告和统计结果。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · GROUP BY 处理](https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html)
+- [MySQL 8.0 Reference Manual · GROUP BY 修饰符](https://dev.mysql.com/doc/refman/8.0/en/group-by-modifiers.html)
+- [MySQL 8.0 Reference Manual · GROUP BY 函数依赖](https://dev.mysql.com/doc/refman/8.0/en/group-by-functional-dependence.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

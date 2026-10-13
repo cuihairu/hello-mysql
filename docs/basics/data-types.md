@@ -67,3 +67,25 @@
   - `LONGBLOB`：用于存储非常长的二进制数据，最大长度为 4,294,967,295 字节。
 
 选择合适的数据类型可以确保数据的准确性和数据库性能，同时也有助于节省存储空间。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · 数据类型](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
+- [字符串类型 · CHAR/VARCHAR](https://dev.mysql.com/doc/refman/8.0/en/char.html)
+- [二进制字符串类型 · BLOB](https://dev.mysql.com/doc/refman/8.0/en/blob.html)
+- [DATETIME](https://dev.mysql.com/doc/refman/8.0/en/datetime.html)
+- [整数类型](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html)
+- [数值类型](https://dev.mysql.com/doc/refman/8.0/en/numeric-types.html)
+- [浮点类型](https://dev.mysql.com/doc/refman/8.0/en/floating-point-types.html)
+- [YEAR](https://dev.mysql.com/doc/refman/8.0/en/year.html)
+- [SET / ENUM](https://dev.mysql.com/doc/refman/8.0/en/set.html)
+- [ENUM](https://dev.mysql.com/doc/refman/8.0/en/enum.html)
+- [BIT](https://dev.mysql.com/doc/refman/8.0/en/bit-type.html)
+- [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

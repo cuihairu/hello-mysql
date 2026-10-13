@@ -113,3 +113,17 @@ UNLOCK TABLES;
 - **共享锁与排他锁**：控制数据的读取和修改，确保数据一致性。
 
 锁机制的理解和使用对优化数据库性能、维护数据一致性和处理并发事务至关重要。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁类型](https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html)
+- [MySQL 8.0 Reference Manual · 内部锁](https://dev.mysql.com/doc/refman/8.0/en/internal-locking.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

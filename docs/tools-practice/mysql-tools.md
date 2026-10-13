@@ -111,3 +111,16 @@ MySQL 提供了一些官方备份工具，如 `mysqldump` 和 `mysqlbackup`，�
   - 数据库的定期备份和恢复操作。
 
 这些工具可以根据具体的需求和环境选择使用，帮助用户更有效地管理和优化 MySQL 数据库。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · mysqladmin](https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html)
+- [MySQL 8.0 Reference Manual · mysqlcheck](https://dev.mysql.com/doc/refman/8.0/en/mysqlcheck.html)
+- [MySQL 8.0 Reference Manual · mysqlshow](https://dev.mysql.com/doc/refman/8.0/en/mysqlshow.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

@@ -93,3 +93,16 @@ util.loadDump("/data/backup/inst_dump", {threads: 4})
 - `util.checkForServerUpgrade()` 会在升级前检查废弃配置项、保留字冲突、不兼容的 SQL 用法等，升级前务必先跑一遍。
 
 MySQL Shell 提供了一个灵活和强大的环境，适合各种数据库操作需求，无论是开发、管理还是数据分析。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · MySQL Shell](https://dev.mysql.com/doc/refman/8.0/en/mysql-shell-tutorial-python.html)
+- [MySQL Shell · JavaScript 文档](https://dev.mysql.com/doc/refman/8.0/en/mysql-shell-tutorial-javascript.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)

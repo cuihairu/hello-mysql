@@ -53,3 +53,20 @@ MVCC 支持两种类型的读操作：快照读和当前读。
 ## 总结
 
 MVCC 是一种强大的并发控制技术，通过维护数据的多个版本，实现高效的读写并发。InnoDB 存储引擎通过撤销日志和隐藏列实现了 MVCC，提供了非阻塞读操作和一致性视图，有效提升了数据库的并发性能和数据一致性。然而，MVCC 也带来了额外的存储空间开销和实现复杂性。在实际应用中，合理使用 MVCC 机制，可以显著提高数据库系统的性能和可扩展性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 多版本](https://dev.mysql.com/doc/refman/8.0/en/innodb-multi-versioning.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

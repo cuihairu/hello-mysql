@@ -149,3 +149,14 @@
   ```
 
 通过学习和掌握 `JOIN` 和子查询，可以更灵活地从多个表中获取数据，并进行复杂的数据分析和处理。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 子查询](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

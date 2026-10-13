@@ -96,3 +96,14 @@ SELECT * FROM employees WHERE department_id = 1;
 ## 7. 总结
 
 慢查询日志是一个强大的工具，可以帮助识别数据库中的性能瓶颈。通过启用和分析慢查询日志，数据库管理员可以了解查询的执行情况，找到并优化慢查询，从而提高数据库的整体性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · 慢查询日志](https://dev.mysql.com/doc/refman/8.0/en/slow-query-log.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

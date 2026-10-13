@@ -48,3 +48,15 @@ MySQL Workbench 是一个综合的数据库设计和管理工具，由 MySQL 官
 - **性能监控**：监控数据库性能，识别并解决性能瓶颈。
 
 MySQL Workbench 是一个功能强大的工具，适合从数据库设计到管理的各个阶段，帮助用户高效地管理和优化 MySQL 数据库。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)

@@ -125,3 +125,4 @@
 		- [新特性与版本更新](new-technologies-future/new-features-versions.md)
 		- [未来的趋势与展望](new-technologies-future/trends-and-outlook.md)
 - [知识点整理](knowledge.md)
+- [术语表](./glossary.md)

@@ -65,3 +65,13 @@
 3. **性能考虑**：在设计阶段考虑数据的存取效率，优化表结构和索引。
 4. **可扩展性**：设计时考虑系统的未来扩展需求，确保模型能够支持数据量的增长和业务需求的变化。
 
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

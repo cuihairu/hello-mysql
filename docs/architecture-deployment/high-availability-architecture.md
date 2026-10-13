@@ -123,3 +123,16 @@ InnoDB Cluster = **Group Replication + MySQL Shell（AdminAPI）+ MySQL Router**
 ## 总结
 
 MHA 和 Galera Cluster 是两种常见的 MySQL 高可用架构方案，各有其特点和适用场景。MHA 适合需要主节点自动切换的场景，而 Galera Cluster 适合需要多主节点和高一致性的场景。选择合适的高可用架构取决于具体的应用需求、负载特性以及系统的复杂性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · 组复制](https://dev.mysql.com/doc/refman/8.0/en/group-replication.html)
+- [MySQL 8.0 Reference Manual · InnoDB 集群](https://dev.mysql.com/doc/refman/8.0/en/mysql-innodb-cluster-introduction.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

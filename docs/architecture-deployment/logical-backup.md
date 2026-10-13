@@ -80,3 +80,16 @@ MySQL Workbench 是一个图形化的数据库管理工具，它提供了一个�
 - **恢复需求**：逻辑备份可以选择性恢复部分数据，物理备份恢复时需要完整的备份文件。
 
 通过选择适当的备份工具和方法，可以确保数据库数据的安全性和完整性。逻辑备份是一种灵活而有效的备份方法，适合于各种数据保护需求。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · mysqlpump](https://dev.mysql.com/doc/refman/8.0/en/mysqlpump.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

@@ -109,3 +109,12 @@ WHERE column_name LIKE pattern;
 ## 总结
 
 `LIKE` 运算符是 SQL 中用于进行模糊查询的强大工具，通过使用通配符，可以灵活地匹配字符串数据。掌握 `LIKE` 的使用技巧，可以帮助你更精确地筛选和检索数据。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

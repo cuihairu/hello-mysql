@@ -75,3 +75,12 @@
 ## 6. 总结
 
 操作系统级调优对于提高数据库性能至关重要。通过优化内存管理、I/O 性能、网络配置、进程和线程管理以及系统安全与稳定性，可以显著提升数据库的响应速度和处理能力。根据实际应用需求，定期监控和调整操作系统设置，以保持数据库的最佳运行状态。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

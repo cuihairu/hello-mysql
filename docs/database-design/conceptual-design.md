@@ -76,3 +76,13 @@
    订单 (1) -- (n) 订单明细
    产品 (1) -- (n) 订单明细
    ```
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

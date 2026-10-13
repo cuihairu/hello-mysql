@@ -93,3 +93,19 @@
      MODIFY COLUMN name TEXT;
      ```
    - **注意事项**：修改表结构可能会影响现有数据和应用程序逻辑。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE DATABASE](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
+- [ALTER DATABASE](https://dev.mysql.com/doc/refman/8.0/en/alter-database.html)
+- [DROP DATABASE](https://dev.mysql.com/doc/refman/8.0/en/drop-database.html)
+- [CREATE TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [ALTER TABLE](https://dev.mysql.com/doc/refman/8.0/en/alter-table.html)
+- [DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

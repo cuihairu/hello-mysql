@@ -113,3 +113,14 @@
   ```
 
 了解 `UPDATE` 语句的这些用法可以帮助你灵活地修改表中的数据，并确保操作的安全性和准确性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · UPDATE](https://dev.mysql.com/doc/refman/8.0/en/update.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

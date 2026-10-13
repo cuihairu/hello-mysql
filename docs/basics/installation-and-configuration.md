@@ -98,3 +98,14 @@
      ```
 
 安装与配置完成后，可以通过MySQL Workbench或命令行客户端连接到MySQL服务器，进行数据库的创建和管理。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · 安装](https://dev.mysql.com/doc/refman/8.0/en/installing.html)
+- [MySQL 8.0 Reference Manual · 二进制安装](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

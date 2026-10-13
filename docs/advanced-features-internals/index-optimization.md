@@ -63,3 +63,16 @@
 ## 总结
 
 索引优化是一个持续的过程，需要根据数据的变化、查询的模式和系统的负载进行调整。选择合适的索引类型、合理设计和维护索引、使用查询优化工具、避免不必要的索引以及合理的数据库设计都是有效的索引优化策略。通过这些措施，可以显著提高数据库性能，确保系统高效地处理数据。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · 优化索引](https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html)
+- [MySQL 8.0 Reference Manual · InnoDB 自适应哈希索引](https://dev.mysql.com/doc/refman/8.0/en/innodb-adaptive-hash.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

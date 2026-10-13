@@ -90,3 +90,16 @@ ROLLBACK;
 - **`ROLLBACK`**：用于撤销事务中的所有操作，恢复到事务开始前的状态。
 
 事务的正确使用可以帮助维护数据的完整性和一致性，处理复杂操作时至关重要。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · COMMIT](https://dev.mysql.com/doc/refman/8.0/en/commit.html)
+- [MySQL 8.0 Reference Manual · SAVEPOINT](https://dev.mysql.com/doc/refman/8.0/en/savepoint.html)
+- [MySQL 8.0 Reference Manual · SET TRANSACTION](https://dev.mysql.com/doc/refman/8.0/en/set-transaction.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

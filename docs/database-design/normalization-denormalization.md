@@ -62,3 +62,14 @@
 
 - **反规范化示例**
   - 在订单表中直接存储客户的基本信息，而不是仅存储客户ID。这样可以减少在查询订单时需要的连接操作，提升查询性能，但增加了数据冗余。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [knowledge](/knowledge.md)

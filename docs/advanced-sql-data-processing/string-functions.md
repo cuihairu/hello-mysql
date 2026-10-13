@@ -199,3 +199,13 @@ FROM products;
 ## 总结
 
 掌握这些字符串函数可以帮助你在 SQL 查询中有效地处理和操作字符串数据。通过字符串连接、子串提取、大小写转换、去除空格和替换等操作，你可以灵活地调整数据的显示和处理方式。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 字符串函数](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

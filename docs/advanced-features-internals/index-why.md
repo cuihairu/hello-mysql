@@ -156,3 +156,16 @@ MySQL 索引广泛使用 B+ 树和 B- 树，因为这些树结构在处理大量
 ## 结论
 
 B+ 树和 B- 树由于其平衡性和低磁盘 I/O 操作的特点，非常适合用于关系型数据库的索引结构。它们能够提供高效的等值查询、范围查询和顺序访问，兼顾了性能和灵活性。而其他数据结构，如哈希表、倒排索引、R-树和位图索引，虽然在特定场景下有其优势，但在通用性和综合性能上不如 B+ 树和 B- 树适合数据库系统的需求。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 索引](https://dev.mysql.com/doc/refman/8.0/en/innodb-indexes.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

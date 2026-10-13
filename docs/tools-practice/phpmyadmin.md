@@ -56,3 +56,14 @@ phpMyAdmin 是一个基于 Web 的 MySQL/MariaDB 数据库管理工具，使用 
 4. **phpMyAdmin**：下载并安装 phpMyAdmin，将其放置在 Web 服务器的根目录或子目录中，并进行必要的配置。
 
 通过访问 phpMyAdmin 的 Web 界面，用户可以进行数据库的各种操作，包括设计、管理和维护。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

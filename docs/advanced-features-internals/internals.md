@@ -51,3 +51,14 @@ MySQL 支持多种存储引擎，每种存储引擎在数据存储、索引管�
 ## 总结
 
 MySQL 的底层原理涉及存储引擎、数据页与数据行、日志系统、查询优化器、缓存机制、事务处理和存储结构等方面。理解这些底层原理有助于深入掌握 MySQL 的工作机制、优化性能、解决潜在问题。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

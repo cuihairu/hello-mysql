@@ -110,3 +110,15 @@
 ## 总结
 
 索引的创建与管理是数据库性能优化的重要部分。选择合适的索引类型、定期维护索引以及监控查询性能，可以确保数据库系统高效地处理数据并提供快速的查询响应。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · 创建索引](https://dev.mysql.com/doc/refman/8.0/en/create-index.html)
+- [MySQL 8.0 Reference Manual · InnoDB 索引](https://dev.mysql.com/doc/refman/8.0/en/innodb-indexes.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

@@ -113,3 +113,15 @@
 ## 总结
 
 日志处理与分析系统是现代IT架构中的关键组件，涉及到日志收集、存储、处理、分析、可视化、监控等多个方面。通过合理的设计和优化措施，可以提高系统的性能、扩展性和可靠性，帮助企业实时监控系统状态，分析业务数据，优化运营策略。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · 二进制日志](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)
+- [MySQL 8.0 Reference Manual · Performance Schema](https://dev.mysql.com/doc/refman/8.0/en/performance-schema.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

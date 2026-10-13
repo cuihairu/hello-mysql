@@ -161,3 +161,14 @@ SQL 函数用于在查询中处理数据，以完成各种计算、转换和格�
 ## 总结
 
 SQL 函数在数据处理、分析和报告中扮演着关键角色。了解和正确使用这些函数可以帮助你更有效地从数据库中提取和处理数据。通过合理利用字符串函数、数学函数、日期和时间函数以及条件判断函数，你可以实现复杂的数据操作和分析。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 函数参考](https://dev.mysql.com/doc/refman/8.0/en/functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

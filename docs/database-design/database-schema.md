@@ -85,3 +85,15 @@
    - **触发器名**：`BeforeOrderInsert`
    - **功能**：在订单插入之前验证数据完整性。
 
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [INFORMATION_SCHEMA · SCHEMATA](https://dev.mysql.com/doc/refman/8.0/en/information-schema-schemata-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

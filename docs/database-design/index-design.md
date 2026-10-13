@@ -102,3 +102,15 @@
 ## 总结
 
 索引设计是提升数据库性能的关键部分。通过合理选择索引类型、遵循设计原则以及进行定期维护，可以显著提高查询速度和系统响应能力。在实际应用中，应根据具体的查询需求和数据特点来设计和优化索引，以实现最佳的数据库性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [CREATE INDEX](https://dev.mysql.com/doc/refman/8.0/en/create-index.html)
+- [MySQL 8.0 Reference Manual · 优化索引](https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

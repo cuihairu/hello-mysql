@@ -91,3 +91,14 @@
   ```
 
 了解这些 `INSERT` 操作可以帮助你有效地将数据添加到 MySQL 数据库中，并处理可能出现的各种情况。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · INSERT](https://dev.mysql.com/doc/refman/8.0/en/insert.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

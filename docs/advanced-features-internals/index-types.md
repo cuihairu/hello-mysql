@@ -146,3 +146,15 @@
 ## 总结
 
 选择合适的索引类型可以显著提高数据库的查询性能和效率。然而，过多的索引会增加数据修改操作的开销，因此在设计索引时需要综合考虑查询需求、数据特性和性能需求。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 索引](https://dev.mysql.com/doc/refman/8.0/en/innodb-indexes.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

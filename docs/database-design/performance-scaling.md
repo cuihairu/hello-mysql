@@ -86,3 +86,15 @@
 ## 总结
 
 优化数据库的性能和扩展性是一个持续的过程，需要根据具体的应用场景和需求不断调整和改进。通过合理设计索引、优化查询、调整配置参数、实施水平和纵向扩展等措施，可以有效提升数据库系统的性能和扩展能力，确保系统在面对不断增长的数据和负载时能够稳定运行。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

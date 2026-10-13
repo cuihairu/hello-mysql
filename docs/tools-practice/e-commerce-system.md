@@ -120,3 +120,18 @@
 ## 总结
 
 电商系统的数据库设计与优化是一个复杂而重要的过程，需要从需求分析、概念设计、逻辑设计、物理设计、性能优化、安全性和扩展性等多个方面进行综合考虑。通过合理的设计和优化措施，可以提高系统的性能、可靠性和可扩展性，为用户提供更好的体验。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

@@ -190,3 +190,13 @@ SELECT LOG10(100) AS log10_value;
 ## 总结
 
 数学函数在 SQL 查询中提供了强大的数据处理能力。通过使用这些函数，你可以进行各种数学计算和数据分析，从简单的四舍五入到复杂的指数运算，满足数据处理和分析的需求。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 数学函数](https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

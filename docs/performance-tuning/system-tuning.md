@@ -104,3 +104,12 @@
 ## 5. 总结
 
 系统调优是一个综合的过程，涉及到数据库配置、硬件选择、操作系统设置等多个方面。通过对 `my.cnf` 配置文件的优化、硬件资源的合理配置、操作系统级的调整以及定期的性能监控和分析，可以显著提高 MySQL 数据库的整体性能和稳定性。定期进行系统调优，确保系统在高负载情况下保持高效和稳定运行。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

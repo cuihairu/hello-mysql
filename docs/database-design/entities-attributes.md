@@ -64,3 +64,13 @@
 3. **设计主键**：选择合适的主键属性，以唯一标识每个实体实例。
 4. **规范化设计**：避免冗余数据，确保属性的规范化，以提高数据库的效率和一致性。
 5. **考虑未来扩展**：在设计属性时，考虑系统的未来扩展性和可维护性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

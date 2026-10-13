@@ -65,3 +65,15 @@
 ## 总结
 
 数据库架构设计是数据库系统建设的关键部分，它涉及到数据库的组成、类型、设计原则和优化策略。通过理解和应用这些架构设计原则，可以创建一个高效、可靠、可扩展和安全的数据库系统，以满足业务需求和性能要求。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · InnoDB 集群](https://dev.mysql.com/doc/refman/8.0/en/mysql-innodb-cluster-introduction.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

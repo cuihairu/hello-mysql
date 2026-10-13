@@ -92,3 +92,15 @@ SELECT * FROM performance_schema.data_lock_waits\G
 - **性能测试**：在上线新功能或进行系统升级前进行性能测试，确保新版本不会引入性能问题。
 
 通过有效的性能监控，可以确保MySQL数据库的稳定运行，及时发现和解决性能问题，提高数据库系统的整体效率。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · Performance Schema](https://dev.mysql.com/doc/refman/8.0/en/performance-schema.html)
+- [MySQL 8.0 Reference Manual · 慢查询日志](https://dev.mysql.com/doc/refman/8.0/en/slow-query-log.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

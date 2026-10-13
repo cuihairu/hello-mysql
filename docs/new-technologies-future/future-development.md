@@ -40,3 +40,12 @@ MySQL 仍是世界上使用最广泛的开源关系型数据库之一。它在 O
 ## 总结
 
 MySQL 的未来不是“变成另一个数据库”，而是在保持简单、稳定、生态广泛的基础上，向云原生、HTAP 与 AI 场景延展。对使用者来说，务实的做法是：跟住 LTS 版本、用好 8.0 已有的 SQL 与运维能力、按需引入缓存/搜索/分析组件，并在版本升级前用 `util.checkForServerUpgrade()` 做好兼容性评估。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

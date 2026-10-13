@@ -56,3 +56,15 @@
 - **业务连续性计划**：确保在数据丢失或系统故障时，业务操作能够继续进行，减少业务中断时间。
 
 通过制定和实施有效的恢复策略，可以确保在数据库发生故障时，能够快速恢复数据，最小化数据丢失和系统中断时间，从而保障业务的连续性和数据的完整性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · InnoDB 恢复](https://dev.mysql.com/doc/refman/8.0/en/innodb-recovery.html)
+- [MySQL 8.0 Reference Manual · InnoDB 恢复（崩溃恢复）](https://dev.mysql.com/doc/refman/8.0/en/innodb-backup-recovery.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

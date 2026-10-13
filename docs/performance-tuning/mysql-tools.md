@@ -85,3 +85,15 @@ WHERE processlist_command = 'Query';
 - **`SHOW PROCESSLIST`** 提供了当前活动线程的信息，适合用于监控活跃的查询和诊断潜在的性能瓶颈。
 
 通过这些工具，数据库管理员可以有效地监控和管理MySQL服务器的性能，及时发现和解决潜在的问题。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · mysqladmin](https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html)
+- [MySQL 8.0 Reference Manual · mysqlcheck](https://dev.mysql.com/doc/refman/8.0/en/mysqlcheck.html)
+- [MySQL 8.0 Reference Manual · mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

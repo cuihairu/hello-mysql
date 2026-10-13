@@ -76,3 +76,17 @@
 - **检测工具**：如InnoDB的内置检测机制和MySQL的 `SHOW ENGINE INNODB STATUS` 命令。
 
 了解死锁及其检测和解决方法，可以帮助提高数据库系统的稳定性和性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 死锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-deadlocks.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

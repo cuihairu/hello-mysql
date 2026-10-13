@@ -90,3 +90,13 @@ MySQL 9.x 创新版引入 `VECTOR` 数据类型与向量相似度检索能力，
 ## 总结
 
 MySQL 对 NoSQL 的整合有三层含义：一是**文档存储与 JSON**，把半结构化数据原生纳入 MySQL；二是**与 Redis、Elasticsearch 等专用组件协同**，通过应用层缓存或 binlog 订阅实现“关系型 + NoSQL”的多语言持久化；三是**性能型旁路**（Memcached 插件）与**向量检索**（9.x）等新能力。选型时应遵循“事务与一致性要求高的数据留在 MySQL，高并发热点与复杂检索交给专用组件”的原则。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

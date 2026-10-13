@@ -185,3 +185,14 @@ SELECT DATE_FORMAT(NOW(), '%W, %M %e, %Y') AS formatted_datetime;
 ## 总结
 
 日期和时间函数在 SQL 查询中为日期和时间的处理提供了灵活性。这些函数允许你提取、计算、格式化和比较日期及时间，使得日期和时间的操作变得更加高效和便捷。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 日期和时间函数](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

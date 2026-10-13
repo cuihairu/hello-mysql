@@ -69,3 +69,16 @@
 - **资源可用性**：备份过程对系统性能的影响和资源的需求。
 
 通过选择适合的备份类型，可以有效地保障数据库的安全性和业务的连续性。根据实际需求，制定和实施合适的备份策略，是数据保护和恢复的关键。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · 备份方法](https://dev.mysql.com/doc/refman/8.0/en/backup-methods.html)
+- [MySQL 8.0 Reference Manual · 备份类型](https://dev.mysql.com/doc/refman/8.0/en/backup-types.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

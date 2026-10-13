@@ -73,3 +73,18 @@ MySQL 的日志系统（Redo Log、Undo Log 和 Binary Log）是数据库管理�
 - **Binary Log**：用于主从复制和数据恢复，支持增量备份和时间点恢复。
 
 理解这些日志的工作机制和使用场景，有助于优化数据库性能、保证数据的完整性，以及进行有效的数据备份和恢复。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 重做日志](https://dev.mysql.com/doc/refman/8.0/en/innodb-redo-log.html)
+- [MySQL 8.0 Reference Manual · InnoDB 撤销日志](https://dev.mysql.com/doc/refman/8.0/en/innodb-undo-logs.html)
+- [MySQL 8.0 Reference Manual · 二进制日志](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

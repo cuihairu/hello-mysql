@@ -77,3 +77,15 @@
 ## 总结
 
 事务是数据库管理中不可或缺的机制，通过实现ACID特性，事务确保了数据操作的完整性、一致性、隔离性和持久性。正确地使用事务，可以有效管理数据库操作，处理复杂的业务逻辑，保障数据的可靠性和一致性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-model.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

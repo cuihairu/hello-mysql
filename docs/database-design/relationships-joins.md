@@ -76,3 +76,15 @@ RIGHT JOIN table2 b ON a.id = b.id;
 2. **合理选择连接类型**：根据查询需求选择合适的连接类型，以获得所需的数据。
 3. **优化连接性能**：在处理大规模数据时，注意连接操作的性能，考虑索引和查询优化。
 4. **保持数据一致性**：确保关系和连接不会导致数据的不一致性，使用适当的约束和规则来维护数据的完整性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [MySQL 8.0 Reference Manual · 子查询](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html)
+- [MySQL 8.0 Reference Manual · SELECT](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

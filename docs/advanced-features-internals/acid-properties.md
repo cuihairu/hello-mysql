@@ -84,3 +84,16 @@ COMMIT;  -- 即使系统崩溃，订单也会被记录在数据库中
 ## 总结
 
 ACID特性确保了数据库事务的可靠性和一致性。在设计和实现数据库事务时，理解和应用这些特性可以帮助确保数据的完整性、准确性和稳定性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 事务模型](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-model.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

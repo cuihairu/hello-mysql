@@ -139,3 +139,15 @@ MySQL 8.0 **移除**了查询缓存，不再提供 `query_cache_size`、`query_c
 ## 6. 总结
 
 通过调整 `my.cnf` 配置文件中的参数，可以显著提高 MySQL 数据库的性能和稳定性。参数优化需要根据实际的负载情况和硬件配置进行调整。定期监控数据库性能并根据实际使用情况进行调整，以保持数据库的最佳性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · 服务器系统变量](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+- [MySQL 8.0 Reference Manual · InnoDB 参数](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

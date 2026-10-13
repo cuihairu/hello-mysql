@@ -94,3 +94,21 @@
 - **文档记录**：记录备份和恢复过程，以便在需要时能够快速恢复。
 
 通过正确的备份和恢复策略，您可以有效地保护 MySQL 数据库中的数据，并在发生故障时迅速恢复系统。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · 备份方法](https://dev.mysql.com/doc/refman/8.0/en/backup-methods.html)
+- [MySQL 8.0 Reference Manual · 备份类型](https://dev.mysql.com/doc/refman/8.0/en/backup-types.html)
+- [MySQL 8.0 Reference Manual · 备份策略](https://dev.mysql.com/doc/refman/8.0/en/backup-policy.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

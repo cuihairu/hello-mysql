@@ -84,3 +84,16 @@ FROM employees_eu;
 - **`EXCEPT`**: 查找一个查询结果集中的记录，但不出现在另一个查询结果集中。MySQL 8.0.31 起原生支持，更早版本可用 `LEFT JOIN`、`WHERE` 或 `NOT EXISTS` 实现类似功能（MySQL 不支持 `MINUS` 写法）。
 
 这些操作符提供了强大的数据处理能力，可以用来进行复杂的数据分析和报告。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · UNION](https://dev.mysql.com/doc/refman/8.0/en/union.html)
+- [MySQL 8.0 Reference Manual · INTERSECT](https://dev.mysql.com/doc/refman/8.0/en/intersect.html)
+- [MySQL 8.0 Reference Manual · EXCEPT](https://dev.mysql.com/doc/refman/8.0/en/except.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

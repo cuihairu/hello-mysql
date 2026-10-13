@@ -68,3 +68,13 @@ SHOW REPLICA STATUS\G
 3. **区分会话与全局**：很多问题与 `sql_mode`、字符集、时区的会话级设置有关，`SHOW VARIABLES` 对比会话与全局值；
 4. **定位到具体语句**：慢查询日志、`performance_schema.events_statements_summary_by_digest`、`SHOW PROCESSLIST` 三件套；
 5. **留证据再动手**：改配置、跳过复制事务、`KILL` 连接之前，先把 `SHOW ENGINE INNODB STATUS`、错误日志、`SHOW REPLICA STATUS` 的输出保存下来。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [knowledge](/knowledge.md)

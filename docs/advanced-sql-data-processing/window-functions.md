@@ -146,3 +146,17 @@ FROM employees;
 - 窗口函数只能出现在 `SELECT`、`ORDER BY` 和窗口化子句中，`WHERE`、`GROUP BY`、`HAVING` 里不能直接使用。先用 `WHERE` 过滤、再对结果开窗；需要按条件改变计算结果时用 `CASE` 构造窗口内表达式。
 - `OVER` 子句内不支持 `LIMIT`；"每组取前 N"要用 `ROW_NUMBER` 加子查询过滤。
 - 窗口函数不能建索引直接加速，排序和分区是运行时计算。数据量大时先用 `WHERE` 缩小范围，或对 `PARTITION BY` / `ORDER BY` 涉及的列建好普通索引，减少排序开销。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 窗口函数](https://dev.mysql.com/doc/refman/8.0/en/window-functions.html)
+- [窗口函数框架](https://dev.mysql.com/doc/refman/8.0/en/window-functions-frames.html)
+- [命名窗口](https://dev.mysql.com/doc/refman/8.0/en/window-functions-named-windows.html)
+- [窗口函数用法](https://dev.mysql.com/doc/refman/8.0/en/window-functions-usage.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

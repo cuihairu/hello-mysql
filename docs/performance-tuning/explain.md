@@ -110,3 +110,22 @@ SELECT * FROM employees WHERE department_id = 1;
 ## 7. 总结
 
 `EXPLAIN` 是一个强大的工具，用于分析 SQL 查询的执行计划。通过理解 `EXPLAIN` 的输出，可以识别性能问题，优化查询，并提高数据库的整体性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html)
+- [EXPLAIN 输出格式](https://dev.mysql.com/doc/refman/8.0/en/explain-output.html)
+- [EXPLAIN EXTENDED](https://dev.mysql.com/doc/refman/8.0/en/explain-extended.html)
+- [EXPLAIN FOR CONNECTION](https://dev.mysql.com/doc/refman/8.0/en/explain-for-connection.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)
+- [README](README.md)

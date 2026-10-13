@@ -22,3 +22,13 @@
 2. **准确性**：确保需求描述的准确性，避免模糊和歧义，确保需求与实际业务一致。
 3. **可验证性**：需求应当是可验证的，确保在系统实现后能够进行验证和测试，确保需求得到满足。
 4. **沟通和确认**：与用户保持良好的沟通，及时确认需求，确保需求分析结果得到用户认可和确认。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

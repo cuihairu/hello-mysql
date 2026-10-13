@@ -63,3 +63,17 @@ COMMIT;
 - **行锁**：提供更细粒度的并发控制，适用于需要对特定行进行操作的场景。尽管实现和管理较为复杂，但在高并发环境中能够提高性能和数据一致性。
 
 理解表锁和行锁的特点及适用场景，对于设计高效的数据库系统、处理并发事务以及优化性能至关重要。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁类型](https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html)
+- [MySQL 8.0 Reference Manual · InnoDB 下一键锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-next-key-locking.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

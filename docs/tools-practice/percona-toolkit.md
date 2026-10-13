@@ -87,3 +87,14 @@ Percona Toolkit 是一组开源工具，专为 MySQL 数据库管理和优化设
      ```
 
 Percona Toolkit 是一个强大且灵活的工具集，对于 MySQL 数据库的性能优化、管理和故障排除提供了重要的支持。通过合理使用这些工具，可以提高数据库的性能和稳定性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

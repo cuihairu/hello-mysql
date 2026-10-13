@@ -114,3 +114,18 @@
 ## 总结
 
 分区和分片都是数据库优化和扩展的重要技术。**分区**通过将数据分布到同一个数据库的不同分区中，提高了查询效率和数据管理的灵活性，而**分片**通过将数据分布到多个数据库实例中，实现了水平扩展和负载均衡。根据具体的应用场景和需求，选择合适的技术来优化数据库性能和扩展能力。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [MySQL 8.0 Reference Manual · 分区](https://dev.mysql.com/doc/refman/8.0/en/partitioning.html)
+- [分区概述](https://dev.mysql.com/doc/refman/8.0/en/partitioning-overview.html)
+- [分区类型](https://dev.mysql.com/doc/refman/8.0/en/partitioning-types.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

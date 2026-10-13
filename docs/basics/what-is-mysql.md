@@ -19,3 +19,13 @@ MySQL 是一个开源的关系型数据库管理系统（RDBMS），广泛应用
 4. **嵌入式系统**：由于 MySQL 的轻量级和高性能特点，它也被广泛应用于各种嵌入式系统中。
 
 通过了解 MySQL 的基本概念和特点，读者可以对这一广泛应用的数据库管理系统有一个初步的认识，为后续深入学习 MySQL 的安装、配置及各种操作奠定基础。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

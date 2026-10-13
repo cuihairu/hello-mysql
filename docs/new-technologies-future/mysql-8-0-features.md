@@ -86,3 +86,19 @@ MySQL 8.0 于 2018 年 4 月正式 GA，是继 5.7 之后变化最大的一次�
 ## 总结
 
 MySQL 8.0 是一次“内功”升级：数据字典与原子 DDL 解决了元数据的一致性问题，窗口函数与 CTE 补齐了 SQL 能力，utf8mb4 与 caching_sha2_password 提升了默认安全性，同时移除了查询缓存等历史包袱。后续的 8.4 LTS 与 9.x 创新版在这条路线上继续演进。理解这些变化及其版本归属，是做好升级评估和性能调优的前提。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)
+- [MySQL 8.0 Reference Manual · 窗口函数](https://dev.mysql.com/doc/refman/8.0/en/window-functions.html)
+- [MySQL 8.0 Reference Manual · 原子 DDL](https://dev.mysql.com/doc/refman/8.0/en/atomic-ddl.html)
+- [MySQL 8.0 Reference Manual · 降序索引](https://dev.mysql.com/doc/refman/8.0/en/descending-indexes.html)
+- [MySQL 8.0 Reference Manual · 不可见索引](https://dev.mysql.com/doc/refman/8.0/en/invisible-indexes.html)
+- [MySQL 8.0 Reference Manual · 角色](https://dev.mysql.com/doc/refman/8.0/en/roles.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

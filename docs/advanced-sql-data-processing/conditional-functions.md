@@ -109,3 +109,13 @@ FROM
 ## 总结
 
 条件判断函数在 SQL 查询中用于实现复杂的逻辑判断。`IF()` 和 `CASE` 提供了灵活的条件表达式，用于根据不同的条件返回不同的值。`IFNULL()` 和 `COALESCE()` 则用于处理和替代空值，以确保查询结果的完整性和准确性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 控制流函数](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

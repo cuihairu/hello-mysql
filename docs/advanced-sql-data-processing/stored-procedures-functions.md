@@ -173,3 +173,16 @@ SELECT CalculateBonus(50000, 10);
 ### 总结
 
 **存储过程**和**函数**是MySQL中强大的编程工具，能够帮助用户实现复杂的业务逻辑和数据操作。存储过程适用于处理复杂的操作和事务，能够接受和返回多个参数，而函数则用于执行计算和转换操作，并在SQL语句中嵌入使用。根据具体的需求和场景，合理选择和使用存储过程与函数，可以显著提高数据库系统的性能、可维护性和代码复用性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 存储例程](https://dev.mysql.com/doc/refman/8.0/en/stored-routines.html)
+- [CREATE PROCEDURE](https://dev.mysql.com/doc/refman/8.0/en/create-procedure.html)
+- [CREATE FUNCTION](https://dev.mysql.com/doc/refman/8.0/en/create-function.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

@@ -123,3 +123,15 @@ CREATE INDEX idx_order_date_customer ON Orders (OrderDate, CustomerID);
 ## 总结
 
 表的设计是数据库设计的核心，涉及确定表结构、字段选择、主键和外键定义、约束条件设置以及索引设计。合理的表设计不仅有助于提高数据的存储和检索效率，还能确保数据的一致性和完整性。通过综合考虑表设计的各个方面，可以构建出高效、稳定、易于维护的数据库系统。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [ALTER TABLE](https://dev.mysql.com/doc/refman/8.0/en/alter-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

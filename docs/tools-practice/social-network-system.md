@@ -118,3 +118,14 @@
 ## 总结
 
 社交网络数据库的设计与优化涉及多个方面，包括需求分析、概念设计、逻辑设计、物理设计、性能优化、安全性和扩展性等。通过合理的设计和优化措施，可以提高系统的性能、可靠性和可扩展性，为用户提供更好的体验。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [knowledge](/knowledge.md)
+- [README](README.md)

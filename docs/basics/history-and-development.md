@@ -20,3 +20,12 @@ MySQL 的历史和发展充满了创新和变革。从1995年发布第一个版�
 
 MySQL 的发展体现了开源社区的强大力量和持续创新的精神。随着云计算和大数据技术的发展，MySQL 继续在全球范围内被广泛应用于各种应用场景。
 
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

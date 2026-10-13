@@ -126,3 +126,12 @@ WHERE condition;
 ## 总结
 
 `WHERE` 子句是 SQL 查询中最常用的工具，用于精确控制检索数据的条件。通过使用逻辑运算符、模式匹配、集合检查和范围查询，可以有效地筛选出所需的数据。掌握 `WHERE` 子句的使用方法，对于编写高效的 SQL 查询至关重要。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

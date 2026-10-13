@@ -81,3 +81,13 @@ erDiagram
 2. **精确表示**：实体、属性和关系的表示应尽量精确，避免歧义。
 3. **保持简洁**：ER图应尽量简洁，避免不必要的复杂性，以便于理解和交流。
 4. **规范命名**：使用统一的命名规范，确保实体、属性和关系名称的一致性和可读性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

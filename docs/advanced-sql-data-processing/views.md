@@ -123,3 +123,15 @@ WHERE department_name = 'Sales';
 ```
 
 总结，视图是 SQL 中强大的工具，通过视图可以简化查询、增强安全性，并提供灵活的数据表示形式。但在使用时也需注意性能和更新限制。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 视图](https://dev.mysql.com/doc/refman/8.0/en/views.html)
+- [CREATE VIEW](https://dev.mysql.com/doc/refman/8.0/en/create-view.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

@@ -138,3 +138,17 @@ SET GLOBAL rpl_semi_sync_replica_enabled = 1;
 ## 总结
 
 主从复制是提高数据库系统性能和可用性的有效技术，通过将读操作分配给从服务器和备份主服务器的数据来实现负载均衡和高可用性。虽然它带来了一些管理复杂性和数据延迟问题，但正确配置和维护可以显著提升系统的可靠性和性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · 复制实施](https://dev.mysql.com/doc/refman/8.0/en/replication-implementation.html)
+- [MySQL 8.0 Reference Manual · 复制格式](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

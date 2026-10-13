@@ -115,3 +115,15 @@ FROM employees;
 ## 总结
 
 数据汇总与分析涉及到通过聚合函数、分组、组合查询等技术来提取和分析数据中的关键信息。掌握这些技术可以帮助用户高效地处理数据，生成报告，并支持决策过程。通过合理使用这些SQL功能，用户可以深入理解数据并做出更具信息化的决策。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 聚合函数](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html)
+- [MySQL 8.0 Reference Manual · 窗口函数](https://dev.mysql.com/doc/refman/8.0/en/window-functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

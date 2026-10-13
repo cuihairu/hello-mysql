@@ -147,3 +147,12 @@ WHERE NOT EXISTS (
 ## 总结
 
 数据过滤与条件是 SQL 查询中关键的操作，用于限制查询结果的范围和精确度。通过使用 `WHERE` 子句、模糊查询、`IN`、`BETWEEN`、`EXISTS` 等条件，可以实现复杂的数据筛选和检索，确保从数据库中获取到符合需求的记录。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

@@ -108,3 +108,14 @@
 ## 总结
 
 Percona Toolkit 提供了一系列强大的工具，能够帮助数据库管理员解决实际中的各种问题，包括表结构在线修改、数据一致性检查和修复、慢查询优化、长时间运行查询的自动终止以及系统诊断信息的收集。通过这些工具，可以有效提高 MySQL 数据库的性能、稳定性和可维护性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 程序](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

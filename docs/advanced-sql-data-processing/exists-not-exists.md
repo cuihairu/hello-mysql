@@ -95,3 +95,14 @@ WHERE NOT EXISTS (subquery);
 ## 总结
 
 `EXISTS` 和 `NOT EXISTS` 是用于测试子查询是否返回结果的操作符。这些操作符在 SQL 查询中用于处理复杂的数据关联和条件检查，使得查询更具灵活性和表达力。正确使用这些操作符，可以有效地进行记录存在性检测，从而优化数据检索的逻辑。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 子查询](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

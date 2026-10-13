@@ -74,3 +74,17 @@
 ---
 
 - [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+
+## 相关页面
+
+- [Multi-Version-Concurrency-Control](Multi-Version-Concurrency-Control.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [Multi-Version-Concurrency-Control](Multi-Version-Concurrency-Control.md)

@@ -76,3 +76,13 @@
    - **缓存和会话存储**：需要快速读写访问的临时数据存储，如缓存系统和会话管理。
 
 通过以上分析，可以更清楚地了解 SQL 和 NoSQL 数据库的区别，以及在不同应用场景下如何选择适合的数据库类型。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

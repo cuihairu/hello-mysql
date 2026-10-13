@@ -52,3 +52,12 @@
 ## 总结
 
 数据库行业正朝着云原生、分布式、HTAP 与 AI 融合的方向演进，MySQL 的角色是其中最通用的事务型数据底座。对工程师而言，掌握 MySQL 的核心原理、理解周边系统的协同方式、并建立自动化的运维与可观测体系，比追逐某一个具体的新技术更能长期受益。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

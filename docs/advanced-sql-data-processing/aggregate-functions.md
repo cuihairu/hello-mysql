@@ -102,3 +102,14 @@ GROUP BY department_id;
 ## 总结
 
 聚合函数在数据库查询中非常有用，它们帮助用户从大量数据中提取汇总信息和统计数据。通过使用这些函数，用户可以快速获取总和、平均值、数量、最小值和最大值，从而更好地分析和理解数据。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 聚合函数](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

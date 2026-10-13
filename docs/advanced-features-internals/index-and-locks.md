@@ -102,3 +102,15 @@ SELECT * FROM employees WHERE name = 'John Doe' FOR UPDATE;
 ## 总结
 
 索引和锁在数据库中的作用至关重要。通过有效的索引优化策略，可以显著提高数据库性能，减少查询时间，提高并发性，降低系统负载。同时，了解有索引和无索引情况下锁的区别，有助于更好地设计和优化数据库。索引优化是一个持续的过程，需要根据数据的变化、查询的模式和系统的负载进行调整。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁类型](https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

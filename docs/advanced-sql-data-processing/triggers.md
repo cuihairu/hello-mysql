@@ -84,3 +84,15 @@ DROP TRIGGER IF EXISTS after_employee_insert;
 ## 总结
 
 触发器是MySQL提供的强大工具，可以在特定的数据库事件发生时自动执行预定义的操作。它们可以用于数据验证、自动计算、日志记录和数据同步等场景。通过合理使用触发器，可以提高数据库系统的自动化水平和数据一致性。然而，需要注意触发器的性能影响和复杂性管理，确保触发器的设计符合实际需求并保持数据库的良好性能。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 触发器](https://dev.mysql.com/doc/refman/8.0/en/triggers.html)
+- [CREATE TRIGGER](https://dev.mysql.com/doc/refman/8.0/en/create-trigger.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

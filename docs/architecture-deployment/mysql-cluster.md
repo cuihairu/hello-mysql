@@ -76,3 +76,17 @@ MySQL Cluster 的工作原理可以总结为以下几个步骤：
 ## 总结
 
 MySQL Cluster 提供了一种高可用、可扩展的数据库解决方案，适用于需要高性能和高可用性的应用场景。通过将数据分布到多个数据节点上，并使用复制和故障恢复机制，MySQL Cluster 能够提供稳定的服务。然而，它的配置和管理相对复杂，需要深入了解其架构和性能优化策略。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · MySQL 集群](https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster.html)
+- [MySQL 8.0 Reference Manual · MySQL 集群概览](https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-overview.html)
+- [MySQL 8.0 Reference Manual · MySQL 集群一般信息](https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-general-info.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

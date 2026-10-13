@@ -46,3 +46,16 @@
 ## 总结
 
 锁的优化策略涉及减少锁持有时间、选择合适的隔离级别、使用行级锁、避免死锁、优化锁策略、减少锁冲突、监控和调整锁使用以及应用层的优化。通过这些策略，可以有效地提高数据库系统的并发性能和整体效率。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+- [MySQL 8.0 Reference Manual · InnoDB 死锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-deadlocks.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

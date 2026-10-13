@@ -61,3 +61,14 @@
 ## 总结
 
 单实例架构是数据库系统的基础配置形式，适用于较小的应用场景和开发环境。尽管它在扩展性和高可用性方面有限，但其简单性和成本效益使其在许多场合下仍然具有重要价值。理解和合理使用单实例架构可以为更复杂的数据库架构奠定基础。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · 服务器系统变量](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

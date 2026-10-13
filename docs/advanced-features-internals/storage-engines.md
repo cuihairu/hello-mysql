@@ -76,3 +76,16 @@ MySQL 采用可插拔的存储引擎架构，同一个数据库中可以为不�
 - 在 MySQL 8.0 中，**InnoDB 是默认存储引擎**，绝大多数 OLTP 场景都应优先使用它：完整的事务（ACID）、行级锁与 MVCC、崩溃恢复、外键、全文索引与空间索引一应俱全。
 - **MyISAM** 适合读多写少、不要求事务的场景；**MEMORY** 适合临时表与缓存类数据（重启即丢失）；**CSV** 便于与其他系统交换数据；**ARCHIVE** 适合日志与历史数据归档（只支持 INSERT 和 SELECT，不支持 UPDATE/DELETE）；**FEDERATED** 用于跨实例访问远程表，8.0 中默认未启用。
 - 选择存储引擎时，应结合事务需求、并发模式、数据生命周期与运维成本综合权衡；除非有明确理由，一般不建议偏离默认的 InnoDB。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · MyISAM](https://dev.mysql.com/doc/refman/8.0/en/myisam-storage-engine.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)
+- [knowledge](/knowledge.md)

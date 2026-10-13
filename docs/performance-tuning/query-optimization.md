@@ -128,3 +128,15 @@
 ## 总结
 
 查询优化是提高MySQL性能的重要任务。通过执行计划分析、慢查询日志、查询重写、合适的索引、缓存机制和数据库结构优化等措施，可以有效提高数据库的查询效率和响应速度。不断监控和调整查询性能是保持数据库高效运行的关键。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · SELECT 优化](https://dev.mysql.com/doc/refman/8.0/en/select-optimization.html)
+- [MySQL 8.0 Reference Manual · 子查询优化](https://dev.mysql.com/doc/refman/8.0/en/subquery-optimization.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [glossary](/glossary.md)
+- [README](README.md)

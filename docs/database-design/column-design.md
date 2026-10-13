@@ -134,3 +134,22 @@ CREATE TABLE Employees (
 ## 总结
 
 字段设计在数据库设计中扮演着重要角色，涉及字段名称、数据类型、长度、约束条件、默认值、索引及优化等方面。合理的字段设计能够确保数据的准确性、一致性和查询性能，从而构建高效、可靠的数据库系统。在设计字段时，应综合考虑实际业务需求、数据特性和性能要求，以达到最佳设计效果。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+- [MySQL 8.0 Reference Manual · 数据类型](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
+- [字符串类型 · CHAR/VARCHAR](https://dev.mysql.com/doc/refman/8.0/en/char.html)
+- [BLOB](https://dev.mysql.com/doc/refman/8.0/en/blob.html)
+- [DATETIME](https://dev.mysql.com/doc/refman/8.0/en/datetime.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

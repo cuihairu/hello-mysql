@@ -164,3 +164,18 @@ DELIMITER ;
 ## 总结
 
 高级SQL查询包括多表联合、子查询、视图、存储过程、触发器和游标等。这些功能允许你进行复杂的数据操作和分析，提高数据库的灵活性和效率。通过合理使用这些高级查询技术，可以实现更高效的数据管理和业务逻辑处理。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · 子查询](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html)
+
+## 相关页面
+
+- [README](README.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

@@ -82,3 +82,12 @@ WHERE column_name NOT BETWEEN value1 AND value2;
 ## 总结
 
 `BETWEEN` 和 `NOT BETWEEN` 运算符用于在 SQL 查询中指定数据范围，这使得筛选数据变得更加简洁和直观。正确使用这些操作符，可以有效地检索或排除在特定范围内的数据。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

@@ -88,3 +88,14 @@ SQL广泛应用于：
 ## 总结
 
 SQL是管理关系型数据库的核心语言，掌握SQL的基本概念和语法是数据库开发和管理的基础。通过熟悉SQL的基本功能和操作，可以有效地进行数据查询、管理和分析，为各种应用场景提供强大的数据支持。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/glossary.md)

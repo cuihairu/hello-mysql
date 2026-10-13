@@ -105,3 +105,13 @@ mysql -u root -p mydatabase < mydatabase_backup.sql
 ## 总结
 
 物理设计是将数据库逻辑模型转化为实际的数据库实现的过程。通过表设计、索引设计、数据分区、存储引擎选择、备份与恢复策略及性能优化，物理设计确保数据库高效、稳定、安全地运行。合理的物理设计不仅提高了数据库的性能，还增强了数据的管理和安全性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 数据库对象](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+- [CREATE TABLE / ALTER TABLE / DROP TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)

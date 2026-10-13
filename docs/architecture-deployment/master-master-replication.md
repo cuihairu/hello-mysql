@@ -88,3 +88,14 @@
 ## 总结
 
 主主复制是一种提高数据库系统可用性和扩展性的有效技术，通过允许每个主服务器同时处理读写操作和双向数据同步，实现了系统的高可用性和负载均衡。然而，它也带来了数据冲突和管理复杂性的问题，需要仔细设计和管理以确保系统的稳定性和数据一致性。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · 复制配置](https://dev.mysql.com/doc/refman/8.0/en/replication-configuration.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
