@@ -13,13 +13,13 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-MySQL Knowledge Handbook · [Read online](https://cuihairu.github.io/hello-mysql/)
+MySQL learning notes and developer field notes · [Read online](https://cuihairu.github.io/hello-mysql/)
 
 </div>
 
 ---
 
-A Chinese-language knowledge site covering MySQL fundamentals and SQL, database design, advanced data processing, internals, architecture and deployment, performance tuning, and tooling in practice.
+A Chinese-language collection of personal MySQL notes, takeaways, and developer experience, spanning SQL, database design, internals, deployment, performance, and tools. It shares what I have learned and encountered while building software; it is not organized as a course.
 
 Knowledge notes: [docs/knowledge.md](https://cuihairu.github.io/hello-mysql/knowledge) — core concepts, the reference books, official manual pages, use cases, and common pitfalls, each linked to the full pages.
 

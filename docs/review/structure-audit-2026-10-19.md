@@ -129,8 +129,18 @@
 
 ### C｜口径与侧栏对账
 
-- 根目录 `README.md`、`README.zh.md` 未列篇数或不存在的目录，本轮改为个人笔记与开发者经验分享的定位；没有可修正的数量/目录事实。
+- 根目录 `README.md`、`README.zh.md` 未列篇数或不存在的目录；已统一为个人笔记、心得与开发者经验分享的定位，没有虚构篇数或课程路径。
 - `docs/.vitepress/config.mts` 侧栏注释仍描述 7 个主题分组与附录归类，和实际配置一致；没有过期“第 N 讲”数字。
 - sidebar 配置目标均存在；总览页及可见 Markdown 页面均有入口，首页由 VitePress 首页约定处理，SUMMARY 由 `srcExclude` 排除。
 
 具体 file:line、构建、死链和删除计数以最终交付回报为准。
+
+### 最终验收证据
+
+- 构建：`pnpm docs:build` 通过；VitePress 1.6.4 完成客户端/服务端构建与页面渲染。构建有既存的单个 bundle 大小提示，不影响成功退出。
+- 本地 Markdown 链接：脚本扫描仓库根 README 和 docs Markdown，排除代码示例及外链，共检查 **671** 个本地目标，断链 **0**。此数字只代表本地文件目标，不代表外部 URL 可达性或锚点有效性。
+- Sidebar：124 个链接目标；同一侧栏重复目标 **0**、不存在目标 **0**、未进入侧栏的可见内容 Markdown **0**。排除首页约定、SUMMARY 底稿、内部 `docs/review/` 报告和 VitePress 配置/主题文件。
+- 删除计数：`git diff origin/main...HEAD --diff-filter=D --name-only | wc -l` = **0**；其中 Markdown 删除数也为 **0**。
+- A 定位：`docs/SUMMARY.md` 第 1–5 行；附录唯一侧栏入口为 [sidebar.json](../.vitepress/sidebar.json) 第 527–547 行。
+- B 定位：事务摘要 [transactions.md](../advanced-features-internals/transactions.md) 第 5–13 行及权威页互链 [transaction-concepts.md](../advanced-features-internals/transaction-concepts.md) 第 1–3 行；索引互链 [index-design.md](../database-design/index-design.md) 第 1–5 行、[index-types.md](../advanced-features-internals/index-types.md) 第 1–5 行；工具互链 [mysql-tools.md](../tools-practice/mysql-tools.md) 第 1–5 行、[性能监控工具](../performance-tuning/mysql-tools.md) 第 1–5 行；锁/隔离角度互链见 [isolation-levels-locks.md](../advanced-features-internals/isolation-levels-locks.md)、[locking-mechanisms.md](../advanced-features-internals/locking-mechanisms.md)、[lock-types.md](../advanced-features-internals/lock-types.md) 各第 1–5 行。
+- C 定位：英文 README 第 16、22 行；中文 README 第 16、22 行。侧栏配置注释 `docs/.vitepress/config.mts` 第 38–40 行与 7 个主题分组一致，没有“第 N 讲”过期数量。

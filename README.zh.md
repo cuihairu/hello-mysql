@@ -13,13 +13,13 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-MySQL 知识手册 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
+MySQL 个人笔记与开发经验 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
 
 </div>
 
 ---
 
-覆盖 MySQL 基础与 SQL、数据库设计、高级数据处理、底层原理、架构部署、性能调优与工具实战的中文知识站点。
+这里记录我学习和使用 MySQL 时整理的笔记、心得与开发经验，内容涉及 SQL、数据库设计、底层原理、架构部署、性能调优和工具实践。这是个人经验分享，不按课程或学习路径组织。
 
 知识点主文档：[docs/knowledge.md](https://cuihairu.github.io/hello-mysql/knowledge) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
 
