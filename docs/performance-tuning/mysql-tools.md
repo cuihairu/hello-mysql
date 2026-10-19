@@ -1,5 +1,7 @@
 # MySQL自带工具
 
+本文聚焦性能排查时使用 `SHOW STATUS`、`SHOW PROCESSLIST` 等服务器观测手段；通用客户端和工具类别见[MySQL 工具总览](../tools-practice/mysql-tools.md)。
+
 MySQL提供了多种内置工具和命令，用于监控数据库的运行状态和性能。以下是两种常用的工具及其详细说明：
 
 ## 1. SHOW STATUS

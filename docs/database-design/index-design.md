@@ -1,5 +1,7 @@
 # 索引设计
 
+本文从表结构与查询需求出发记录索引设计取舍；索引的数据结构与类型见[索引类型及其底层实现](../advanced-features-internals/index-types.md)，操作与调优见[索引优化](../advanced-features-internals/index-optimization.md)。
+
 索引设计是数据库性能优化中的关键部分，它能显著提高数据检索的速度。合理的索引设计可以加快查询速度，减少数据访问时间。以下是索引设计的主要内容和最佳实践：
 
 ## 1. 索引的基本概念

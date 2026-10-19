@@ -107,3 +107,30 @@
 1. **先处理附录 README 重复导航**：去掉父项或子项的重复链接，保留唯一入口，不改文件 URL（`docs/SUMMARY.md:115-120`，sidebar 附录块）。
 2. **给两个 `mysql-tools` 页写清边界并互链**：把一个定位为性能监控/服务器工具，另一个定位为工具实战总览，减少读者误入（`docs/performance-tuning/mysql-tools.md`、`docs/tools-practice/mysql-tools.md`）。
 3. **确定 SUMMARY 是否为 sidebar 的派生物**：先定维护来源，之后再做自动生成或停止手工更新，避免两份目录慢慢漂移（`docs/.vitepress/config.mts:18-19`、`docs/SUMMARY.md`、`docs/.vitepress/sidebar.json`）。
+
+## 收口验收记录
+
+以下是本轮实际执行结果；审计报告正文记录执行前证据，若与下列结果不同，以本节为准。内容定位采用个人学习笔记、心得和开发者经验分享，不组织成课程或学习路径。
+
+### A｜导航源
+
+- `docs/SUMMARY.md` 保留文件和 URL，开头改为导航维护说明：sidebar 是唯一权威源，SUMMARY 仅作不再维护的迁移底稿；页面变更只维护 sidebar 并核对文件目标。
+- `docs/.vitepress/sidebar.json` 附录 README 只在父入口链接一次；子级“附录资料”保留分类但不再重复链接同一页面。
+- 检查 sidebar 全部 link 的目标及同一侧栏重复目标；跨侧栏复用不计重复。
+
+### B｜跨轴重复：文本证据与分类
+
+| 组别 | 分类与处理 | 修改前文本对比证据 |
+|---|---|---|
+| 事务总览 / 事务概念 | **真重复，1 组。** `transactions.md` 收敛为要点摘要和指向事务概念、隔离级别与锁、事务使用三页的完整说明链接；保留其业务应用场景和总览角度。 | `transactions.md` 原文：“事务是一组操作的集合……要么全部执行，要么全部不执行”；`transaction-concepts.md` 原文：“事务（Transaction）是一个数据库操作的逻辑单元……所有操作要么全部成功，要么全部不执行”。两处均展开 ACID 和隔离级别。 |
+| 数据库设计索引 / 底层索引实现 | **不同角度，保留并互链。** 前者讨论表结构与查询需求的设计取舍，后者讨论 MySQL/InnoDB 类型及实现。 | `database-design/index-design.md`：“索引设计是数据库性能优化中的关键部分……最佳实践”；`advanced-features-internals/index-types.md`：“不同类型的索引有不同的底层实现……适用场景及其底层实现”。 |
+| 工具总览 / 性能监控工具 | **不同角度，保留并互链。** 前者是开发管理工具分类，后者聚焦性能现场的服务器观测命令。 | `tools-practice/mysql-tools.md` 按 Workbench、phpMyAdmin、MySQL Shell 等工具介绍功能和适用场景；`performance-tuning/mysql-tools.md` 展开 `SHOW STATUS`、`SHOW PROCESSLIST`、状态变量和现场筛查。 |
+| 事务隔离 / 锁机制与锁类型 | **不同角度，保留并互链。** 分别讨论并发可见性、锁机制、锁类型，没有把概念相邻当作重复。 | `isolation-levels-locks.md` 从隔离级别解释事务可见性；`locking-mechanisms.md` 梳理并发访问控制机制；`lock-types.md` 聚焦表锁和行锁特点。 |
+
+### C｜口径与侧栏对账
+
+- 根目录 `README.md`、`README.zh.md` 未列篇数或不存在的目录，本轮改为个人笔记与开发者经验分享的定位；没有可修正的数量/目录事实。
+- `docs/.vitepress/config.mts` 侧栏注释仍描述 7 个主题分组与附录归类，和实际配置一致；没有过期“第 N 讲”数字。
+- sidebar 配置目标均存在；总览页及可见 Markdown 页面均有入口，首页由 VitePress 首页约定处理，SUMMARY 由 `srcExclude` 排除。
+
+具体 file:line、构建、死链和删除计数以最终交付回报为准。
