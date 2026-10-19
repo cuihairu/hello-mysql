@@ -1,6 +1,6 @@
 [
   {
-    "text": "第1部分：基础知识",
+    "text": "基础知识",
     "link": "/basics/README",
     "collapsed": true,
     "items": [
@@ -61,7 +61,7 @@
     ]
   },
   {
-    "text": "第2部分：数据库设计",
+    "text": "数据库设计",
     "link": "/database-design/README",
     "collapsed": true,
     "items": [
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "text": "第3部分：高级SQL与数据处理",
+    "text": "高级SQL与数据处理",
     "link": "/advanced-sql-data-processing/README",
     "collapsed": true,
     "items": [
@@ -259,7 +259,7 @@
     ]
   },
   {
-    "text": "第4部分：高级功能与底层原理",
+    "text": "高级功能与底层原理",
     "link": "/advanced-features-internals/README",
     "collapsed": true,
     "items": [
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "text": "第5部分：架构与部署",
+    "text": "架构与部署",
     "link": "/architecture-deployment/README",
     "collapsed": true,
     "items": [
@@ -415,7 +415,7 @@
     ]
   },
   {
-    "text": "第6部分：性能调优",
+    "text": "性能调优",
     "link": "/performance-tuning/README",
     "collapsed": true,
     "items": [
@@ -475,7 +475,7 @@
     ]
   },
   {
-    "text": "第7部分：工具与实战",
+    "text": "工具记录",
     "link": "/tools-practice/README",
     "collapsed": true,
     "items": [

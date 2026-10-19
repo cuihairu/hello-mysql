@@ -1,6 +1,6 @@
 # 高可用架构（MHA, Galera Cluster）
 
-高可用架构在数据库系统中非常重要，因为它确保了系统在发生故障时能够继续提供服务。MySQL 提供了多种高可用架构方案，其中最常见的包括 MHA（Master High Availability Manager and Tools）和 Galera Cluster。以下是对这两种架构的详细介绍：
+高可用架构在数据库系统中非常重要，因为它确保了系统在发生故障时能够继续提供服务。MySQL 提供了多种高可用架构方案，其中最常见的包括 MHA（Master High Availability Manager and Tools）和 Galera Cluster。下面记录这两种架构的主要特点：
 
 ## 1. MHA（Master High Availability Manager and Tools）
 

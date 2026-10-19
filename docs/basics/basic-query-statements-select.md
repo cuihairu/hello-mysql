@@ -1,6 +1,6 @@
 # 基本查询语句（SELECT）
 
-`SELECT` 语句是 SQL 中用于从数据库中检索数据的基本命令。以下是 `SELECT` 语句的主要用法和一些常见操作的介绍。
+`SELECT` 语句是 SQL 中用于从数据库中检索数据的基本命令。下面整理 `SELECT` 的主要用法和常见操作。
 
 ## 1. 基本 SELECT 查询
 
@@ -181,7 +181,7 @@
   RIGHT JOIN table2 ON table1.common_column = table2.common_column;
   ```
 
-了解和掌握这些基本的 `SELECT` 查询语句可以帮助你有效地从 MySQL 数据库中检索和处理数据。
+这些基本的 `SELECT` 查询语句用于从 MySQL 数据库检索和处理数据。
 
 ## 参考资料
 

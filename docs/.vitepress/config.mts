@@ -6,7 +6,7 @@ import sidebar from './sidebar.json'
 export default withMermaid(defineConfig({
   lang: 'zh-CN',
   title: 'Hello MySQL',
-  description: 'MySQL 知识手册——基础与 SQL、数据库设计、底层原理、架构部署、性能调优与工具实战',
+  description: 'MySQL 开发笔记与实践记录：SQL、数据库设计、底层原理、架构部署、性能调优与工具',
   base: '/hello-mysql/',
   cleanUrls: true,
   lastUpdated: true,
@@ -24,13 +24,13 @@ export default withMermaid(defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '基础知识', link: '/basics/README' },
+      { text: '基础笔记', link: '/basics/README' },
       { text: '数据库设计', link: '/database-design/README' },
       { text: '高级SQL', link: '/advanced-sql-data-processing/README' },
       { text: '底层原理', link: '/advanced-features-internals/README' },
       { text: '架构部署', link: '/architecture-deployment/README' },
       { text: '性能调优', link: '/performance-tuning/README' },
-      { text: '工具实战', link: '/tools-practice/README' },
+      { text: '工具记录', link: '/tools-practice/README' },
       { text: '附录', link: '/appendix/README' },
       { text: '知识点整理', link: '/knowledge' }
     ],

@@ -1,6 +1,6 @@
 # 组合查询（UNION, INTERSECT, EXCEPT）
 
-在 SQL 中，`UNION`、`INTERSECT` 和 `EXCEPT` 是用于合并和比较多个查询结果集的操作。这些操作使得用户能够处理和分析来自不同查询的数据集合。需要注意版本差异：**自 MySQL 8.0.31 起，`INTERSECT` 与 `EXCEPT` 已被原生支持**；更早的版本需要用 `INNER JOIN` / `EXISTS` 和 `LEFT JOIN` / `NOT EXISTS` 等方式模拟。另外，MySQL 并不支持 Oracle 的 `MINUS` 运算符（`MINUS` 等价于 `EXCEPT`，但 MySQL 中应写 `EXCEPT`）。以下是它们的详细介绍：
+在 SQL 中，`UNION`、`INTERSECT` 和 `EXCEPT` 是用于合并和比较多个查询结果集的操作。这些操作使得用户能够处理和分析来自不同查询的数据集合。需要注意版本差异：**自 MySQL 8.0.31 起，`INTERSECT` 与 `EXCEPT` 已被原生支持**；更早的版本需要用 `INNER JOIN` / `EXISTS` 和 `LEFT JOIN` / `NOT EXISTS` 等方式模拟。另外，MySQL 并不支持 Oracle 的 `MINUS` 运算符（`MINUS` 等价于 `EXCEPT`，但 MySQL 中应写 `EXCEPT`）。下面对比它们的行为和用法：
 
 ## 1. UNION
 

@@ -48,7 +48,7 @@
 - Stack Overflow 的 `mysql`、`mysql-8.0` 标签，以及 Database Administrators（DBA Stack Exchange）；
 - GitHub 上的示例库与工具仓库（gh-ost、my2.sql、mysql-sys 等）。
 
-## 5. 学习路径建议
+## 5. 我查资料时的顺序
 
 1. **基础**：SQL 语法、数据类型、表设计范式（对应本书第 1-2 部分）；
 2. **进阶**：索引原理（B+Tree）、事务与隔离级别、锁与 MVCC（第 4 部分）；
@@ -56,7 +56,7 @@
 4. **工具**：MySQL Shell、EXPLAIN ANALYZE、performance_schema、Percona Toolkit（第 6-7 部分）；
 5. **扩展**：分库分表、NewSQL、云原生与 HTAP（第 7 部分）。
 
-建议边学边在本地搭建实验环境（可用 Docker 拉起 MySQL 8.0），用 `EXPLAIN ANALYZE`、`SHOW ENGINE INNODB STATUS`、`performance_schema` 验证书中的结论，形成自己的笔记。
+我通常会在本地搭建实验环境（可用 Docker 拉起 MySQL 8.0），再用 `EXPLAIN ANALYZE`、`SHOW ENGINE INNODB STATUS`、`performance_schema` 验证书中的结论，形成自己的笔记。
 
 ## 参考资料
 
