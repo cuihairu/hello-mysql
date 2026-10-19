@@ -1,4 +1,12 @@
-# hello-mysql
+# 导航维护说明
+
+本文件保留为迁移时的目录映射底稿，不是站点导航源，也不由 VitePress 构建。站点导航以 [`docs/.vitepress/sidebar.json`](.vitepress/sidebar.json) 为唯一权威来源；新增、改名或调整页面时只维护 sidebar，并核对目标文件存在。此文件不再手工同步，避免与 sidebar 漂移。
+
+以下旧目录映射内容已停止维护，仅供追溯迁移前的章节归属；阅读和导航请使用站点侧栏。
+
+---
+
+# hello-mysql（旧映射底稿）
 
 - [第1部分：基础知识](basics/README.md)
 	- [简介](basics/introduction.md)
