@@ -1,90 +1,90 @@
-# 高级功能与底层原理
+# Internals and Advanced Features
 
-这里记录我在排查性能和并发问题时用到的 MySQL 功能与内部机制，包括索引、事务、锁和存储引擎。
+My notes on the MySQL features and internal mechanics I reach for when debugging performance and concurrency problems: indexes, transactions, locking and storage engines.
 
-## [索引](indexes.md)
+## [Indexes](indexes.md)
 
-索引类型、创建管理和优化方式，以及我在查询排查中关注的性能影响。
+Index types, how to create and manage them, and the performance effects I watch for while investigating queries.
 
-- **[索引类型](index-types.md)**  
-  不同索引类型（如 B-Tree、哈希索引）及其适用场景。
+- **[Index Types](index-types.md)**  
+  The different index types (B-tree, hash index and so on) and where each applies.
 
-- **[创建与管理索引](create-manage-indexes.md)**  
-  创建、修改和删除索引时的常见操作与注意点。
+- **[Creating and Managing Indexes](create-manage-indexes.md)**  
+  Common operations and things to watch out for when creating, altering and dropping indexes.
 
-- **[索引优化](index-optimization.md)**  
-  索引调整对查询性能和耗时的影响。
+- **[Index Optimization](index-optimization.md)**  
+  How changing indexes affects query performance and execution time.
 
-- **[索引的底层数据结构选择](index-why.md)**  
-  解释为什么主流选择 B+ 树，以及与哈希、二叉树等结构的取舍。
+- **[Index Data Structures](index-why.md)**  
+  Why B+ trees are the mainstream choice, and the trade-offs against hash tables, binary trees and others.
 
-## [事务](transactions.md)
+## [Transactions](transactions.md)
 
-事务关系到数据一致性和完整性。这里记录事务概念、ACID 特性、事务操作和隔离级别管理。
+Transactions are what keep data consistent and intact. This section covers transaction concepts, ACID, transaction operations and isolation levels.
 
-- **[事务概念](transaction-concepts.md)**  
-  事务的定义、作用和 MySQL 中的用法。
+- **[Transaction Concepts](transaction-concepts.md)**  
+  What transactions are, what they are for, and how they are used in MySQL.
 
-- **[ACID特性](acid-properties.md)**  
-  事务的四大特性：原子性、一致性、隔离性和持久性。
+- **[ACID Properties](acid-properties.md)**  
+  The four properties of transactions: atomicity, consistency, isolation and durability.
 
-- **[事务的使用（BEGIN, COMMIT, ROLLBACK）](transaction-usage.md)**  
-  在 MySQL 中启动、提交和回滚事务时需要留意的地方。
+- **[Using Transactions (BEGIN, COMMIT, ROLLBACK)](transaction-usage.md)**  
+  Things to be careful about when starting, committing and rolling back transactions in MySQL.
 
-- **[隔离级别与锁](isolation-levels-locks.md)**  
-  探讨事务隔离级别的不同设置及其对数据操作的影响，以及锁机制的应用。
+- **[Isolation Levels and Locks](isolation-levels-locks.md)**  
+  The different isolation level settings, how they affect data operations, and where locking comes in.
 
-- **[索引与锁](index-and-locks.md)**  
-  分析索引对锁范围的影响，理解为什么走对索引能减少行锁冲突。
+- **[Indexes and Locks](index-and-locks.md)**  
+  How indexes affect lock scope, and why taking an index correctly reduces row-lock contention.
 
-## [锁机制](locking-mechanisms.md)
+## [Locking Mechanisms](locking-mechanisms.md)
 
-锁机制控制并发操作下的数据一致性。这里整理锁的种类、死锁检测处理和锁优化策略。
+Locks keep data consistent under concurrent access. This section covers lock types, deadlock detection and handling, and lock optimisation.
 
-- **[锁的种类（表锁、行锁）](lock-types.md)**  
-  介绍表锁和行锁的区别及其应用场景。
+- **[Lock Types (Table Locks, Row Locks)](lock-types.md)**  
+  The difference between table locks and row locks, and where each applies.
 
-- **[死锁与检测](deadlock-detection.md)**  
-  死锁的成因、检测方式和处理思路。
+- **[Deadlocks and Detection](deadlock-detection.md)**  
+  What causes deadlocks, how they are detected and how to deal with them.
 
-- **[锁的优化策略](lock-optimization.md)**  
-  锁优化对数据库并发处理能力的影响。
+- **[Lock Optimization](lock-optimization.md)**  
+  How lock tuning affects the database's ability to handle concurrency.
 
-## [底层原理](internals.md)
+## [Internals](internals.md)
 
-我把与性能排查相关的 MySQL 内部机制放在这一节，方便对照实际运行行为。
+The MySQL internals I keep close when debugging performance, so I can cross-check against actual runtime behaviour.
 
-- **[存储引擎（InnoDB、MyISAM等）](storage-engines.md)**  
-  MySQL 中不同存储引擎的特点和适用场景，如 InnoDB 和 MyISAM。
+- **[Storage Engines (InnoDB, MyISAM, and others)](storage-engines.md)**  
+  The characteristics of the different storage engines and where each applies, such as InnoDB and MyISAM.
 
-- **[数据页与数据行](data-pages-rows.md)**  
-  探索 MySQL 数据存储的基本单元：数据页和数据行。
+- **[Data Pages and Rows](data-pages-rows.md)**  
+  The basic units of storage in MySQL: data pages and rows.
 
-- **[日志（Redo Log, Undo Log, Binary Log）](logs.md)**  
-  了解日志在 MySQL 中的作用，包括重做日志、回滚日志和二进制日志。
+- **[Logs (Redo Log, Undo Log, Binary Log)](logs.md)**  
+  What the logs do in MySQL: the redo log, undo log and binary log.
 
-- **[MVCC（多版本并发控制）](Multi-Version-Concurrency-Control.md)**  
-  讲解快照读与当前读、undo 版本链，以及 MVCC 如何支撑事务隔离级别。
+- **[MVCC (Multi-Version Concurrency Control)](Multi-Version-Concurrency-Control.md)**  
+  Snapshot reads versus current reads, the undo version chain, and how MVCC supports the transaction isolation levels.
 
-- **[查询优化器](query-optimizer.md)**  
-  学习查询优化器的工作原理及其如何帮助提高查询性能。
+- **[Query Optimizer](query-optimizer.md)**  
+  How the query optimizer works and how it helps improve query performance.
 
-这些笔记记录了我对 MySQL 高级功能和底层实现的理解，以及它们在管理和优化中的关联。
+These notes record my understanding of MySQL's advanced features and internals, and how they relate to day-to-day administration and tuning.
 
 ---
 
-- [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+- [Knowledge Notes](../knowledge.md) —— Core concepts, references, key points from the official docs, use cases and common pitfalls, all with in-site links.
 
-## 参考资料
+## References
 
-- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
-- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB Storage Engine](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB Architecture](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
 
-## 相关页面
+## Related pages
 
 - [Multi-Version-Concurrency-Control](Multi-Version-Concurrency-Control.md)
 
 <!-- BACKLINKS-AUTO -->
-## 相关页面
+## Related pages
 
 - [Multi-Version-Concurrency-Control](Multi-Version-Concurrency-Control.md)

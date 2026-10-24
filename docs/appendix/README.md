@@ -1,31 +1,31 @@
-# 附录
+# Appendix
 
-我把常查的资料放在这里：需要命令、错误码或参考链接时可以直接翻。
+The material I look up most often: commands, error codes and reference links.
 
-- **[常用命令参考](common-commands.md)**  
-  按场景整理的高频命令：连接与基本信息、库表操作、用户权限、备份恢复、状态诊断、复制、事务与锁、变量修改、索引与执行计划。
+- **[Common Commands](common-commands.md)**  
+  High-frequency commands grouped by scenario: connections and basic info, databases and tables, users and privileges, backup and recovery, status diagnostics, replication, transactions and locks, variable changes, indexes and execution plans.
 
-- **[错误代码与解决方案](error-codes-solutions.md)**  
-  按类别（连接认证、SQL 与数据、锁与并发、外键约束、复制）整理常见错误码、典型原因与处理思路。
+- **[Error Codes and Solutions](error-codes-solutions.md)**  
+  Common error codes grouped by category (connection and auth, SQL and data, locks and concurrency, foreign keys, replication), with typical causes and fixes.
 
-- **[参考书目与在线资源](references-resources.md)**  
-  我常用的官方文档入口、参考书目、工具清单和社区渠道。
+- **[References and Resources](references-resources.md)**  
+  The official documentation entry points, books, tool lists and community channels I keep going back to.
 
-> 说明：本仓库正文以 MySQL 8.0 为基准编写，涉及 8.0.x 之后的版本变化（如 8.0.22 起的复制语法更名、8.0.30 起的重做日志参数调整）会在相应位置注明。
+> Note: the main text in this repository targets MySQL 8.0. Changes introduced after 8.0.x (for example the replication syntax renames from 8.0.22 and the redo log parameter adjustments from 8.0.30) are noted where they apply.
 
 ---
 
-- [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+- [Knowledge Notes](../knowledge.md) —— Core concepts, references, key points from the official docs, use cases and common pitfalls, all with in-site links.
 
-## 参考资料
+## References
 
 - [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
 
-## 相关页面
+## Related pages
 
 - [common-commands](common-commands.md)
 
 <!-- BACKLINKS-AUTO -->
-## 相关页面
+## Related pages
 
 - [common-commands](common-commands.md)

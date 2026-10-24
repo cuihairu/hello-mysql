@@ -1,0 +1,31 @@
+# 附录
+
+我把常查的资料放在这里：需要命令、错误码或参考链接时可以直接翻。
+
+- **[常用命令参考](common-commands.md)**  
+  按场景整理的高频命令：连接与基本信息、库表操作、用户权限、备份恢复、状态诊断、复制、事务与锁、变量修改、索引与执行计划。
+
+- **[错误代码与解决方案](error-codes-solutions.md)**  
+  按类别（连接认证、SQL 与数据、锁与并发、外键约束、复制）整理常见错误码、典型原因与处理思路。
+
+- **[参考书目与在线资源](references-resources.md)**  
+  我常用的官方文档入口、参考书目、工具清单和社区渠道。
+
+> 说明：本仓库正文以 MySQL 8.0 为基准编写，涉及 8.0.x 之后的版本变化（如 8.0.22 起的复制语法更名、8.0.30 起的重做日志参数调整）会在相应位置注明。
+
+---
+
+- [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
+
+## 相关页面
+
+- [common-commands](common-commands.md)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [common-commands](common-commands.md)

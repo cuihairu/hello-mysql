@@ -1,0 +1,95 @@
+# 逻辑备份（mysqldump, MySQL Workbench）
+
+逻辑备份是指通过导出数据库的结构和数据来实现备份。这种备份方法将数据库内容转换为SQL语句或其他格式的文件，可以用于数据库迁移、恢复、以及数据分析等。逻辑备份不依赖于具体的存储引擎，通常比物理备份更灵活。
+
+## 1. `mysqldump`
+
+`mysqldump` 是 MySQL 提供的一个命令行工具，用于生成数据库的逻辑备份。它将数据库的数据和结构导出为 SQL 脚本，可以用于数据恢复和迁移。
+
+- **基本用法**：
+  ```bash
+  mysqldump -u [username] -p [database_name] > [backup_file].sql
+  ```
+
+  - `-u [username]`：指定用户名。
+  - `-p`：提示输入密码。
+  - `[database_name]`：指定要备份的数据库名称。
+  - `[backup_file].sql`：备份文件的名称。
+
+- **常用选项**：
+  - `--all-databases`：备份所有数据库。
+  - `--single-transaction`：在备份过程中保持事务一致性（适用于 InnoDB）。
+  - `--routines`：备份存储过程和函数。
+  - `--triggers`：备份触发器。
+  - `--no-data`：仅备份数据库结构，不备份数据。
+  - `--compress`：压缩客户端与服务器之间连接上的传输数据（8.0.18 起已废弃，建议改用 `--compression-algorithms=zlib`）。注意它并不压缩备份文件本身，若要减小备份文件体积，应配合系统压缩工具，例如 `mysqldump -u root -p mydb | gzip > mydb_backup.sql.gz`。
+  - `--source-data=2`（8.0.26 前为 `--master-data=2`）：在备份文件中记录备份时源库的二进制日志位点，便于基于位点的恢复和搭建从库。
+  - `--set-gtid-purged=OFF`：在启用了 GTID 的实例上，导出为可重新导入的 SQL 时通常需要该选项，避免备份文件中携带本实例的 GTID 集合。
+
+- **示例**：
+  ```bash
+  mysqldump -u root -p mydb > mydb_backup.sql
+  ```
+
+  这个命令将 `mydb` 数据库的结构和数据导出到 `mydb_backup.sql` 文件中。
+
+- **恢复**：
+  ```bash
+  mysql -u [username] -p [database_name] < [backup_file].sql
+  ```
+
+  使用 `mysql` 命令将备份文件导入数据库。
+
+## 2. MySQL Workbench
+
+MySQL Workbench 是一个图形化的数据库管理工具，它提供了一个用户友好的界面来执行数据库备份和恢复操作。通过 MySQL Workbench，用户可以方便地创建逻辑备份，并进行恢复。
+
+- **创建备份**：
+  1. 打开 MySQL Workbench 并连接到数据库服务器。
+  2. 在左侧 **管理**（Administration）导航中选择 **数据导出**（Data Export）。
+  3. 勾选要备份的数据库和表。
+  4. 选择导出方式：**导出到自包含文件**（Export to Self-Contained File，生成单个 `.sql` 文件）或 **导出到转储项目文件夹**（Export to Dump Project Folder，每张表一个文件）。
+  5. 在 **高级选项**（Advanced Options）中按需勾选是否包含结构、数据、触发器、存储过程等。
+  6. 点击 **开始导出**（Start Export），并指定备份文件的保存位置。
+
+- **恢复备份**：
+  1. 打开 MySQL Workbench 并连接到数据库服务器。
+  2. 在 **管理** 导航中选择 **数据导入**（Data Import/Restore）。
+  3. 选择导入来源：**从转储项目文件夹导入** 或 **从自包含文件导入**。
+  4. 在 **默认目标 Schema**（Default Target Schema）中选择目标数据库（也可以勾选导入时自动创建 Schema）。
+  5. 点击 **开始导入**（Start Import），把备份文件的数据恢复到数据库中。
+
+- **优点**：
+  - **用户友好**：提供图形化界面，易于操作。
+  - **集成工具**：支持多种管理功能，如数据库设计和查询。
+
+- **缺点**：
+  - **性能**：对于大型数据库，图形化工具可能会较慢。
+  - **资源占用**：可能需要更多的系统资源和内存。
+
+## 3. 逻辑备份的比较
+
+- **灵活性**：逻辑备份可以选择备份数据库的部分内容（如仅表结构、某些表的数据），而物理备份通常是整体备份。
+- **恢复**：逻辑备份通过 SQL 脚本恢复，通常不依赖于特定的数据库存储引擎。
+- **适用场景**：适用于迁移数据、生成数据快照和进行数据分析等。
+
+## 4. 选择备份方法的考虑因素
+
+- **数据大小**：逻辑备份适合中小型数据库，较大的数据库可能需要更高效的工具。
+- **备份频率**：逻辑备份适合定期备份和小范围的恢复。
+- **恢复需求**：逻辑备份可以选择性恢复部分数据，物理备份恢复时需要完整的备份文件。
+
+通过选择适当的备份工具和方法，可以确保数据库数据的安全性和完整性。逻辑备份是一种灵活而有效的备份方法，适合于各种数据保护需求。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [MySQL 8.0 Reference Manual · mysqlpump](https://dev.mysql.com/doc/refman/8.0/en/mysqlpump.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/zh/glossary.md)

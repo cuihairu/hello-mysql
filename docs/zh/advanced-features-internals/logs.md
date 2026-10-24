@@ -1,0 +1,90 @@
+# 日志（Redo Log, Undo Log, Binary Log）
+
+在 MySQL 中，日志是数据库管理和恢复的关键组件。它们用于记录数据库的更改、支持事务处理、保证数据一致性和持久性。下面是三种主要的日志类型及其作用及使用场景：
+
+## 1. Redo Log（重做日志）
+
+- **定义**：
+  - Redo Log 记录了对数据库的所有更改操作，以便在系统崩溃后能够重新应用这些操作。它确保了数据的持久性，即使在发生故障时也能恢复数据。
+
+- **功能**：
+  - **持久化**：记录所有对数据库的修改操作（INSERT、UPDATE、DELETE 对数据页的物理修改），并将这些操作记录到日志文件中。
+  - **崩溃恢复**：在数据库崩溃后，系统可以使用 Redo Log 重放已提交但尚未写入数据文件的修改；对于未提交的事务，则借助 Undo Log 回滚，从而保证数据库的一致性。
+
+- **工作机制**：
+  - **写入方式**：在事务提交之前，数据库会先将操作写入 Redo Log，然后再更新数据文件。
+  - **刷写**：Redo Log 会被周期性地刷写到磁盘，以减少持久化操作的开销。事务提交时是否立即刷盘由参数 `innodb_flush_log_at_trx_commit` 控制（默认值为 1，即每次提交都刷盘，保证持久性）。
+
+- **文件结构**：
+  - **Log Buffer**：内存中的日志缓冲区，用于临时存储日志记录。
+  - **Redo Log Files**：磁盘上的日志文件，存储所有日志记录。
+
+- **使用场景**：
+  - **崩溃恢复**：在系统崩溃或意外断电后，通过 Redo Log 恢复已提交事务尚未落盘的修改。
+  - **数据持久性**：确保所有已提交的事务在持久化存储中可恢复，即使发生故障。
+
+## 2. Undo Log（撤销日志）
+
+- **定义**：
+  - Undo Log 记录了对数据库的所有修改操作，以便在事务回滚时撤销这些操作。它确保了事务的原子性，即事务中的所有操作要么全部成功，要么全部失败。
+
+- **功能**：
+  - **事务回滚**：当事务失败或被用户显式回滚时，Undo Log 用于撤销事务对数据的所有修改操作，恢复到事务开始之前的状态。
+  - **MVCC 支持**：支持多版本并发控制（MVCC），允许并发事务看到数据的一致快照，而不会受到其他事务的干扰。
+
+- **工作机制**：
+  - **日志记录**：每次对数据库进行修改操作时，Undo Log 会记录下撤销这些操作所需的信息。
+  - **回滚操作**：在回滚事务时，Undo Log 中的信息被用于将数据恢复到事务开始之前的状态。
+
+- **文件结构**：
+  - **Undo Log Segments**：Undo Log 的存储分段，记录每个事务的撤销操作。
+
+- **使用场景**：
+  - **事务回滚**：当事务失败或用户主动请求回滚时，Undo Log 用于恢复数据。
+  - **并发控制**：在多版本并发控制下，通过 Undo Log 支持一致性读操作。
+
+## 3. Binary Log（二进制日志）
+
+- **定义**：
+  - Binary Log 记录了所有对数据库的更改操作，包括 DDL（数据定义语言）和 DML（数据操纵语言）操作。它用于数据复制和恢复操作。
+
+- **功能**：
+  - **数据复制**：是主从复制（Master-Slave Replication）中的关键组件。主服务器将更改操作记录到 Binary Log 中，从服务器读取这些日志并应用到自身的数据中，从而保持数据一致性。
+  - **数据恢复**：通过读取 Binary Log，用户可以将数据库恢复到某个特定的时间点或状态。
+
+- **工作机制**：
+  - **日志记录**：在每次数据更改操作时，Binary Log 会记录下这些操作，包括 SQL 语句和更改的数据。Binary Log 有三种格式：STATEMENT（记录 SQL 语句）、ROW（记录行的实际变更，MySQL 8.0 默认）和 MIXED（混合模式），由参数 `binlog_format` 控制。
+  - **备份和恢复**：可以利用 Binary Log 进行增量备份和数据恢复，恢复数据库到特定时间点。
+
+- **文件结构**：
+  - **Binary Log Files**：日志文件中包含所有记录的更改操作。
+  - **Index File**：索引文件记录 Binary Log 文件的列表和顺序。
+
+- **使用场景**：
+  - **主从复制**：在主从复制设置中，主服务器使用 Binary Log 将更改传递给从服务器。
+  - **数据恢复**：使用 Binary Log 将数据库恢复到特定时间点，实现增量备份和时间点恢复。
+
+## 总结
+
+MySQL 的日志系统（Redo Log、Undo Log 和 Binary Log）是数据库管理和恢复的重要组成部分。不同的日志类型有不同的用途和工作机制：
+
+- **Redo Log**：用于持久化事务的更改，确保崩溃后数据的一致性。
+- **Undo Log**：用于事务回滚和 MVCC 支持，确保数据的一致性和并发控制。
+- **Binary Log**：用于主从复制和数据恢复，支持增量备份和时间点恢复。
+
+理解这些日志的工作机制和使用场景，有助于优化数据库性能、保证数据的完整性，以及进行有效的数据备份和恢复。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 重做日志](https://dev.mysql.com/doc/refman/8.0/en/innodb-redo-log.html)
+- [MySQL 8.0 Reference Manual · InnoDB 撤销日志](https://dev.mysql.com/doc/refman/8.0/en/innodb-undo-logs.html)
+- [MySQL 8.0 Reference Manual · 二进制日志](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/zh/glossary.md)
+- [knowledge](/zh/knowledge.md)

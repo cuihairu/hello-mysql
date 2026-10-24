@@ -1,58 +1,58 @@
-# 性能调优
+# Performance Tuning
 
-这里记录我处理 MySQL 性能问题时用到的监控、查询优化和系统调优方法。
+The monitoring, query optimisation and system tuning methods I use when dealing with MySQL performance problems.
 
-## [性能监控](performance-monitoring.md)
+## [Performance Monitoring](performance-monitoring.md)
 
-性能监控用于跟踪数据库运行状况，也是我定位性能瓶颈时首先查看的信息来源之一。
+Monitoring tracks the health of the database, and it is one of the first places I look when hunting for a bottleneck.
 
-- **[MySQL自带工具（SHOW STATUS, SHOW PROCESSLIST）](mysql-tools.md)**  
-  MySQL 自带的性能监控工具，如 `SHOW STATUS` 和 `SHOW PROCESSLIST`，以及我用它们查看运行状态、定位问题的方式。
+- **[Built-in MySQL Tools (SHOW STATUS, SHOW PROCESSLIST)](mysql-tools.md)**  
+  The monitoring tools MySQL ships with, such as `SHOW STATUS` and `SHOW PROCESSLIST`, and how I use them to inspect runtime state and narrow down problems.
 
-- **[第三方工具（Percona Toolkit, MySQL Enterprise Monitor）](third-party-tools.md)**  
-  常用的第三方性能监控工具，如 Percona Toolkit 和 MySQL Enterprise Monitor，以及它们在性能分析中的用途。
+- **[Third-Party Tools (Percona Toolkit, MySQL Enterprise Monitor)](third-party-tools.md)**  
+  Common third-party monitoring tools such as Percona Toolkit and MySQL Enterprise Monitor, and what they contribute to performance analysis.
 
-## [查询优化](query-optimization.md)
+## [Query Optimization](query-optimization.md)
 
-查询优化是提升数据库查询效率的关键。有效的查询优化可以显著减少查询时间和资源消耗。
+Query optimisation is the key to efficient database queries. Done well, it cuts query time and resource use considerably.
 
-- **[执行计划分析（EXPLAIN）](explain.md)**  
-  用 `EXPLAIN` 查看查询执行计划，并据此定位性能瓶颈。
+- **[Execution Plans (EXPLAIN)](explain.md)**  
+  Reading execution plans with `EXPLAIN` and using them to locate bottlenecks.
 
-- **[慢查询日志](slow-query-log.md)**  
-  慢查询日志的启用、分析，以及定位耗时查询时的处理思路。
+- **[Slow Query Log](slow-query-log.md)**  
+  Enabling and analysing the slow query log, and how I follow up on slow statements.
 
-- **[查询重写与优化](query-rewriting-optimization.md)**  
-  探讨查询重写技术，包括如何改写复杂的查询以提高执行效率和性能。
+- **[Query Rewriting](query-rewriting-optimization.md)**  
+  Query rewriting techniques: how to rework complex queries for better execution efficiency and performance.
 
-## [系统调优](system-tuning.md)
+## [System Tuning](system-tuning.md)
 
-系统调优涉及数据库配置、硬件和操作系统的调整，以确保数据库在各种负载下保持最佳性能。
+System tuning covers database configuration, hardware and operating system adjustments, so the database holds up under varying load.
 
-- **[参数优化（my.cnf配置文件）](parameter-optimization.md)**  
-  `my.cnf` 参数调整记录，包括缓冲区、缓存等设置对性能的影响。
+- **[Parameter Optimization (my.cnf)](parameter-optimization.md)**  
+  Notes on tuning `my.cnf` parameters, including how buffer and cache settings affect performance.
 
-- **[硬件调优](hardware-tuning.md)**  
-  硬件升级与优化对数据库性能的影响，例如增加内存或使用更快的磁盘。
+- **[Hardware Tuning](hardware-tuning.md)**  
+  How hardware upgrades affect database performance — more memory, faster disks and so on.
 
-- **[操作系统级调优](os-tuning.md)**  
-  探索操作系统级的调优措施，包括文件系统配置、进程优先级调整等，以提升数据库的整体性能。
+- **[OS-Level Tuning](os-tuning.md)**  
+  Operating system level tuning: filesystem configuration, process priorities and other levers that lift overall database performance.
 
-这些记录围绕性能监控、查询优化和系统调优，整理我排查与处理性能问题时的思路。
+These notes are organised around monitoring, query optimisation and system tuning — the path I usually follow when investigating and fixing performance problems.
 
 ---
 
-- [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+- [Knowledge Notes](../knowledge.md) —— Core concepts, references, key points from the official docs, use cases and common pitfalls, all with in-site links.
 
-## 参考资料
+## References
 
-- [MySQL 8.0 Reference Manual · 优化](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
+- [MySQL 8.0 Reference Manual · Optimization](https://dev.mysql.com/doc/refman/8.0/en/optimization.html)
 
-## 相关页面
+## Related pages
 
 - [explain](explain.md)
 
 <!-- BACKLINKS-AUTO -->
-## 相关页面
+## Related pages
 
 - [explain](explain.md)

@@ -1,55 +1,55 @@
-# 架构与部署
+# Architecture and Deployment
 
-这里整理我对 MySQL 架构、部署、备份和恢复的实践记录，包括不同方案的取舍及可靠性相关问题。
+My working notes on MySQL architecture, deployment, backup and recovery — including the trade-offs between options and the reliability questions that come with them.
 
-## [数据库架构](database-architecture.md)
+## [Database Architecture](database-architecture.md)
 
-数据库架构设计对于数据库系统的性能、可靠性和可扩展性至关重要。本节将介绍不同的数据库架构类型和如何根据需求选择合适的架构。
+Architecture design is critical to a database system's performance, reliability and scalability. This part covers the common architecture types and how to pick one to match your requirements.
 
-- **[单实例架构](single-instance-architecture.md)**  
-  了解单实例架构的基本概念，包括其优点和局限性。这种架构适用于小型到中型的应用场景。
+- **[Single-Instance Architecture](single-instance-architecture.md)**  
+  The basics of running a single instance: strengths and limits. This layout suits small to medium workloads.
 
-- **[主从复制（Master-Slave Replication）](master-slave-replication.md)**  
-  探讨主从复制架构的工作原理、配置方法及其在负载均衡和数据备份中的应用。
+- **[Master-Slave Replication](master-slave-replication.md)**  
+  How master-slave replication works, how to configure it, and its role in load balancing and backups.
 
-- **[主主复制（Master-Master Replication）](master-master-replication.md)**  
-  主主复制架构的设计与实现，以及多个主节点间的数据同步和可用性取舍。
+- **[Master-Master Replication](master-master-replication.md)**  
+  Designing and running a master-master setup, plus the data sync and availability trade-offs between multiple primaries.
 
-- **[集群架构（MySQL Cluster）](mysql-cluster.md)**  
-  介绍 MySQL 集群架构，包括其设计原理、优势以及如何配置和管理集群以实现高可用性和可扩展性。
+- **[MySQL Cluster](mysql-cluster.md)**  
+  The MySQL Cluster architecture: design principles, advantages, and how to configure and operate a cluster for high availability and scalability.
 
-- **[高可用架构（MHA, Galera Cluster）](high-availability-architecture.md)**  
-  MHA 和 Galera Cluster 等高可用方案，以及故障场景下的运行方式。
+- **[High-Availability Architectures (MHA, Galera Cluster)](high-availability-architecture.md)**  
+  HA options such as MHA and Galera Cluster, and how they behave in failure scenarios.
 
-## [备份与恢复](backup-recovery.md)
+## [Backup and Recovery](backup-recovery.md)
 
-数据备份和恢复是数据库管理的重要方面。本节将讨论不同的备份方法以及如何在数据丢失或损坏时进行恢复。
+Backup and recovery are core parts of database administration. This part covers the backup methods and how to recover when data is lost or corrupted.
 
-- **[物理备份（冷备、热备）](physical-backup.md)**  
-  学习物理备份的概念，包括冷备份和热备份的优缺点及其适用场景。
+- **[Physical Backup (Cold and Hot)](physical-backup.md)**  
+  What physical backup involves: the pros and cons of cold and hot backups and where each fits.
 
-- **[逻辑备份（mysqldump, MySQL Workbench）](logical-backup.md)**  
-  逻辑备份工具和方法，包括 mysqldump、MySQL Workbench 及数据完整性方面的注意点。
+- **[Logical Backup (mysqldump, MySQL Workbench)](logical-backup.md)**  
+  Logical backup tools and methods: mysqldump, MySQL Workbench, and points to watch for data integrity.
 
-- **[恢复策略](recovery-strategies.md)**  
-  了解不同的数据恢复策略，包括如何制定恢复计划、测试恢复过程及应对数据恢复过程中可能遇到的问题。
+- **[Recovery Strategies](recovery-strategies.md)**  
+  Different recovery strategies: building a recovery plan, testing the restore path, and handling the problems that come up along the way.
 
-这些记录覆盖 MySQL 架构设计与备份恢复，供我回看方案选择和运维细节。
+These notes cover MySQL architecture design along with backup and recovery, so I can look back on the choices made and the operational details.
 
 ---
 
-- [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+- [Knowledge Notes](../knowledge.md) —— Core concepts, references, key points from the official docs, use cases and common pitfalls, all with in-site links.
 
-## 参考资料
+## References
 
-- [MySQL 8.0 Reference Manual · 复制](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
-- [MySQL 8.0 Reference Manual · 备份与恢复](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
+- [MySQL 8.0 Reference Manual · Replication](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [MySQL 8.0 Reference Manual · Backup and Recovery](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html)
 
-## 相关页面
+## Related pages
 
 - [backup-recovery](backup-recovery.md)
 
 <!-- BACKLINKS-AUTO -->
-## 相关页面
+## Related pages
 
 - [backup-recovery](backup-recovery.md)

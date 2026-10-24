@@ -1,114 +1,114 @@
-# 高级SQL与数据处理
+# Advanced SQL and Data Processing
 
-这里整理我使用高级 SQL 和处理数据时涉及的主题：复杂查询、数据汇总与分析、SQL 函数，以及数据过滤条件。
+The topics I collect while working with advanced SQL and data processing: complex queries, aggregation and analysis, SQL functions, and filtering conditions.
 
-## [高级SQL查询](advanced-sql-queries.md)
+## [Advanced SQL Queries](advanced-sql-queries.md)
 
-高级 SQL 查询涉及复杂查询、视图、存储过程与函数、触发器和游标。
+Advanced querying covers complex queries, views, stored procedures and functions, triggers and cursors.
 
-- **[复杂查询（JOIN、子查询）](complex-queries.md)**
+- **[Complex Queries (JOINs and Subqueries)](complex-queries.md)**
 
-  讲解各种复杂查询方法，包括不同类型的JOIN操作（如INNER JOIN、LEFT JOIN、RIGHT JOIN等）和子查询的使用技巧。
+  Various ways to build complex queries, including the different JOIN types (INNER JOIN, LEFT JOIN, RIGHT JOIN and so on) and subquery techniques.
 
-- **[视图（Views）](views.md)**
+- **[Views](views.md)**
 
-  介绍视图的概念、创建视图的方法及其在简化复杂查询中的应用。
+  What views are, how to create them, and how they simplify complex queries.
 
-- **[存储过程与函数（Stored Procedures and Functions）](stored-procedures-functions.md)**
+- **[Stored Procedures and Functions](stored-procedures-functions.md)**
 
-  讲解存储过程和函数的定义、创建和使用，包括参数的传递和控制流语句的使用。
+  Defining, creating and using stored procedures and functions, including passing parameters and control-flow statements.
 
-- **[触发器（Triggers）](triggers.md)**
+- **[Triggers](triggers.md)**
 
-  介绍触发器的作用、创建触发器的步骤以及常见的应用场景。
+  What triggers are for, how to create them, and common use cases.
 
-- **[游标（Cursors）](cursors.md)**
+- **[Cursors](cursors.md)**
 
-  讲解游标的概念、使用方法以及在处理复杂数据操作时的应用。
+  What cursors are, how to use them, and where they come up in complex data operations.
 
-## [数据汇总与分析](data-summarization-analysis.md)
+## [Aggregation and Analysis](data-summarization-analysis.md)
 
-数据汇总和分析中常用聚合函数、GROUP BY 与 HAVING、窗口函数和组合查询。
+Aggregation and analysis rely on aggregate functions, GROUP BY with HAVING, window functions and set operations.
 
-- **[聚合函数（SUM, AVG, COUNT, MIN, MAX）](aggregate-functions.md)**
+- **[Aggregate Functions (SUM, AVG, COUNT, MIN, MAX)](aggregate-functions.md)**
 
-  介绍常用的聚合函数，包括SUM、AVG、COUNT、MIN、MAX的使用方法及其应用场景。
+  The common aggregate functions and the scenarios they fit.
 
-- **[GROUP BY 和 HAVING](group-by-having.md)**
+- **[GROUP BY and HAVING](group-by-having.md)**
 
-  讲解如何使用GROUP BY进行数据分组，如何利用HAVING子句对分组后的数据进行过滤。
+  How to group data with GROUP BY and filter the groups with HAVING.
 
-- **[窗口函数（Window Functions）](window-functions.md)**
+- **[Window Functions](window-functions.md)**
 
-  讲解 OVER 子句、PARTITION BY、排名函数（ROW_NUMBER、RANK、DENSE_RANK）、窗口帧与 LAG/LEAD 等分析函数的用法。
+  How to use OVER, PARTITION BY, ranking functions (ROW_NUMBER, RANK, DENSE_RANK), window frames and LAG/LEAD.
 
-- **[组合查询（UNION, INTERSECT, EXCEPT）](set-operations.md)**
+- **[Set Operations (UNION, INTERSECT, EXCEPT)](set-operations.md)**
 
-  介绍组合查询操作，包括UNION、INTERSECT和EXCEPT的使用方法及其区别。
+  Combining result sets with UNION, INTERSECT and EXCEPT, and the differences between them.
 
-## [SQL函数](sql-functions.md)
+## [SQL Functions](sql-functions.md)
 
-这里汇总 SQL 函数的常见类别：字符串、数学、日期和时间、条件判断及 JSON 函数。
+A rundown of the common SQL function families: string, math, date and time, conditional and JSON.
 
-- **[字符串函数](string-functions.md)**
+- **[String Functions](string-functions.md)**
 
-  介绍SQL中的常用字符串函数，如CONCAT、SUBSTRING、TRIM等，及其在数据处理中的应用。
+  Common string functions such as CONCAT, SUBSTRING and TRIM, and where they are used in data processing.
 
-- **[数学函数](math-functions.md)**
+- **[Math Functions](math-functions.md)**
 
-  讲解常用的数学函数，包括ROUND、FLOOR、CEILING等及其在数据计算中的作用。
+  Common math functions including ROUND, FLOOR and CEILING, and their role in data calculations.
 
-- **[日期和时间函数](date-time-functions.md)**
+- **[Date and Time Functions](date-time-functions.md)**
 
-  介绍SQL中的日期和时间函数，如NOW、DATE_ADD、DATEDIFF等，用于处理时间相关的数据。
+  Date and time functions such as NOW, DATE_ADD and DATEDIFF for working with time-related data.
 
-- **[条件判断函数（IF, CASE）](conditional-functions.md)**
+- **[Conditional Functions (IF, CASE)](conditional-functions.md)**
 
-  讲解IF和CASE条件判断函数的使用方法及其在数据处理中的应用。
+  How to use IF and CASE, and where they come up in data processing.
 
-- **[JSON 函数](json-functions.md)**
+- **[JSON Functions](json-functions.md)**
 
-  讲解JSON数据类型的读写：JSON_EXTRACT 与 ->、->> 提取、JSON_SET 等修改函数、JSON_TABLE 展开，以及生成列与多值索引的优化手段。
+  Reading and writing JSON data: extraction with JSON_EXTRACT and `->` / `->>`, mutators like JSON_SET, unfolding with JSON_TABLE, and generated columns and multi-value indexes as optimisations.
 
-## [数据过滤与条件](data-filtering-conditions.md)
+## [Filtering and Conditions](data-filtering-conditions.md)
 
-数据过滤与条件查询的常见写法及其对检索的影响。
+Common filtering and conditional query patterns, and how they affect retrieval.
 
-- **[使用WHERE子句](where-clause.md)**
+- **[WHERE Clause](where-clause.md)**
 
-  讲解WHERE子句的使用方法及其在筛选数据时的作用。
+  How to use WHERE and what it does when narrowing down data.
 
-- **[模糊查询（LIKE）](like-operator.md)**
+- **[LIKE Operator](like-operator.md)**
 
-  介绍模糊查询操作符LIKE的用法及其在数据匹配中的应用。
+  Pattern matching with LIKE and its use in data matching.
 
-- **[IN 和 NOT IN](in-not-in.md)**
+- **[IN and NOT IN](in-not-in.md)**
 
-  讲解IN和NOT IN操作符的使用方法及其在查询中的应用场景。
+  Using IN and NOT IN in queries.
 
-- **[BETWEEN 和 NOT BETWEEN](between-not-between.md)**
+- **[BETWEEN and NOT BETWEEN](between-not-between.md)**
 
-  介绍BETWEEN和NOT BETWEEN操作符的使用方法及其在范围查询中的应用。
+  Using BETWEEN and NOT BETWEEN for range queries.
 
-- **[EXISTS 和 NOT EXISTS](exists-not-exists.md)**
+- **[EXISTS and NOT EXISTS](exists-not-exists.md)**
 
-  讲解EXISTS和NOT EXISTS操作符的使用方法及其在数据存在性判断中的应用。
+  Using EXISTS and NOT EXISTS for existence checks.
 
-这些页面记录高级 SQL 查询和数据处理中的常见写法与取舍。
+These pages record common patterns and trade-offs in advanced SQL queries and data processing.
 
 ---
 
-- [知识点整理](../knowledge.md) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+- [Knowledge Notes](../knowledge.md) —— Core concepts, references, key points from the official docs, use cases and common pitfalls, all with in-site links.
 
-## 参考资料
+## References
 
-- [MySQL 8.0 Reference Manual · SQL 语句](https://dev.mysql.com/doc/refman/8.0/en/select.html)
+- [MySQL 8.0 Reference Manual · SQL Statements](https://dev.mysql.com/doc/refman/8.0/en/select.html)
 
-## 相关页面
+## Related pages
 
 - [advanced-sql-queries](advanced-sql-queries.md)
 
 <!-- BACKLINKS-AUTO -->
-## 相关页面
+## Related pages
 
 - [advanced-sql-queries](advanced-sql-queries.md)

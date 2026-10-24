@@ -1,0 +1,594 @@
+[
+  {
+    "text": "Basics",
+    "link": "/basics/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Introduction",
+        "link": "/basics/introduction",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "What is MySQL",
+            "link": "/basics/what-is-mysql"
+          },
+          {
+            "text": "NoSQL, SQL, and MySQL",
+            "link": "/basics/nosql-sql-mysql"
+          },
+          {
+            "text": "History and Development",
+            "link": "/basics/history-and-development"
+          },
+          {
+            "text": "Installation and Configuration",
+            "link": "/basics/installation-and-configuration"
+          }
+        ]
+      },
+      {
+        "text": "SQL Basics",
+        "link": "/basics/sql-basics",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Creating and Deleting Databases and Tables",
+            "link": "/basics/creating-modifying-deleting-databases-tables"
+          },
+          {
+            "text": "Data Types",
+            "link": "/basics/data-types"
+          },
+          {
+            "text": "Basic SELECT Statements",
+            "link": "/basics/basic-query-statements-select"
+          },
+          {
+            "text": "Inserting Data (INSERT)",
+            "link": "/basics/inserting-data"
+          },
+          {
+            "text": "Updating Data (UPDATE)",
+            "link": "/basics/updating-data"
+          },
+          {
+            "text": "Deleting Data (DELETE)",
+            "link": "/basics/deleting-data"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Database Design",
+    "link": "/database-design/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Overview",
+        "link": "/database-design/overview"
+      },
+      {
+        "text": "Requirements Analysis",
+        "link": "/database-design/requirements-analysis"
+      },
+      {
+        "text": "Conceptual Design",
+        "link": "/database-design/conceptual-design",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Entity-Relationship Model (ER Diagrams)",
+            "link": "/database-design/er-model"
+          },
+          {
+            "text": "Entities and Attributes",
+            "link": "/database-design/entities-attributes"
+          },
+          {
+            "text": "Relationships and Joins",
+            "link": "/database-design/relationships-joins"
+          }
+        ]
+      },
+      {
+        "text": "Logical Design",
+        "link": "/database-design/logical-design",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Normalization and Denormalization",
+            "link": "/database-design/normalization-denormalization"
+          },
+          {
+            "text": "Database Schema",
+            "link": "/database-design/database-schema"
+          },
+          {
+            "text": "Primary and Foreign Keys",
+            "link": "/database-design/primary-foreign-keys"
+          }
+        ]
+      },
+      {
+        "text": "Physical Design",
+        "link": "/database-design/physical-design",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Table Design",
+            "link": "/database-design/table-design"
+          },
+          {
+            "text": "Column Design",
+            "link": "/database-design/column-design"
+          },
+          {
+            "text": "Index Design",
+            "link": "/database-design/index-design"
+          }
+        ]
+      },
+      {
+        "text": "Performance and Scaling",
+        "link": "/database-design/performance-scaling",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Partitioning and Sharding",
+            "link": "/database-design/partitioning-sharding"
+          },
+          {
+            "text": "Vertical and Horizontal Splitting",
+            "link": "/database-design/vertical-horizontal-splitting"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Advanced SQL and Data Processing",
+    "link": "/advanced-sql-data-processing/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Advanced SQL Queries",
+        "link": "/advanced-sql-data-processing/advanced-sql-queries",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Complex Queries (JOINs and Subqueries)",
+            "link": "/advanced-sql-data-processing/complex-queries"
+          },
+          {
+            "text": "Views",
+            "link": "/advanced-sql-data-processing/views"
+          },
+          {
+            "text": "Stored Procedures and Functions",
+            "link": "/advanced-sql-data-processing/stored-procedures-functions"
+          },
+          {
+            "text": "Triggers",
+            "link": "/advanced-sql-data-processing/triggers"
+          },
+          {
+            "text": "Cursors",
+            "link": "/advanced-sql-data-processing/cursors"
+          }
+        ]
+      },
+      {
+        "text": "Aggregation and Analysis",
+        "link": "/advanced-sql-data-processing/data-summarization-analysis",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Aggregate Functions",
+            "link": "/advanced-sql-data-processing/aggregate-functions"
+          },
+          {
+            "text": "GROUP BY and HAVING",
+            "link": "/advanced-sql-data-processing/group-by-having"
+          },
+          {
+            "text": "Window Functions",
+            "link": "/advanced-sql-data-processing/window-functions"
+          },
+          {
+            "text": "Set Operations",
+            "link": "/advanced-sql-data-processing/set-operations"
+          }
+        ]
+      },
+      {
+        "text": "SQL Functions",
+        "link": "/advanced-sql-data-processing/sql-functions",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "String Functions",
+            "link": "/advanced-sql-data-processing/string-functions"
+          },
+          {
+            "text": "Math Functions",
+            "link": "/advanced-sql-data-processing/math-functions"
+          },
+          {
+            "text": "Date and Time Functions",
+            "link": "/advanced-sql-data-processing/date-time-functions"
+          },
+          {
+            "text": "Conditional Functions",
+            "link": "/advanced-sql-data-processing/conditional-functions"
+          },
+          {
+            "text": "JSON Functions",
+            "link": "/advanced-sql-data-processing/json-functions"
+          }
+        ]
+      },
+      {
+        "text": "Filtering and Conditions",
+        "link": "/advanced-sql-data-processing/data-filtering-conditions",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "WHERE Clause",
+            "link": "/advanced-sql-data-processing/where-clause"
+          },
+          {
+            "text": "LIKE Operator",
+            "link": "/advanced-sql-data-processing/like-operator"
+          },
+          {
+            "text": "IN and NOT IN",
+            "link": "/advanced-sql-data-processing/in-not-in"
+          },
+          {
+            "text": "BETWEEN and NOT BETWEEN",
+            "link": "/advanced-sql-data-processing/between-not-between"
+          },
+          {
+            "text": "EXISTS and NOT EXISTS",
+            "link": "/advanced-sql-data-processing/exists-not-exists"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Internals and Advanced Features",
+    "link": "/advanced-features-internals/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Indexes",
+        "link": "/advanced-features-internals/indexes",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Index Types",
+            "link": "/advanced-features-internals/index-types"
+          },
+          {
+            "text": "Creating and Managing Indexes",
+            "link": "/advanced-features-internals/create-manage-indexes"
+          },
+          {
+            "text": "Index Optimization",
+            "link": "/advanced-features-internals/index-optimization"
+          },
+          {
+            "text": "Index Data Structures",
+            "link": "/advanced-features-internals/index-why"
+          }
+        ]
+      },
+      {
+        "text": "Transactions",
+        "link": "/advanced-features-internals/transactions",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Transaction Concepts",
+            "link": "/advanced-features-internals/transaction-concepts"
+          },
+          {
+            "text": "ACID Properties",
+            "link": "/advanced-features-internals/acid-properties"
+          },
+          {
+            "text": "Using Transactions",
+            "link": "/advanced-features-internals/transaction-usage"
+          },
+          {
+            "text": "Isolation Levels and Locks",
+            "link": "/advanced-features-internals/isolation-levels-locks"
+          },
+          {
+            "text": "Indexes and Locks",
+            "link": "/advanced-features-internals/index-and-locks"
+          }
+        ]
+      },
+      {
+        "text": "Locking Mechanisms",
+        "link": "/advanced-features-internals/locking-mechanisms",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Lock Types",
+            "link": "/advanced-features-internals/lock-types"
+          },
+          {
+            "text": "Deadlocks and Detection",
+            "link": "/advanced-features-internals/deadlock-detection"
+          },
+          {
+            "text": "Lock Optimization",
+            "link": "/advanced-features-internals/lock-optimization"
+          }
+        ]
+      },
+      {
+        "text": "Internals",
+        "link": "/advanced-features-internals/internals",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Storage Engines",
+            "link": "/advanced-features-internals/storage-engines"
+          },
+          {
+            "text": "Data Pages and Rows",
+            "link": "/advanced-features-internals/data-pages-rows"
+          },
+          {
+            "text": "Logs",
+            "link": "/advanced-features-internals/logs"
+          },
+          {
+            "text": "MVCC",
+            "link": "/advanced-features-internals/Multi-Version-Concurrency-Control"
+          },
+          {
+            "text": "Query Optimizer",
+            "link": "/advanced-features-internals/query-optimizer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Architecture and Deployment",
+    "link": "/architecture-deployment/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Database Architecture",
+        "link": "/architecture-deployment/database-architecture",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Single-Instance Architecture",
+            "link": "/architecture-deployment/single-instance-architecture"
+          },
+          {
+            "text": "Master-Slave Replication",
+            "link": "/architecture-deployment/master-slave-replication"
+          },
+          {
+            "text": "Master-Master Replication",
+            "link": "/architecture-deployment/master-master-replication"
+          },
+          {
+            "text": "MySQL Cluster",
+            "link": "/architecture-deployment/mysql-cluster"
+          },
+          {
+            "text": "High-Availability Architectures",
+            "link": "/architecture-deployment/high-availability-architecture"
+          }
+        ]
+      },
+      {
+        "text": "Backup and Recovery",
+        "link": "/architecture-deployment/backup-recovery",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Physical Backup",
+            "link": "/architecture-deployment/physical-backup"
+          },
+          {
+            "text": "Logical Backup",
+            "link": "/architecture-deployment/logical-backup"
+          },
+          {
+            "text": "Recovery Strategies",
+            "link": "/architecture-deployment/recovery-strategies"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Performance Tuning",
+    "link": "/performance-tuning/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Performance Monitoring",
+        "link": "/performance-tuning/performance-monitoring",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Built-in MySQL Tools",
+            "link": "/performance-tuning/mysql-tools"
+          },
+          {
+            "text": "Third-Party Tools",
+            "link": "/performance-tuning/third-party-tools"
+          }
+        ]
+      },
+      {
+        "text": "Query Optimization",
+        "link": "/performance-tuning/query-optimization",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Execution Plans (EXPLAIN)",
+            "link": "/performance-tuning/explain"
+          },
+          {
+            "text": "Slow Query Log",
+            "link": "/performance-tuning/slow-query-log"
+          },
+          {
+            "text": "Query Rewriting",
+            "link": "/performance-tuning/query-rewriting-optimization"
+          }
+        ]
+      },
+      {
+        "text": "System Tuning",
+        "link": "/performance-tuning/system-tuning",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Parameter Optimization",
+            "link": "/performance-tuning/parameter-optimization"
+          },
+          {
+            "text": "Hardware Tuning",
+            "link": "/performance-tuning/hardware-tuning"
+          },
+          {
+            "text": "OS-Level Tuning",
+            "link": "/performance-tuning/os-tuning"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tools in Practice",
+    "link": "/tools-practice/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "MySQL Tools",
+        "link": "/tools-practice/mysql-tools",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "MySQL Workbench",
+            "link": "/tools-practice/mysql-workbench"
+          },
+          {
+            "text": "phpMyAdmin",
+            "link": "/tools-practice/phpmyadmin"
+          },
+          {
+            "text": "MySQL Shell",
+            "link": "/tools-practice/mysql-shell"
+          },
+          {
+            "text": "Percona Toolkit",
+            "link": "/tools-practice/percona-toolkit"
+          }
+        ]
+      },
+      {
+        "text": "Real-World Cases",
+        "link": "/tools-practice/real-world-cases",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "E-Commerce System",
+            "link": "/tools-practice/e-commerce-system"
+          },
+          {
+            "text": "Social Network System",
+            "link": "/tools-practice/social-network-system"
+          },
+          {
+            "text": "Log Processing and Analysis",
+            "link": "/tools-practice/log-processing-analysis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Appendix",
+    "link": "/appendix/README",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Appendix Resources",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Common Commands",
+            "link": "/appendix/common-commands"
+          },
+          {
+            "text": "Error Codes and Solutions",
+            "link": "/appendix/error-codes-solutions"
+          },
+          {
+            "text": "References and Resources",
+            "link": "/appendix/references-resources"
+          }
+        ]
+      },
+      {
+        "text": "New Technologies and the Future",
+        "link": "/new-technologies-future/README",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Comparison with Other Databases",
+            "link": "/new-technologies-future/comparison-with-other-databases"
+          },
+          {
+            "text": "Future Development",
+            "link": "/new-technologies-future/future-development"
+          },
+          {
+            "text": "Integrating with NoSQL",
+            "link": "/new-technologies-future/integration-with-nosql"
+          },
+          {
+            "text": "MySQL 8.0 Features",
+            "link": "/new-technologies-future/mysql-8-0-features"
+          },
+          {
+            "text": "MySQL in the Cloud",
+            "link": "/new-technologies-future/mysql-in-cloud"
+          },
+          {
+            "text": "New Features and Versions",
+            "link": "/new-technologies-future/new-features-versions"
+          },
+          {
+            "text": "Trends and Outlook",
+            "link": "/new-technologies-future/trends-and-outlook"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Knowledge Notes",
+    "link": "/knowledge"
+  },
+  {
+    "text": "Glossary",
+    "link": "/glossary"
+  }
+]

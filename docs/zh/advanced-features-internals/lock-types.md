@@ -1,0 +1,81 @@
+# 锁的种类（表锁、行锁）
+
+本文聚焦表锁、行锁等类型的特点与使用；MySQL 并发控制中锁的整体机制见[锁机制](./locking-mechanisms.md)。
+
+在数据库系统中，锁的种类直接影响到数据的并发访问、性能和一致性。主要的锁类型包括表锁和行锁。下面列出这两种锁的特点、适用场景和示例。
+
+## 1. 表锁（Table Lock）
+
+**定义**：表锁是一种锁定整个表的机制。以 `WRITE` 方式加表锁时，其他会话既不能读也不能写该表（只有持有锁的会话可以读写）；以 `READ` 方式加表锁时，所有会话（包括持有锁的会话）都只能读、不能写，直到锁被释放。
+
+**特点**：
+- **全表锁定**：在写表锁被持有时，整个表对其他会话不可访问。
+- **简单易用**：实现和管理较为简单，适合对整个表进行操作的场景。
+- **性能瓶颈**：在高并发环境中，表锁可能导致性能问题，因为它会阻止其他事务对表的访问。
+
+**适用场景**：
+- 当需要对整个表进行批量更新或维护时，表锁可以有效地防止数据冲突。
+- 适用于需要对整个表进行操作而不关注并发性能的情况。
+
+**示例**：
+```sql
+-- 锁定整个表，进行写操作
+LOCK TABLES accounts WRITE;
+-- 执行对表的写操作
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 'A';
+-- 释放锁
+UNLOCK TABLES;
+```
+
+## 2. 行锁（Row Lock）
+
+**定义**：行锁是一种锁定表中的特定行的机制。在事务中获取行锁时，其他事务只能访问表中未被锁定的行。行锁可以实现更细粒度的并发控制。
+
+**特点**：
+- **细粒度控制**：只锁定表中的特定行，提高并发性能。
+- **支持事务隔离**：主要由InnoDB存储引擎提供，用于实现更高的并发性和数据一致性。
+- **复杂性高**：相对于表锁，行锁的管理和实现更复杂，但能显著提升并发性能。
+
+**适用场景**：
+- 适用于需要对表中少量行进行操作的场景，例如更新单个记录。
+- 在高并发环境下表现良好，因为它只锁定必要的行，避免了全表锁定的性能瓶颈。
+
+**示例**：
+```sql
+BEGIN;
+-- 对特定行进行更新操作，锁定该行
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 'A';
+-- 提交事务，释放行锁
+COMMIT;
+```
+
+## 表锁与行锁的比较
+
+| 特性          | 表锁                   | 行锁                   |
+|---------------|------------------------|------------------------|
+| 锁定范围      | 整个表                 | 表中的特定行           |
+| 性能影响      | 高并发时性能瓶颈       | 高并发下表现良好       |
+| 实现复杂度    | 简单                   | 较复杂                 |
+| 适用场景      | 整表操作               | 针对特定记录的操作     |
+| 支持的引擎    | 所有存储引擎           | 主要由InnoDB提供       |
+
+## 总结
+
+- **表锁**：适用于整体操作，但可能在高并发场景下导致性能问题。它的优点是简单易用，适合需要对整个表进行操作的场景。
+- **行锁**：提供更细粒度的并发控制，适用于需要对特定行进行操作的场景。尽管实现和管理较为复杂，但在高并发环境中能够提高性能和数据一致性。
+
+理解表锁和行锁的特点及适用场景，对于设计高效的数据库系统、处理并发事务以及优化性能至关重要。
+
+## 参考资料
+
+- [MySQL 8.0 Reference Manual · InnoDB 存储引擎](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+- [MySQL 8.0 Reference Manual · InnoDB 架构](https://dev.mysql.com/doc/refman/8.0/en/innodb-architecture.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html)
+- [MySQL 8.0 Reference Manual · InnoDB 锁类型](https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html)
+- [MySQL 8.0 Reference Manual · InnoDB 下一键锁](https://dev.mysql.com/doc/refman/8.0/en/innodb-next-key-locking.html)
+
+<!-- BACKLINKS-AUTO -->
+## 相关页面
+
+- [README](README.md)
+- [glossary](/zh/glossary.md)
