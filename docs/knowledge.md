@@ -19,7 +19,7 @@ This page pulls the whole site together into one review thread: core concepts, a
 
 1. **High Performance MySQL (4th edition)**: the classic reference across architecture, indexing, replication and tuning. The way the indexing, replication and tuning sections on this site unfold lines up with it. [S8]
 2. **Inside the MySQL InnoDB Storage Engine (Jiang Chengyao)**: goes deep into InnoDB internals; it underpins the storage engine, locking, MVCC and logging sections on this site. [S9]
-3. **MySQL: A Must-Know Guide (Ben Forta)**: a quick reference for basic SQL syntax, matching the SQL basics and function sections on this site. [S10]
+3. **MySQL Crash Course (Ben Forta)**: a quick reference for basic SQL syntax, matching the SQL basics and function sections on this site. [S10]
 4. **Designing Data-Intensive Applications (DDIA)**: storage, replication and consistency from a systems perspective; it provides the background framing for replication and how the logs divide up the work. [S11]
 5. **O'Reilly Learning SQL**: an introduction to SQL fundamentals and standard syntax, complementing the advanced SQL sections on this site. [S12]
 
@@ -63,7 +63,7 @@ All the books are listed on the [References and Resources](./appendix/references
 - [S7] MySQL Connector/ODBC Developer Guide — <https://dev.mysql.com/doc/connector-odbc/en/>
 - [S8] High Performance MySQL (4th edition) — listed on the site's book page
 - [S9] Inside the MySQL InnoDB Storage Engine, Jiang Chengyao — listed on the site's book page
-- [S10] MySQL: A Must-Know Guide, Ben Forta — listed on the site's book page
+- [S10] MySQL Crash Course, Ben Forta — listed on the site's book page
 - [S11] Designing Data-Intensive Applications (DDIA) — listed on the site's book page
 - [S12] O'Reilly Learning SQL — listed on the site's book page
 
