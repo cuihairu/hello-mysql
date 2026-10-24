@@ -1,45 +1,45 @@
-# Content and structure change review (2026-10-19)
+# Content Structure Changes Review (2026-10-19)
 
-## Scope reviewed
+## Review Scope
 
-`git fetch origin && git pull --rebase origin main` was run first, and returned `Already up to date`; the working tree was clean when the review started. The repository's four most recent commits, in chronological order, are:
+First ran `git fetch origin && git pull --rebase origin main`, which returned `Already up to date`; the working tree was clean at the start of the review. The four most recent commits actually in the repository (in chronological order) are:
 
 - `37e88b7` Add structure audit report
-- `d1126cb` Unify documentation navigation source (A: unify the navigation source)
-- `e9222ae` Clarify overlapping documentation topics (B: clarify and merge overlapping topics)
-- `ee98aa4` Align project documentation description (C: unify the project's positioning)
+- `d1126cb` Unify documentation navigation source (A: unified navigation source)
+- `e9222ae` Clarify overlapping documentation topics (B: clarify/merge overlapping topics)
+- `ee98aa4` Align project documentation description (C: align project positioning)
 
-The review range is `HEAD~4..HEAD`: 4 commits and 14 files (1 new audit report, 13 modifications to existing files), with no file deletions. I checked `transactions.md`'s deleted content, the SUMMARY index entries, the README wording, the sidebar, and every new cross-link section by section. All line numbers below refer to the versions at the time of review; deleted content is additionally cited with its old-version line numbers.
+The comparison range was `HEAD~4..HEAD`, covering 4 commits and 14 files (1 new audit report, 13 modifications to existing files); no deleted files were found. The review focused paragraph by paragraph on the deleted content in `transactions.md`, SUMMARY table-of-contents entries, README wording, sidebar, and all newly added cross-links. All line numbers below refer to the current version at the time of review; deleted content is separately noted with old version line numbers.
 
-## Conclusions for the four checks
+## Four Verification Conclusions
 
-### 1. Lost content: not found
+### 1. Content Loss: Not Found
 
-- B's deletions are concentrated in `docs/advanced-features-internals/transactions.md`, old lines 5–67. The old expansion of the transaction definition and ACID is now covered by `transaction-concepts.md:7–29`; the BEGIN, COMMIT and ROLLBACK examples and the autocommit discussion are now covered by `transaction-concepts.md:31–61` and `transaction-usage.md:5–58`; the four isolation levels and the InnoDB phantom-read note are now covered by `transaction-concepts.md:21–26` and `isolation-levels-locks.md:7–61`. The old transaction scenarios are still in `transactions.md:15–21`, and the transfer, order and batch-operation examples are in `transaction-usage.md:60–84`. The revised overview, `transactions.md:5–13`, links explicitly to those topic pages. Going through the deleted passages, I found no unique technical content that was deleted and not migrated elsewhere, so nothing needs to be put back.
-- `docs/SUMMARY.md` was not drastically pruned: `d1126cb` added an explanatory note at the top (currently `SUMMARY.md:1–8`), and the complete old index mapping continues from line 10. Spot checks of parts 1, 2, 4, 5, 6 and 7 plus the appendix entries confirm they are still present (for example `SUMMARY.md:12–36, 77–120, 122–136`). It now states that it is for traceability only and is no longer the maintained navigation source, and no content-bearing entries were removed.
+- B's deletions were concentrated in `docs/advanced-features-internals/transactions.md` old lines 5–67. The old expanded transaction definition/ACID content is now covered by `transaction-concepts.md:7–29`; the BEGIN, COMMIT, ROLLBACK examples and auto-commit are now covered by `transaction-concepts.md:31–61` and `transaction-usage.md:5–58`; the four isolation levels and InnoDB phantom-read explanation are now covered by `transaction-concepts.md:21–26` and `isolation-levels-locks.md:7–61`. The old transaction scenarios remain in `transactions.md:15–21`, and the transfer, order, and batch operation examples are also in `transaction-usage.md:60–84`. The revised overview `transactions.md:5–13` explicitly links to these topic pages. Comparing against the deleted paragraphs, no unique technical content was found to have been deleted without being migrated, so nothing needs to be restored.
+- `docs/SUMMARY.md` was not drastically trimmed: `d1126cb` added a note at its start (currently `SUMMARY.md:1–8`), and the complete old directory mapping continues to be retained from line 10 onward; spot checks of Parts 1, 2, 4, 5, 6, 7 and the appendix entries confirmed they remain (e.g. `SUMMARY.md:12–36, 77–120, 122–136`). It has declared itself traceability-only and no longer a navigation maintenance source, without deleting any content-bearing entries.
 
-### 2. Incorrect rewording: no technical meaning reversed, no wrong numbers
+### 2. Miswording: No Technical Meaning Reversal or Incorrect Numbers Found
 
-- The README changes describe only the project's positioning; no chapter count, file count or directory count was added. English before and after: `README.md:16,22`, changing from “MySQL Knowledge Handbook” / “A Chinese-language knowledge site covering ... advanced data processing ...” to a collection of personal notes and development experience. Chinese before and after: `README.zh.md:16,22`, changing from “a Chinese-language knowledge site” to “personal experience sharing, not organised as courses or a learning path”. Neither the old nor the new text makes “supported/unsupported”-style technical capability claims, so the rewrite does not change any MySQL technical conclusion.
-- The copy's topic coverage matches the repository: the 9 content topic directories are `basics`, `database-design`, `advanced-sql-data-processing`, `advanced-features-internals`, `architecture-deployment`, `performance-tuning`, `tools-practice`, `appendix` and `new-technologies-future`; the README's SQL / database design / internals / deployment / performance / tools descriptions do not claim any count of those directories or chapters. The visible Markdown count in the repository changes as the audit report itself is added, so it cannot be used as evidence of an incorrect number in the README.
-- The sidebar still carries “Part 1” through “Part 7” (`sidebar.json:3` through to the part-7 tools group), so “not organised as courses or a learning path” is project-positioning wording rather than a precise statement of the structure; I found no technical meaning error caused by it. Whether “notes site” is the preferred term is an editorial choice, so it is not listed as a defect here and not rewritten.
+- README changes only describe project positioning and add no new article counts, file counts, or directory counts. English before/after: `README.md:16,22`, changed from "MySQL Knowledge Handbook" / "A Chinese-language knowledge site covering ... advanced data processing ..." to a collection of personal notes and development experience; Chinese before/after: `README.zh.md:16,22`, changed from "Chinese knowledge site" to "personal experience sharing, not organized as courses or learning paths." Neither the original nor the new text makes "supports/does not support" style technical capability claims, and the rewrite does not change any MySQL technical conclusion.
+- The copy's topic coverage matches the repository: the 9 content topic directories are `basics`, `database-design`, `advanced-sql-data-processing`, `advanced-features-internals`, `architecture-deployment`, `performance-tuning`, `tools-practice`, `appendix`, `new-technologies-future`; the README's SQL / database design / internals / deployment / performance / tools descriptions do not claim these directory counts or article counts. The repository's visible Markdown count at the time changed as the audit report itself was added, so it cannot serve as evidence of README number errors.
+- The sidebar still retains "Part 1" through "Part 7" (from `sidebar.json:3` through the Part 7 tools group), so "not organized as courses or learning paths" is project positioning wording, not a precise structural statement; no technical meaning error was found. Whether to prefer calling it a "notes site" is an editorial choice and is not listed as a defect or rewritten this time.
 
-### 3. Links and navigation: verified local targets are correct
+### 3. Links and Navigation: Checked Local Targets Are Correct
 
-- Recursively reading `docs/.vitepress/sidebar.json` yields 124 links, all 124 targets exist, and no target is duplicated. Of the changed appendix targets, `/appendix/README` keeps only one parent-level entry in `sidebar.json:527–547`, and the target file exists; the renamed appendix subgroup “Appendix materials” no longer links twice.
-- Every cross-link B added points at the corresponding topic: index design and index implementation correspond to `database-design/index-design.md:3` and `advanced-features-internals/index-types.md:3`; the tools overview and performance observation correspond to `tools-practice/mysql-tools.md:3` and `performance-tuning/mysql-tools.md:3`; transaction concepts, operations, isolation and locks correspond to `transaction-concepts.md:3`, `transactions.md:9–11`, `isolation-levels-locks.md:3`, `locking-mechanisms.md:3` and `lock-types.md:3`. Reading the page titles and body topics by hand, I found no target that exists but is off-topic.
-- Not verified: external URL reachability, post-deployment routes and anchors, and a full site build at the time of this review. None of that affects the conclusion of the local sidebar target check.
+- Recursively reading `docs/.vitepress/sidebar.json` yielded 124 links, all 124 targets exist, and no targets are duplicated. The appendix target `/appendix/README` involved in the change retains only a single parent-level entry at `sidebar.json:527–547`, and the target file exists; the appendix subgroup renamed "Appendix materials" no longer links it again.
+- All cross-links added by B point to corresponding topics: index design and implementation correspond to `database-design/index-design.md:3` and `advanced-features-internals/index-types.md:3` respectively; tools overview and performance observation correspond to `tools-practice/mysql-tools.md:3` and `performance-tuning/mysql-tools.md:3` respectively; transaction concepts, operations, isolation, and locks correspond to `transaction-concepts.md:3`, `transactions.md:9–11`, `isolation-levels-locks.md:3`, `locking-mechanisms.md:3`, `lock-types.md:3`. Manual inspection of page titles and body topics found no target that "exists but does not match the topic."
+- Not verified: external URL reachability, post-deployment routes/anchors, and a full site build during this review. The above does not affect the local sidebar target verification conclusion.
 
-### 4. Evidence boundaries and unverified items
+### 4. Evidence Boundaries and Unverified Items
 
-Git changes, target file existence, the changed sentences and the topics of the corresponding pages have all been checked. I did not pass off the build and link conclusions in the earlier structure audit report as results from a rerun just now; external links, build output and real navigation in a browser were not verified. I found no contested delete-or-merge decision that should be held back for lack of evidence.
+Checked Git changes, target file existence, changed sentences, and corresponding page topics. Did not pass off build/link conclusions from the older structure audit report as freshly run results here; external links, build artifacts, and actual browser navigation were all left unverified. No contentious merge/delete decisions were found that needed to be deferred for insufficient evidence.
 
-## Issues found
+## Issues Found
 
 | Severity | Issue | Evidence | Fixed? / commit |
 |---|---|---|---|
-| — | No clear lost content, wrong numbers, reversed technical meaning or misdirected links were found | See the four checks above | No fix needed |
+| — | No clear content loss, incorrect numbers, technical meaning reversal, or misdirected links found | See the four verifications above | No fix needed |
 
 ## Conclusion
 
-Within the review range stated in this report, this batch of structural and positioning changes can be considered **accepted**: no unique content needing to be put back, and no clear wording or local navigation error. External links and the build for this round were not verified, and are not part of the pass verdict. This verdict does not replace post-release verification of the unverified items.
+Within the review scope stated in this report, this batch of structural and positioning changes can be considered **accepted**: no unique content needing restoration was found, and no clear wording or local navigation errors were found. External links and this build were not verified and are not included in the pass conclusion. This conclusion does not replace post-release verification of unverified items.
