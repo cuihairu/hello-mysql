@@ -12,11 +12,6 @@ export default withMermaid(defineConfig({
   cleanUrls: true,
   lastUpdated: true,
 
-  // TEMPORARY while the English pages are being rolled out section by section:
-  // English content still links to pages that have not been translated yet.
-  // Remove once every page exists in both locales and the build is re-verified.
-  ignoreDeadLinks: true,
-
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-mysql/favicon.svg' }]
   ],
