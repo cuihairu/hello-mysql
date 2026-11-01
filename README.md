@@ -1,27 +1,10 @@
-<div align="center">
-
-[English](README.md) | [中文](README.zh.md)
-
-<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> </p>
-
-# Hello MySQL
-
-<p align="center">
-  <img src="docs/public/badges/topic.svg" alt="topic" />
-  <img src="docs/public/badges/docs.svg" alt="docs" />
-  <img src="docs/public/badges/license.svg" alt="license" />
-  <img src="docs/public/badges/langs.svg" alt="langs" />
-</p>
-
-MySQL learning notes and developer field notes · [Read online](https://cuihairu.github.io/hello-mysql/)
-
-</div>
+<div align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /> <img src="docs/public/badges/license.svg" alt="license" /> <img src="docs/public/badges/langs.svg" alt="langs" /> <a href="https://cuihairu.github.io/hello-mysql/"><img src="https://img.shields.io/badge/docs-docs-blue" alt="docs"></a></div>
 
 ---
 
 A Chinese-language collection of personal MySQL notes, takeaways, and developer experience, spanning SQL, database design, internals, deployment, performance, and tools. It shares what I have learned and encountered while building software; it is not organized as a course.
 
-Knowledge notes: [docs/knowledge.md](https://cuihairu.github.io/hello-mysql/knowledge) — core concepts, the reference books, official manual pages, use cases, and common pitfalls, each linked to the full pages.
+Knowledge notes: [docs/knowledge.md](https://cuihairu.github.io/hello-mysql//knowledge) — core concepts, the reference books, official manual pages, use cases, and common pitfalls, each linked to the full pages.
 
 ## Local Development
 

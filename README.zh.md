@@ -1,27 +1,10 @@
-<div align="center">
-
-[English](README.md) | [中文](README.zh.md)
-
-<p align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> </p>
-
-# Hello MySQL
-
-<p align="center">
-  <img src="docs/public/badges/topic.svg" alt="topic" />
-  <img src="docs/public/badges/docs.svg" alt="docs" />
-  <img src="docs/public/badges/license.svg" alt="license" />
-  <img src="docs/public/badges/langs.svg" alt="langs" />
-</p>
-
-MySQL 个人笔记与开发经验 · [在线阅读](https://cuihairu.github.io/hello-mysql/)
-
-</div>
+<div align="center"><img src="docs/public/logo.svg" width="64" height="64" alt="logo" /> <img src="docs/public/badges/topic.svg" alt="topic" /> <img src="docs/public/badges/docs.svg" alt="docs" /> <img src="docs/public/badges/license.svg" alt="license" /> <img src="docs/public/badges/langs.svg" alt="langs" /> <a href="https://cuihairu.github.io/hello-mysql/zh/"><img src="https://img.shields.io/badge/docs-文档-blue" alt="docs"></a></div>
 
 ---
 
 这里记录我在使用 MySQL 时整理的笔记、踩过的坑和做过的取舍，涉及 SQL、数据库设计、底层原理、架构部署、性能调优和工具实践。
 
-知识点主文档：[docs/knowledge.md](https://cuihairu.github.io/hello-mysql/knowledge) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+知识点主文档：[docs/knowledge.md](https://cuihairu.github.io/hello-mysql/zh/knowledge) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
 
 ## 本地开发
 
