@@ -13,22 +13,22 @@
   <img src="docs/public/badges/langs.svg" alt="langs" />
 </p>
 
-MySQL 个人笔记与开发经验 · [在线阅读](https://cuihairu.github.io/hello-mysql/zh//) <a href="https://cuihairu.github.io/hello-mysql/zh/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-blue" alt="docs"></a>
+MySQL 个人笔记与开发经验 · [在线阅读](https://cuihairu.github.io/hello-mysql/zh/) <a href="https://cuihairu.github.io/hello-mysql/zh/"><img src="https://img.shields.io/badge/%E6%96%87%E6%A1%A3-blue" alt="docs"></a>
 </div>
 
 ---
 
 这里记录我学习和使用 MySQL 时整理的笔记、心得与开发经验，内容涉及 SQL、数据库设计、底层原理、架构部署、性能调优和工具实践。这是个人经验分享，不按课程或学习路径组织。
 
-知识点主文档：[docs/knowledge.md](https://cuihairu.github.io/hello-mysql/zh//knowledge) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
+知识点主文档：[docs/knowledge.md](https://cuihairu.github.io/hello-mysql/zh/knowledge) —— 核心概念、参考书目、官方文档要点、应用场景与常见坑，均带站内链接。
 
 ## 本地开发
 
 ```bash
-npm install          # 安装依赖
-npm run docs:dev     # 本地开发
-npm run docs:build   # 构建到 docs/.vitepress/dist
-npm run docs:preview # 本地预览构建产物
+pnpm install          # 安装依赖
+pnpm run docs:dev     # 本地开发
+pnpm run docs:build   # 构建到 docs/.vitepress/dist
+pnpm run docs:preview # 本地预览构建产物
 ```
 
 ## License
